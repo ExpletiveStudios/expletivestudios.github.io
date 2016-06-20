@@ -1,0 +1,15 @@
+
+{% macro footer() %}
+  <div class="footer-container">
+    <div class="footer-controls">
+      <div class="footer-logo">
+        <a href="javascript:void(0)">Home</a>
+      </div>
+      <ul>
+        <li><a href="javascript:void(0)">Portfolio</a></li>
+        <li><a href="javascript:void(0)">Projects</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+{% endmacro %}

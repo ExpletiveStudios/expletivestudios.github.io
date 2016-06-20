@@ -1,0 +1,8 @@
+
+// Bower components
+// =require ../bower_components/jquery/dist/jquery.min.js
+
+// Custom JavaScript partials
+// =require footer.js
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLmpzIl0sInNvdXJjZXNDb250ZW50IjpbIlxyXG4vLyBCb3dlciBjb21wb25lbnRzXHJcbi8vID1yZXF1aXJlIC4uL2Jvd2VyX2NvbXBvbmVudHMvanF1ZXJ5L2Rpc3QvanF1ZXJ5Lm1pbi5qc1xyXG5cclxuLy8gQ3VzdG9tIEphdmFTY3JpcHQgcGFydGlhbHNcclxuLy8gPXJlcXVpcmUgZm9vdGVyLmpzXHJcbiJdLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

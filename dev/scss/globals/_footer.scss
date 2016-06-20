@@ -1,0 +1,41 @@
+.footer-container {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background-color: $gray-jet;
+   min-height: 4rem;
+   
+   .footer-controls {
+      margin: 0 auto;
+      max-width: $large-screen;
+   }
+   
+   .footer-logo {      
+      line-height: 4rem;
+      margin-left: 1rem;
+      
+      @include breakpoint($small-screen) { float: left; }
+      
+      a { @include button($gray-jet, $gray-light); }
+   }
+   
+   ul {      
+      line-height: 4rem;
+      list-style: none;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: auto;
+      height: auto;
+      
+      @include breakpoint($small-screen) { float: right; }
+      
+      li {
+         padding-right: 24px;
+         
+         @include breakpoint($small-screen) { float: left; }
+         
+         a { @include button($gray-jet, $gray-light); }
+      }
+   }   
+}

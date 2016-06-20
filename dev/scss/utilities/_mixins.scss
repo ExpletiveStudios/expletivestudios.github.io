@@ -1,0 +1,17 @@
+// Mobile first breakpoint
+@mixin breakpoint($point) {
+	@media screen and (min-width: $point) { @content; }
+}
+
+// Default button with customizable colors
+@mixin button($default-color, $action-color) {
+	border: 2px solid $default-color;
+	border-radius: 5px;
+	color: $action-color;
+	font-size: 1rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+
+	&:hover { border: 2px solid $action-color; }
+}

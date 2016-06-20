@@ -1,0 +1,7 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  <div class="content">
+    <p>more coming soon!</p>
+  </div>
+{% endblock %}
