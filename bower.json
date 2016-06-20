@@ -1,0 +1,18 @@
+{
+  "name": "portfolio",
+  "description": "Static website to depict portfolio of work.",
+  "main": "index.html",
+  "authors": [
+    "Patrick Petrushonis <pwp904@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}

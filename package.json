@@ -1,0 +1,39 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Static website to depict portfolio of work.",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "gulp",
+    "sass",
+    "nunjucks"
+  ],
+  "author": "Patrick Petrushonis <pwp904@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io/issues"
+  },
+  "homepage": "https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-if": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-render": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp.spritesmith": "^6.2.1",
+    "minimatch": "^3.0.2"
+  }
+}

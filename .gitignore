@@ -1,0 +1,8 @@
+# Node files installed via npm commands
+node_modules
+
+# Bower files installed via bower commands
+bower_components
+
+# Debug log on npm errors
+npm-debug.log
