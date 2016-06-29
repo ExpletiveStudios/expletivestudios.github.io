@@ -6,8 +6,9 @@
         <a href="javascript:void(0)">Home</a>
       </div>
       <ul>
-        <li><a href="javascript:void(0)">Portfolio</a></li>
-        <li><a href="javascript:void(0)">Projects</a></li>
+        <li><a href="javascript:void(0)">Games</a></li>
+        <li><a href="javascript:void(0)">Blog</a></li>
+        <li><a href="javascript:void(0)">Team</a></li>
         <li><a href="javascript:void(0)">Contact</a></li>
       </ul>
     </div>

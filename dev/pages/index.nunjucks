@@ -2,6 +2,7 @@
 
 {% block content %}
   <div class="content">
-    <p>more coming soon!</p>
+    <h1>Expletive Games</h1>
+    <p>This website and all featured content is currently under development.</p>
   </div>
 {% endblock %}
