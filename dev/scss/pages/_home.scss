@@ -1,8 +1,24 @@
 .content {
-   margin: 2rem auto 0;
-   max-width: $large-screen;
-   
-   p {
-      text-align: center;
-   }
+	margin: 2rem auto 0;
+	max-width: $large-screen;
+
+	h1 {
+		margin: 1rem 0;
+		text-align: center;
+	}
+
+	p {
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.button {
+		@include button($blue-pierce, $blue-tranquil);
+
+		margin: 1rem auto;
+		display: block;
+		width: 150px;
+		height: auto;
+		text-align: center;
+	}
 }

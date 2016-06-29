@@ -1,0 +1,10 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  <div class="content">
+    <br><br>
+    <h1>Uh oh!</h1>
+    <p>Looks like you're a little lost.</p>
+    <a class="button" href="index.html">Try going here</a>
+  </div>
+{% endblock %}
