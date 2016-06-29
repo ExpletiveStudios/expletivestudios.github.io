@@ -3,7 +3,7 @@
   <div class="header-container">
     <div class="header-controls">
       <div class="header-logo">
-        <a href="javascript:void(0)">Home</a>
+        <a href="/">Home</a>
       </div>
       <ul>
         <li><a href="javascript:void(0)">Games</a></li>
