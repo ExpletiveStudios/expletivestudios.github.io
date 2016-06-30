@@ -2,6 +2,7 @@
 var gulp      = require('gulp');
 var prefix    = require('gulp-autoprefixer');
 var gulpIf    = require('gulp-if');
+var include   = require('gulp-include');
 var notify    = require('gulp-notify');
 var render    = require('gulp-nunjucks-render');
 var plumber   = require('gulp-plumber');
@@ -25,6 +26,14 @@ var sync      = require('browser-sync');
 var config = {
   src: 'dev/',
   dest: 'app/'
+}
+
+// Plug-in settings
+var includeSettings = {
+	includePaths: [
+		__dirname + "/bower_components",
+		__dirname + "/dev/js"
+	]
 }
 
 // Prompt any error then end current task
@@ -56,6 +65,7 @@ gulp.task('scripts', function(){
     .pipe(customPlumber('Error Running Scripts'))
     // Initialize sourcemaps
     .pipe(maps.init())
+    .pipe(include(includeSettings))
     // Write sourcemaps
     .pipe(maps.write())
     .pipe(gulp.dest(config.dest + 'js'))
