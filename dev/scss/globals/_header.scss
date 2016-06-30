@@ -13,7 +13,7 @@
     float: left;
     line-height: 4rem;      
 
-    a { @include button($gray-jet, $gray-light); }
+    a { @include button-border($gray-jet, $gray-light); }
   }
 }
 
@@ -31,6 +31,6 @@
     float: left;
     padding-right: 24px;
 
-    a { @include button($gray-jet, $gray-light); }
+    a { @include button-border($gray-jet, $gray-light); }
   }
 }

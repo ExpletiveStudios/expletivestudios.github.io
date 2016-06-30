@@ -17,7 +17,7 @@
       
       @include breakpoint($small-screen) { float: left; }
       
-      a { @include button($gray-jet, $gray-light); }
+      a { @include button-border($gray-jet, $gray-light); }
    }
    
    ul {      
@@ -35,7 +35,7 @@
          
          @include breakpoint($small-screen) { float: left; }
          
-         a { @include button($gray-jet, $gray-light); }
+         a { @include button-border($gray-jet, $gray-light); }
       }
    }   
 }

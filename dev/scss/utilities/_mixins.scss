@@ -5,6 +5,7 @@
 
 // Default button with customizable colors
 @mixin button($default-color, $action-color) {
+	background-color: transparent;
 	border: 2px solid $default-color;
 	border-radius: 5px;
 	color: $action-color;
@@ -13,5 +14,23 @@
 	text-decoration: none;
 	transition: all 0.3s ease-out;
 
+	&:focus,
+	&:hover { 
+		background-color: $action-color;
+		border-color: $action-color;
+		color: $gray-light;
+	}
+}
+
+@mixin button-border($default-color, $action-color) {
+	border: 2px solid $default-color;
+	border-radius: 5px;
+	color: $action-color;
+	font-size: 1rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+
+	&:focus,
 	&:hover { border: 2px solid $action-color; }
 }
