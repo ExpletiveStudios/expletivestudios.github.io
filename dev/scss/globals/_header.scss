@@ -1,22 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  padding-top: 4rem;
-  background-color: $gray-light;
-  color: $gray-jet;
-  font-family: 'Oxygen', sans-serif;
-}
-
-.header-container {
-  background-color: $gray-jet;
+.header-container {  
   height: 4rem;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 1;
+  background-color: $gray-jet;
 }
 
 .header-controls {
