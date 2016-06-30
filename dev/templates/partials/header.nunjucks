@@ -9,7 +9,7 @@
         <input type="checkbox">
         <span class="nav-icon"></span>
       </div>
-      <ul>
+      <ul class="nav-menu">
         <li><a href="javascript:void(0)">Games</a></li>
         <li><a href="javascript:void(0)">Blog</a></li>
         <li><a href="javascript:void(0)">Team</a></li>

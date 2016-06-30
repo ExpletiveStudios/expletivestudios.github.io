@@ -17,7 +17,7 @@
   }
 }
 
-.header-controls ul {
+ul.nav-menu {
   margin: 0;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -27,6 +27,21 @@
   float: right;
   line-height: 4rem;
   list-style: none;
+
+  &.show-nav {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    padding-right: 0;
+    width: 100%;
+    display: block;
+    background-color: $gray-jet;
+
+    li { 
+      float: none; 
+      text-align: right;
+      line-height: 3rem;
+    }
+  }
 
   @include breakpoint($small-screen) { display: block; }
 
