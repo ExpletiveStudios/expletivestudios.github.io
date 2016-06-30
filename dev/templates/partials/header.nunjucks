@@ -5,6 +5,10 @@
       <div class="header-logo">
         <a href="/">Home</a>
       </div>
+      <div class="nav-toggle">
+        <input type="checkbox">
+        <span class="nav-icon"></span>
+      </div>
       <ul>
         <li><a href="javascript:void(0)">Games</a></li>
         <li><a href="javascript:void(0)">Blog</a></li>

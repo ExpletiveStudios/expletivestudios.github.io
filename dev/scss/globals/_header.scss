@@ -19,13 +19,16 @@
 
 .header-controls ul {
   margin: 0;
-  float: right;
-  line-height: 4rem;
-  list-style: none;
   padding-left: 1rem;
   padding-right: 1rem;
   width: auto;
   height: auto;
+  display: none;
+  float: right;
+  line-height: 4rem;
+  list-style: none;
+
+  @include breakpoint($small-screen) { display: block; }
 
   li {
     float: left;
@@ -33,4 +36,50 @@
 
     a { @include button-border($gray-jet, $gray-light); }
   }
+}
+
+.nav-toggle {  
+  position: relative;
+  margin: calc(2rem - (23px / 2)) 2rem;
+  width: 30px;
+  height: 23px;
+  float: right;
+
+  @include breakpoint($small-screen) { display: none; }
+
+  input[type="checkbox"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+
+    &:checked + span {
+      background: transparent;
+
+      &:before { transform: rotate(-45deg) translate(-4px, 12px); }
+      &:after { transform: rotate(45deg) translate(-1px, -8px); }
+    }
+  }
+}
+
+.nav-icon {
+  position: absolute;
+  top: 9.5px;
+  width: 100%;
+  height: 5px;
+  background: $gray-light;    
+
+  &:before, &:after {
+    position: absolute;    
+    width: 100%;
+    height: 5px;
+    content: "";
+    background: $gray-light;
+    transition: 0.3s;
+  }
+
+  &:before { top: -9px; }
+  &:after { top: 9px; }
 }
