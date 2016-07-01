@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "devster",
   "version": "1.0.0",
-  "description": "Static website to depict portfolio of work.",
+  "description": "Web page development using gulp, sass, and nunjucks",
   "main": "index.html",
   "scripts": {
     "test": "gulp"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io.git"
   },
   "keywords": [
-    "portfolio",
+    "web",
     "gulp",
     "sass",
     "nunjucks"
@@ -28,13 +28,13 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.10",
     "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.1",
     "gulp-include": "^2.3.0",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^1.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp.spritesmith": "^6.2.1",
     "minimatch": "^3.0.2"
   }
 }
