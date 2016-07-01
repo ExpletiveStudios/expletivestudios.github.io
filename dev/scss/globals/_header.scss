@@ -13,7 +13,7 @@
     float: left;
     line-height: 4rem;      
 
-    a { @include button-border($gray-jet, $gray-light); }
+    a { @include button-border($gray-light); }
   }
 }
 
@@ -39,7 +39,7 @@ ul.nav-menu {
     li { 
       float: none; 
       text-align: right;
-      line-height: 3rem;
+      line-height: 2.75rem;
     }
   }
 
@@ -47,17 +47,17 @@ ul.nav-menu {
 
   li {
     float: left;
-    padding-right: 24px;
+    padding-right: 1.5rem;
 
-    a { @include button-border($gray-jet, $gray-light); }
+    a { @include button-border($gray-light); }
   }
 }
 
 .nav-toggle {  
   position: relative;
-  margin: calc(2rem - (23px / 2)) 2rem;
-  width: 30px;
-  height: 23px;
+  margin: calc(2rem - (1.5rem / 2)) 2rem;
+  width: 1.75rem;
+  height: 1.5rem;
   float: right;
 
   @include breakpoint($small-screen) { display: none; }
@@ -73,8 +73,8 @@ ul.nav-menu {
     &:checked + span {
       background: transparent;
 
-      &:before { transform: rotate(-45deg) translate(-4px, 12px); }
-      &:after { transform: rotate(45deg) translate(-1px, -8px); }
+      &:before { transform: rotate(-45deg) translate(-4px, 0.75rem); }
+      &:after { transform: rotate(45deg) translate(-1px, -0.5rem); }
     }
   }
 }
