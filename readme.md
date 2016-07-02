@@ -13,13 +13,13 @@
 
 ## Description
 
-This is a static website for the Expletive Studios, an indie game development studio.
+This is a static website for Expletive Studios, an indie game development studio.
 
 ---
 
 ## Installation
 
-First and foremost, the development environment requires the appropriate global software.
+First and foremost, the development environment requires the appropriate development tools.
 
 1. Requires manual installation via executable
 	
@@ -104,6 +104,8 @@ Globally install gulp for access to 'gulp' command
 Globally install bower for access to 'bower' command
 
 		npm install -g bower
+
+### Bower
 
 Install all bower components
 
