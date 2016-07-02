@@ -1,6 +1,6 @@
 {
-  "name": "portfolio",
-  "description": "Static website to depict portfolio of work.",
+  "name": "devster",
+  "description": "Web page development using gulp, sass, and nunjucks",
   "main": "index.html",
   "authors": [
     "Patrick Petrushonis <pwp904@gmail.com>"

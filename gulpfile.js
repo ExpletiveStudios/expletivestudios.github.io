@@ -16,6 +16,7 @@ var sync      = require('browser-sync');
 /** 
  * Commands:
  * gulp
+ * gulp images
  * gulp nunjucks
  * gulp sass
  * gulp scripts
