@@ -1,100 +1,118 @@
-.header-container {  
-  height: 4rem;
-  width: 100%;
-  background-color: $gray-jet;
-}
+@include keyframes('reveal-header') {
+		0% { top: -5em; }
+		100% { top: 0; }
+	}
 
-.header-controls {
-  margin: 0 auto;
-  max-width: $large-screen;   
+	#header {
+		background: _palette(header, bg);
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.075);
+		color: _palette(header, fg);
+		cursor: default;
+		font-size: 0.8em;
+		left: 0;
+		padding: 1em 1.5em;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10000;
 
-  .header-logo {
-    margin-left: 1rem;
-    float: left;
-    line-height: 4rem;      
+		h1 {
+			font-weight: 900;
+			margin: 0;
 
-    a { @include button-border($gray-light); }
-  }
-}
+			span {
+				font-weight: 300;
+			}
+		}
 
-ul.nav-menu {
-  margin: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  width: auto;
-  height: auto;
-  display: none;
-  float: right;
-  line-height: 4rem;
-  list-style: none;
+		nav {
+			letter-spacing: 0.075em;
+			position: absolute;
+			right: 1.5em;
+			text-transform: uppercase;
+			top: 0.75em;
 
-  &.show-nav {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    padding-right: 0;
-    width: 100%;
-    display: block;
-    background-color: $gray-jet;
+			ul {
+				li {
+					display: inline-block;
+					margin-left: 1.5em;
 
-    li { 
-      float: none; 
-      text-align: right;
-      line-height: 2.75rem;
-    }
-  }
+					> ul {
+						display: none;
+					}
 
-  @include breakpoint($small-screen) { display: block; }
+					a {
+						border: solid 1px transparent;
+						color: inherit;
+						display: inline-block;
+						line-height: 1em;
+						padding: 0.6em 0.75em;
+						text-decoration: none;
+					}
 
-  li {
-    float: left;
-    padding-right: 1.5rem;
+					input[type="button"],
+					input[type="submit"],
+					input[type="reset"],
+					.button {
+						font-size: 1em;
+						min-width: 0;
+						width: auto;
+					}
 
-    a { @include button-border($gray-light); }
-  }
-}
+					&.submenu {
+						> a {
+							@include icon;
 
-.nav-toggle {  
-  position: relative;
-  margin: calc(2rem - (1.5rem / 2)) 2rem;
-  width: 1.75rem;
-  height: 1.5rem;
-  float: right;
+							&:before {
+								content: '\f107';
+								margin-right: 0.65em;
+							}
+						}
+					}
 
-  @include breakpoint($small-screen) { display: none; }
+					&.active,
+					&:hover {
+						> a {
+							@include vendor('transition', 'all 0.2s ease-in-out');
+							background: rgba(188,202,206,0.15);
+						}
+					}
 
-  input[type="checkbox"] {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-    cursor: pointer;
+					&.current {
+						> a {
+							font-weight: 900;
+						}
+					}
+				}
+			}
+		}
 
-    &:checked + span {
-      background: transparent;
+		&.reveal {
+			@include vendor('animation', 'reveal-header 0.5s');
+		}
 
-      &:before { transform: rotate(-45deg) translate(-4px, 0.75rem); }
-      &:after { transform: rotate(45deg) translate(-1px, -0.5rem); }
-    }
-  }
-}
+		&.alt {
+			@include vendor('animation', 'none');
+			background: _palette(header, alt-bg);
+			box-shadow: none;
+			color: _palette(header, alt-fg);
+			padding: 2em 2.5em;
+			position: absolute;
 
-.nav-icon {
-  position: absolute;
-  top: 9.5px;
-  width: 100%;
-  height: 5px;
-  background: $gray-light;    
+			nav {
+				right: 2.5em;
+				top: 1.75em;
 
-  &:before, &:after {
-    position: absolute;    
-    width: 100%;
-    height: 5px;
-    content: "";
-    background: $gray-light;
-    transition: 0.3s;
-  }
-
-  &:before { top: -9px; }
-  &:after { top: 9px; }
-}
+				ul {
+					li {
+						&.active,
+						&:hover {
+							> a {
+								border: solid 1px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}

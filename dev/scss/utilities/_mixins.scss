@@ -1,51 +1,56 @@
-// Mobile first breakpoint
-@mixin breakpoint($point) {
-	@media screen and (min-width: $point) { @content; }
-}
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin icon($content: false, $where: before) {
 
-// Default button with customizable colors
-@mixin button($default-color, $action-color) {
-	padding: 0.5rem;
-	background-color: transparent;
-	border: 2px solid $default-color;
-	border-radius: 5px;
-	color: $action-color;
-	font-size: 1rem;
 	text-decoration: none;
-	transition: all 0.3s ease-out;
 
-	&:focus,
-	&:hover { 
-		background-color: $action-color;
-		border-color: $action-color;
-		color: $gray-light;
+	&:#{$where} {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+
 	}
+
 }
 
-@mixin button-border($action-color) {
-	padding: 0.5rem;
-	border: 2px solid transparent;
-	border-radius: 5px;
-	color: $action-color;
-	font-size: 1rem;
-	text-decoration: none;
-	transition: all 0.3s ease-out;
+/// Applies padding to an element, taking the current element-margin value into account.
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
 
-	&:focus,
-	&:hover { border: 2px solid $action-color; }
+	@if $important {
+		$important: '!important';
+	}
+
+	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+
 }
 
-@mixin social-icon($name) {
-	height: 1.5rem;
-	width: 1.5rem;
-	display: block;	
-	background: url('../img/logo-' + $name + '.png');	
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	transition: all 0.3s ease-in-out;
+/// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
+/// @param {string} $svg SVG data URL.
+/// @return {string} Encoded SVG data URL.
+@function svg-url($svg) {
 
-	&:hover {
-		transform: translateY(-0.25rem);
-	}
+	$svg: str-replace($svg, '"', '\'');
+	$svg: str-replace($svg, '<', '%3C');
+	$svg: str-replace($svg, '>', '%3E');
+	$svg: str-replace($svg, '&', '%26');
+	$svg: str-replace($svg, '#', '%23');
+	$svg: str-replace($svg, '{', '%7B');
+	$svg: str-replace($svg, '}', '%7D');
+	$svg: str-replace($svg, ';', '%3B');
+
+	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
+
 }
