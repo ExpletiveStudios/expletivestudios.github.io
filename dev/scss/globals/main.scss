@@ -680,7 +680,7 @@
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: _palette(three, bg);
-		background-image: url('images/light-bl.svg'), url('images/light-br.svg'), url('images/overlay.png'), url('../img/alex-kintner-eidetus-portcity.jpg');
+		background-image: url('images/light-bl.svg'), url('images/light-br.svg'), url('images/overlay.png'), url('../img/alex-kintner-eidetus-darkcity.jpg');
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: $pattern-background-size, $pattern-background-size, auto, cover;
@@ -692,7 +692,7 @@
 		.inner {
 			@include vendor('animation', 'reveal-banner 1s 0.25s ease-in-out');
 			@include vendor('animation-fill-mode', 'forwards');
-			background: transparentize(_palette(banner, inner-bg), 0.5);
+			background: transparentize(_palette(banner, inner-bg), 0.3);
 			color: _palette(banner, inner-fg);
 			display: inline-block;
 			opacity: 0;
