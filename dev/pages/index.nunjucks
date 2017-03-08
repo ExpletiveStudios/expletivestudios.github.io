@@ -37,9 +37,9 @@
 			<div class="8u 12u(narrower)">
 
 				<header>
-					<h2>Something informative about the team</h2>
+					<h2>Welcome to Expletive Studios!</h2>
 				</header>
-				<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
+				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="#">here</a>, or take a look at our current game <a href="#">here</a>.</p>
 				<footer>
 					<ul class="buttons">
 						<li><a href="#" class="button">Find Out More</a></li>
@@ -53,8 +53,8 @@
 	<!-- Two -->
 	<section class="wrapper style1 container special">
 		<div class="row">
+			<a href="#">
 			<div class="4u 12u(narrower)">
-
 				<section>
 					<span class="icon featured fa-check"></span>
 					<header>
@@ -62,10 +62,10 @@
 					</header>
 					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
 				</section>
-
 			</div>
+			</a>
+			<a href="#">
 			<div class="4u 12u(narrower)">
-
 				<section>
 					<span class="icon featured fa-check"></span>
 					<header>
@@ -73,10 +73,10 @@
 					</header>
 					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
 				</section>
-
 			</div>
+			</a>
+			<a href="#">
 			<div class="4u 12u(narrower)">
-
 				<section>
 					<span class="icon featured fa-check"></span>
 					<header>
@@ -84,8 +84,8 @@
 					</header>
 					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
 				</section>
-
 			</div>
+			</a>
 		</div>
 	</section>
 </article>
