@@ -605,6 +605,11 @@
 					}
 				}
 			}
+
+			.link {
+				color: _palette(one, fg);
+				font-weight: bold;
+			}
 		}
 
 		&.style3 {
@@ -785,6 +790,10 @@
 
 		header {
 			margin-bottom: 2em;
+		}
+
+		a {
+			border-bottom: none;
 		}
 	}
 

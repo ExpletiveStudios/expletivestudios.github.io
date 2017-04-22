@@ -39,7 +39,7 @@
 				<header>
 					<h2>Welcome to Expletive Studios!</h2>
 				</header>
-				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="#">here</a>, or take a look at our current game <a href="#">here</a>.</p>
+				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="#" class="link">here</a>, or take a look at our current game <a href="#" class="link">here</a>.</p>
 				<footer>
 					<ul class="buttons">
 						<li><a href="#" class="button">Find Out More</a></li>
@@ -58,9 +58,9 @@
 				<section>
 					<span class="icon featured fa-check"></span>
 					<header>
-						<h3>This is Something</h3>
+						<h3>Blog post coming soon!</h3>
 					</header>
-					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+					<p>This is where the blogs posts will be. Be sure to check back often to see progress on the game!</p>
 				</section>
 			</a>
 			</div>			
@@ -69,9 +69,9 @@
 				<section>
 					<span class="icon featured fa-check"></span>
 					<header>
-						<h3>Also Something</h3>
+						<h3>Blog post coming soon!</h3>
 					</header>
-					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+					<p>This is where the blogs posts will be. Be sure to check back often to see progress on the game!</p>
 				</section>
 			</a>
 			</div>
@@ -80,9 +80,9 @@
 				<section>
 					<span class="icon featured fa-check"></span>
 					<header>
-						<h3>Probably Something</h3>
+						<h3>Blog post coming soon!</h3>
 					</header>
-					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+					<p>This is where the blogs posts will be. Be sure to check back often to see progress on the game!</p>
 				</section>
 			</a>
 			</div>			
@@ -94,13 +94,15 @@
 	<section id="cta">
 
 		<header>
-			<h2>Ready to do <strong>something</strong>?</h2>
-			<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
+			<h2>Ready to <strong>follow us</strong>?</h2>
+			<p>Click one of our social links below!</p>
 		</header>
 		<footer>
 			<ul class="buttons">
-				<li><a href="#" class="button special">Take My Money</a></li>
-				<li><a href="#" class="button">LOL Wut</a></li>
+				<li><a href="http://www.facebook.com/expletivestudios"><img src="/app/img/facebook.png"></a></li>
+				<li><a href="http://www.instagram.com/expletivestudios"><img src="/app/img/insta.png"></a></li>
+				<li><a href="http://www.twitter.com/ExpletiveStudio"><img src="/app/img/twitter.png"></a></li>
+				<li><a href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="/app/img/youtube.png"></a></li>
 			</ul>
 		</footer>
 
