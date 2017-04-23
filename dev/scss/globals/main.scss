@@ -214,6 +214,11 @@
 		&.major {
 			padding-top: 3em;
 		}
+
+		img {
+			width: 64px;
+			height: 64px;
+		}
 	}
 
 /* List */
@@ -509,11 +514,7 @@
 /* CTA */
 
 	#cta {
-		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: _palette(three, bg);
-		background-position: top left, top right, top left, bottom center;
-		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: $pattern-background-size, $pattern-background-size, auto, cover;
 		color: _palette(three, fg);
 		padding: 5em;
 		text-align: center;
@@ -524,37 +525,6 @@
 
 		a {
 			border-bottom: none;
-		}
-	}
-
-/* Footer */
-
-	#footer {
-		background: _palette(footer, bg);
-		color: _palette(footer, fg);
-		padding: 5em 5em 10em 5em;
-		text-align: center;
-
-		.copyright {
-			font-size: 0.8em;
-			line-height: 1em;
-
-			a {
-				color: inherit;
-			}
-
-			li {
-				display: inline-block;
-				margin-left: 1em;
-				padding-left: 1em;
-				border-left: dotted 1px;
-
-				&:first-child {
-					margin: 0;
-					padding: 0;
-					border: 0;
-				}
-			}
 		}
 	}
 
@@ -644,13 +614,6 @@
 				padding: 4em;
 				background-attachment: scroll;
 			}
-
-		/* Footer */
-
-			#footer {
-				padding: 4em;
-			}
-
 	}
 
 /* Narrow */
@@ -804,22 +767,13 @@
 						float: none;
 						width: auto;
 
-						.icon {
-							font-size: 4em;
-							width: 1.25em;
-						}
 					}
 				}
 
 				&.buttons {
 					li {
-						display: block;
+						display: inline-block;
 						padding: 1em 0 0 0;
-
-						img {
-							height: 64px;
-							width: 64px;
-						}
 					}
 				}
 			}
@@ -872,12 +826,6 @@
 
 			#cta {
 				margin: 0;
-			}
-
-		/* Footer */
-
-			#footer {
-				padding: 4em 1.5em;
 			}
 
 		/* Off-Canvas Navigation */
@@ -1060,13 +1008,11 @@
 				&.major {
 					padding-top: 0;
 				}
-			}
 
-		/* Icon */
-
-			.icon {
-				&.circle {
-					font-size: 1em;
+				img {
+					padding-left: 5px;
+					width: 32px;
+					height: 32px;
 				}
 			}
 
@@ -1076,7 +1022,6 @@
 			input[type="submit"],
 			input[type="reset"],
 			.button {
-				max-width: 20em;
 				width: 100%;
 
 				&.fit {
@@ -1136,7 +1081,7 @@
 		/* Banner */
 
 			#banner {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+				background-size: cover;
 				padding: 6em 0;
 
 				.inner {
@@ -1179,21 +1124,6 @@
 			#cta {
 				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
 				padding: 3em 1.5em;
-			}
-
-		/* Footer */
-
-			#footer {
-				padding: 3em 1.5em;
-
-				.copyright {
-					li {
-						display: block;
-						margin: 1em 0 0 0;
-						padding: 0;
-						border: 0;
-					}
-				}
 			}
 
 		/* Off-Canvas Navigation */
