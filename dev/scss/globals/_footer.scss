@@ -1,0 +1,24 @@
+#footer {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+
+	footer {
+		width: 80%;
+		display: inline-block;
+		text-align: right;
+
+		ul {
+			display: inline-block;
+
+			a {
+				border-bottom: none;
+				
+				img{
+					width: 48px;
+					height: 48px;
+				}
+			}
+		}
+	}
+}

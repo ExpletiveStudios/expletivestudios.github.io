@@ -1,0 +1,61 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<!-- Main -->
+<div id="header-color"></div>
+<article id="main">
+
+	<!-- One -->
+	<section class="wrapper style2 container special-alt">
+		<div class="row 50%" id="about">
+			<div>
+
+				<header>
+					<h2>Welcome to Expletive Studios!</h2>
+				</header>
+				<p>We're a little <strong>!%£@?&#</strong> indie with big <strong>!%£@?&#</strong> dreams. Founded around a kitchen table with a lot of coffee; we started out as a bunch of freinds with an idea to make a game.  Through college and multiple jobs we maintained working on the game full time.</p>
+				<p>We are now working hard to get our first game into the hands of the masses for the first public alpha. Be sure to check back for more for frequent updates.</p>
+				<p>Click on of the team members below to find out more!</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="wrapper style1 container special">
+		<div class="row">			
+			<div class="4u 12u(narrower) team-card">
+			<a href="#">
+				<section>
+					<span class="icon featured fa-check"></span>
+					<header>
+						<h3>Alex Kintner</h3>
+					</header>
+					<p>Concept Artist &#9679; 3D Artist<br />Animator &#9679; Particle Artist</p>
+				</section>
+			</a>
+			</div>			
+			<div class="4u 12u(narrower) team-card">
+			<a href="#">
+				<section>
+					<span class="icon featured fa-check"></span>
+					<header>
+						<h3>Joe Faiella</h3>
+					</header>
+					<p>Community Manager &#9679; Website Programmer <br />Game Designer</p>
+				</section>
+			</a>
+			</div>
+			<div class="4u 12u(narrower) team-card">
+			<a href="#">
+				<section>
+					<span class="icon featured fa-check"></span>
+					<header>
+						<h3>Pat Petrushonus</h3>
+					</header>
+					<p>Gameplay Programmer &#9679; UI Designer<br />Network Engineer</p>
+				</section>
+			</a>
+			</div>			
+		</div>
+	</section>
+</article>
+{% endblock %}
