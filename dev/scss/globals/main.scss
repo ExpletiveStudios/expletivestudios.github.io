@@ -681,7 +681,7 @@
 		/* Banner */
 
 			#banner {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+				background-size: cover;
 			}
 
 		/* Main */
@@ -693,7 +693,7 @@
 		/* CTA */
 
 			#cta {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+				background-size: cover;
 				padding: 3em;
 			}
 
@@ -1122,7 +1122,7 @@
 		/* CTA */
 
 			#cta {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+				background-size: cover;
 				padding: 3em 1.5em;
 			}
 
