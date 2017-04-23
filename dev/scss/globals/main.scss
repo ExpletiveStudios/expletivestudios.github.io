@@ -188,21 +188,6 @@
 				margin-bottom: 0;
 				padding-top: 1.5em;
 			}
-
-			.icon {
-				cursor: default;
-				height: 7em;
-				left: 0;
-				position: absolute;
-				text-align: center;
-				top: 1em;
-				width: 100%;
-
-				&:before {
-					font-size: 3.5em;
-					opacity: 0.35;
-				}
-			}
 		}
 	}
 
@@ -241,43 +226,6 @@
 
 			li {
 				padding-left: 0.5em;
-			}
-		}
-
-		&.icons {
-			cursor: default;
-
-			li {
-				display: inline-block;
-				line-height: 1em;
-				padding-left: 0.5em;
-
-				&:first-child {
-					padding-left: 0;
-				}
-			}
-		}
-
-		&.featured-icons {
-			cursor: default;
-			margin: -0.75em 0 0 0;
-			opacity: 0.35;
-			overflow: hidden;
-			position: relative;
-
-			li {
-				display: block;
-				float: left;
-				text-align: center;
-				width: 50%;
-
-				.icon {
-					display: inline-block;
-					font-size: 6.25em;
-					height: 1.25em;
-					line-height: 1.25em;
-					width: 1em;
-				}
 			}
 		}
 
@@ -490,20 +438,6 @@
 
 		> :last-child {
 			margin-bottom: 0;
-		}
-
-		.sidebar {
-			section {
-				border-top: solid 1px _palette(border);
-				margin: 3em 0 0 0;
-				padding: 3em 0 0 0;
-
-				&:first-child {
-					border-top: 0;
-					padding-top: 0;
-					margin-top: 0;
-				}
-			}
 		}
 	}
 
