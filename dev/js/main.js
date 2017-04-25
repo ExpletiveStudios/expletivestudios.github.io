@@ -8,3 +8,4 @@
 // Custom JavaScript partials
 // =require partials/footer.js
 // =require partials/header.js
+// =require partials/team.js
