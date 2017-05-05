@@ -434,7 +434,12 @@
 		background-position: bottom right;
 		background-repeat: no-repeat;
 		background-size: $pattern-background-size;
-		padding: 7em 0;
+		padding: 0 0;
+
+		.banner-color {
+			width: 100%;
+			background-color: _palette(one, bg);
+		}
 
 		> :last-child {
 			margin-bottom: 0;
@@ -452,6 +457,7 @@
 		color: _palette(three, fg);
 		padding: 5em;
 		text-align: center;
+		margin-bottom: -1em;
 
 		header {
 			margin-bottom: 2em;
@@ -470,19 +476,39 @@
 		background-color: _palette(three, bg);
 	}
 
-/* Team card */
-	
-	.team-card {
-		color: _palette(three, bg);
-	}
-
 /* Info Box */
 
-	#info-1 {
+	#info-1, #info-2, #info-3 {
+		display: none;
 		width: 100%;
-		height: 250px;
+		min-height: 20em;
 		background-color: #b0b0b0;
-		margin-top: -20px;
+		padding: 2em;
+		margin-bottom: 3em;
+		text-align: left;
+		color: _palette(banner, bg);
+
+		img {
+			vertical-align: top;
+			margin-right: 3em;
+		}
+
+		#member-info {
+			display: inline-block;
+			width: 70%;
+
+			strong {
+				border-bottom: 1px dashed _palette(banner, bg);
+			}
+		}
+	}
+
+/* Newsletter input*/
+
+	#mce-EMAIL {
+		border-radius: 10px;
+		padding-left: 19px;
+		display: inline-block;
 	}
 
 /* Wide */

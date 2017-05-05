@@ -4,10 +4,10 @@
         <footer id="footer">
         	<footer>
 				<ul class="buttons">
-					<li><a href="http://www.facebook.com/expletivestudios"><img src="/app/img/facebook-red.png"></a></li>
-					<li><a href="http://www.instagram.com/expletivestudios"><img src="/app/img/insta-red.png"></a></li>
-					<li><a href="http://www.twitter.com/ExpletiveStudio"><img src="/app/img/twitter-red.png"></a></li>
-					<li><a href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="/app/img/youtube-red.png"></a></li>
+					<li><a target="_blank" href="http://www.facebook.com/expletivestudios"><img src="/app/img/facebook-red.png"></a></li>
+					<li><a target="_blank" href="http://www.instagram.com/expletivestudios"><img src="/app/img/insta-red.png"></a></li>
+					<li><a target="_blank" href="http://www.twitter.com/ExpletiveStudio"><img src="/app/img/twitter-red.png"></a></li>
+					<li><a target="_blank" href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="/app/img/youtube-red.png"></a></li>
 				</ul>
 			</footer>
         </footer>

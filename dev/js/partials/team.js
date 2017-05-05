@@ -1,6 +1,17 @@
-$("#team-card").click(function(){
-	$(this).css("background-image", " url('/app/img/team-card-point.png')");
-	$(this).css("background-position"," center");
-	$(this).css("background-repeat"," no-repeat");
-	$(this).css("background-size","cover");
+$("#member-1").click(function(){
+	$("#info-1").show();
+	$("#info-2").hide();
+	$("#info-3").hide();
+});
+
+$("#member-2").click(function(){
+	$("#info-1").hide();
+	$("#info-2").show();
+	$("#info-3").hide();
+});
+
+$("#member-3").click(function(){
+	$("#info-1").hide();
+	$("#info-2").hide();
+	$("#info-3").show();
 });

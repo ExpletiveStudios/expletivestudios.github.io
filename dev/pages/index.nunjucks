@@ -32,6 +32,7 @@
 <article id="main">
 
 	<!-- One -->
+	<div class="banner-color">
 	<section class="wrapper style2 container special-alt">
 		<div class="row 50%">
 			<div class="8u 12u(narrower)">
@@ -49,6 +50,7 @@
 			</div>
 		</div>
 	</section>
+	</div>
 
 	<!-- Two -->
 	<section class="wrapper style1 container special">
@@ -95,18 +97,25 @@
 
 		<header>
 			<h2>Ready to <strong>follow us</strong>?</h2>
-			<p>Click one of our social links below!</p>
+			<p>Enter your email adress below to sign up for our newsletter!</p>
 		</header>
 		<footer>
-			<ul class="buttons">
-				<li><a href="http://www.facebook.com/expletivestudios"><img src="/app/img/facebook.png"></a></li>
-				<li><a href="http://www.instagram.com/expletivestudios"><img src="/app/img/insta.png"></a></li>
-				<li><a href="http://www.twitter.com/ExpletiveStudio"><img src="/app/img/twitter.png"></a></li>
-				<li><a href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="/app/img/youtube.png"></a></li>
-			</ul>
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+			<form action="//expletivestudios.us15.list-manage.com/subscribe/post?u=2e07229fedd317f43de1a7336&amp;id=9132aaa9b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			    <div id="mc_embed_signup_scroll">
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required size="35">
+			    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2e07229fedd317f43de1a7336_9132aaa9b3" tabindex="-1" value=""></div>&nbsp;&nbsp;&nbsp;<input type="submit" value="Sign me up!" name="subscribe" id="mc-embedded-subscribe" class="button special">
+			    </div>
+			</form>
+			</div>
+
+			<!--End mc_embed_signup-->
 		</footer>
 
 	</section>
 
 </div>
+
 {% endblock %}
