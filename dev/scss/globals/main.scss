@@ -477,7 +477,14 @@
 	}
 
 /* Info Box */
-
+	
+	#info-0{
+		width: 100%;
+		min-height: 20em;
+		background-color: #b0b0b0;
+		margin-bottom: 3em;
+	}
+	
 	#info-1, #info-2, #info-3 {
 		display: none;
 		width: 100%;
