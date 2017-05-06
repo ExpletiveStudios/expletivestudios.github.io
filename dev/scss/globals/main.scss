@@ -557,6 +557,20 @@
 		display: inline-block;
 	}
 
+/* 404 */ 
+	
+	#gameCanvas {
+		background-color: #b0b0b0;
+	}
+
+/* Game container */
+
+	.game-container {
+		margin-top: 3em;
+		text-align: center;
+		width: 100%;
+	}
+
 /* Wide */
 
 	@include breakpoint(wide) {
