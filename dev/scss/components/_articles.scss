@@ -1,0 +1,169 @@
+
+/* Section/Article */
+
+section, article {
+	&.special {
+		text-align: center;
+	}
+}
+
+header {
+	&.major {
+		padding-bottom: 2em;
+	}
+
+	&.special {
+		margin-bottom: 5em;
+		padding-top: 7em;
+		position: relative;
+		text-align: center;
+
+		&:before,
+		&:after {
+			border-bottom: solid 1.5px;
+			border-top: solid 1.5px;
+			content: '';
+			height: 7px;
+			opacity: 0.1;
+			position: absolute;
+			top: 1.75em;
+			width: 43%;
+		}
+
+		&:before {
+			left: 0;
+		}
+
+		&:after {
+			right: 0;
+		}
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		h2 + p {
+			margin-bottom: 0;
+			padding-top: 1.5em;
+		}
+	}
+}
+
+footer {
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	&.major {
+		padding-top: 3em;
+	}
+
+	img {
+		width: 64px;
+		height: 64px;
+	}
+}
+	
+@include breakpoint(wide) {
+	header {
+		&.special {
+			padding-top: 5.5em;
+			margin-bottom: 4em;
+		}
+	}
+}
+
+@include breakpoint(normal) {
+	header {
+		&.major {
+			padding-bottom: 1.5em;
+		}
+	}
+
+	footer {
+		&.major {
+			padding-top: 2em;
+		}
+	}
+}
+
+@include breakpoint(narrow) {
+	header {
+		br {
+			display: none;
+		}
+
+		&.major {
+			padding-bottom: 1em;
+		}
+
+		&.special {
+			padding-left: 2.5em;
+			padding-right: 2.5em;
+		}
+	}
+
+	footer {
+		&.major {
+			padding-top: 1.5em;
+		}
+	}
+}
+
+@include breakpoint(narrower) {
+	section {
+		margin: 1em 0 1em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+@include breakpoint(mobile) {
+	header {
+		text-align: center;
+
+		&.major {
+			padding-bottom: 0;
+		}
+
+		&.special {
+			margin-bottom: 3em;
+			padding-left: 1.5em;
+			padding-right: 1.5em;
+
+			&:before,
+			&:after {
+				width: 38%;
+			}
+
+			.icon {
+				font-size: 0.75em;
+				top: 1.5em;
+			}
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+
+	footer {
+		&.major {
+			padding-top: 0;
+		}
+
+		img {
+			margin-left: 15px;
+			width: 32px;
+			height: 32px;
+		}
+
+		li:first-child {
+			img {
+				margin-left: 0px;
+			}
+		}
+	}
+}

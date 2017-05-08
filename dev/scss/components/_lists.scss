@@ -1,0 +1,96 @@
+
+/* List */
+
+ol {
+	&.default {
+		list-style: decimal;
+		padding-left: 1.25em;
+
+		li {
+			padding-left: 0.25em;
+		}
+	}
+}
+
+ul {
+	&.default {
+		list-style: disc;
+		padding-left: 1em;
+
+		li {
+			padding-left: 0.5em;
+		}
+	}
+
+	&.buttons {
+		cursor: default;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
+			display: inline-block;
+			padding: 0 0 0 1.5em;
+
+			&:first-child {
+				padding: 0;
+			}
+		}
+
+		&.vertical {
+			li {
+				display: block;
+				padding: 1.5em 0 0 0;
+
+				&:first-child {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(narrower) {
+	ul {
+		&.featured-icons {
+			margin: 0;
+
+			li {
+				display: inline-block;
+				float: none;
+				width: auto;
+
+			}
+		}
+
+		&.buttons {
+			li {
+				display: inline-block;
+				padding: 1em 0 0 0;
+			}
+		}
+	}
+}
+
+@include breakpoint(mobile) {
+	ul {
+		&.icons {
+			li {
+				padding-left: 0.25em;
+			}
+		}
+
+		&.featured-icons {
+			li {
+				.icon {
+					width: 1.1em;
+				}
+			}
+		}
+
+		&.buttons {
+			text-align: center;
+		}
+	}
+}

@@ -11,4 +11,16 @@
 'globals/footer';
 
 @import
-'pages/home';
+'components/articles',
+'components/banners',
+'components/buttons',
+'components/content',
+'components/lists',
+'components/newsletters',
+'components/wrappers';
+
+@import
+'pages/404',
+'pages/game',
+'pages/home',
+'pages/team';

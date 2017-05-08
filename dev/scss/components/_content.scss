@@ -1,0 +1,65 @@
+
+/* Main */
+
+#main {
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: $pattern-background-size;
+	padding: 0 0;
+
+	.banner-color {
+		width: 100%;
+		background-color: _palette(one, bg);
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.index #main {
+	padding-top: 5em;
+}
+
+
+@include breakpoint(narrow) {
+	#main {
+		background-size: $pattern-background-size;
+	}
+}
+
+
+@include breakpoint(narrower) {
+	#main {
+		padding: 5em 0;
+
+		.sidebar {
+			border-top: solid 1px transparentize(_palette(fg), 0.9);
+			padding-top: 3em;
+
+			section {
+				border-top: 0;
+				padding-top: 0;
+			}
+		}
+	}
+
+	.index #main {
+		padding-top: 4.5em;
+	}
+}
+
+@include breakpoint(mobile) {
+	#main {
+		background-size: $pattern-background-size;
+		padding: 3.5em 0 2.5em 0;
+	}
+
+	body.index #main {
+		padding: 2.5em 0 0 0;
+	}
+
+	body.contact #main {
+		padding-bottom: 0;
+	}
+}

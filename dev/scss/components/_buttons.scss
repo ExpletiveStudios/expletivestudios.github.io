@@ -1,0 +1,95 @@
+
+/* Button */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button {
+	@include vendor('appearance', 'none');
+	@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
+	background: none;
+	border: solid 1px;
+	color: inherit;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: 900;
+	letter-spacing: 2px;
+	min-width: 18em;
+	padding: 0 0.75em;
+	line-height: 3.75em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		background: rgba(188,202,206,0.15);
+		border-color: inherit;
+	}
+
+	&.special {
+		background: _palette(one, bg);
+		border-color: _palette(one, bg);
+		color: _palette(one, fg) !important;
+
+		&:hover {
+			background: lighten(_palette(one, bg), 5) !important;
+			border-color: lighten(_palette(one, bg), 5) !important;
+		}
+	}
+
+	&.fit {
+		width: 100%;
+	}
+
+	&.small {
+		font-size: 0.7em;
+		min-width: 14em;
+		padding: 0.5em 0;
+	}
+}
+
+.style2 {	
+	.button {
+		&:hover {
+			background: rgba(255,255,255,0.15) !important;
+		}
+
+		&.special {
+			background: _palette(one, fg);
+			border-color: _palette(one, fg);
+			color: _palette(one, bg) !important;
+
+			&:hover {
+				border-color: inherit !important;
+				color: _palette(one, fg) !important;
+			}
+		}
+	}
+}
+
+@include breakpoint(narrower) {
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	.button {
+		&.small {
+			font-size: 0.8em;
+			min-width: 18em;
+			padding: 0.75em 0;
+		}
+	}
+}
+
+@include breakpoint(mobile) {
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	.button {
+		width: 100%;
+
+		&.fit {
+			width: auto;
+		}
+	}
+}

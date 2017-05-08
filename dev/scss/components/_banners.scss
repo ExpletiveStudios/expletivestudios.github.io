@@ -1,0 +1,149 @@
+
+/* Banner */
+
+@include keyframes('reveal-banner') {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+#banner {
+	background-attachment: fixed;
+	background-color: _palette(three, bg);
+	background-image: url('../img/alex-kintner-eidetus-darkcity.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: _palette(banner, fg);
+	cursor: default;
+	padding: 6em 0;
+	text-align: center;
+
+	.inner {
+		@include vendor('animation', 'reveal-banner 1s 0.25s ease-in-out');
+		@include vendor('animation-fill-mode', 'forwards');
+		background: transparentize(_palette(banner, inner-bg), 0.3);
+		color: _palette(banner, inner-fg);
+		display: inline-block;
+		opacity: 0;
+		padding: 3em;
+		text-align: center;
+
+		header {
+			display: inline-block;
+			margin: 0 0 2em 0;
+			padding: 3px 0 3px 0;
+
+			h2 {
+				color: #393939;
+				border-bottom: solid 2px;
+				font-family: 'Helvetica', sans-serif;
+				font-size: 2em;
+				font-weight: 900;
+				letter-spacing: 0.05em;
+				margin: 0;
+				padding-left: 0.05em;
+				position: relative;
+
+				.red {
+					color: #c63838;
+				}
+			}
+		}
+
+		p {
+			letter-spacing: 0.1em;
+			margin: 0;
+
+			a {
+				color: inherit;
+				font-weight: 400;
+				text-decoration: none;
+			}
+		}
+
+		footer {
+			margin: 2em 0 0 0;
+		}
+	}
+}
+
+/* CTA */
+
+#cta {
+	background-color: _palette(three, bg);
+	color: _palette(three, fg);
+	padding: 5em;
+	text-align: center;
+	margin-bottom: -1em;
+
+	header {
+		margin-bottom: 2em;
+	}
+
+	a {
+		border-bottom: none;
+	}
+}
+
+@include breakpoint(normal) {
+	#banner {
+		background-attachment: scroll;
+	}
+
+	#cta {
+		padding: 4em;
+		background-attachment: scroll;
+	}
+}
+
+@include breakpoint(narrow) {
+	#banner {
+		background-size: cover;
+	}
+
+	#cta {
+		background-size: cover;
+		padding: 3em;
+	}
+}
+
+@include breakpoint(narrower) {
+	#banner {
+		margin: 0;
+	}
+
+	#cta {
+		margin: 0;
+	}
+}
+
+@include breakpoint(mobile) {
+	#banner {
+		background-size: cover;
+		padding: 6em 0;
+
+		.inner {
+			display: block;
+			padding: 0 1.5em;
+
+			header {
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+
+			p {
+				text-align: center;
+			}
+
+			br {
+				display: none;
+			}
+		}
+	}
+	
+	#cta {
+		background-size: cover;
+		padding: 3em 1.5em;
+	}
+}
