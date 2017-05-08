@@ -1,10 +1,11 @@
 @import
 'utilities/mixins',
 'utilities/functions',
-'utilities/settings';
+'utilities/settings',
+'utilities/skel';
 
 @import
-'globals/main',
+'globals/body',
 'globals/header',
 'globals/footer';
 
