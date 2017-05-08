@@ -7,15 +7,15 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>Expletive Studios</title>
   <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css"/>
-  <link href="app/css/main.css" rel="stylesheet" type="text/css"/>
-  <link href="/app/img/favicon.ico" rel="shortcut icon"/>
+  <link href="{{ relative_path }}app/css/main.css" rel="stylesheet" type="text/css"/>
+  <link href="{{ relative_path }}app/img/favicon.ico" rel="shortcut icon"/>
 </head>
 <body>
   <div class="main-container">
     {{ header.header() }}
     {% block content %} {% endblock %}
-    {{ footer.footer() }}
+    {{ footer.footer(relative_path) }}
   </div>
-  <footer><script src="app/js/main.js"></script></footer>
+  <footer><script src="{{ relative_path }}app/js/main.js"></script></footer>
 </body>
 </html>

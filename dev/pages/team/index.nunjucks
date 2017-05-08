@@ -1,5 +1,7 @@
 {% extends "layout.nunjucks" %}
 
+{% set relative_path = '../' %}
+
 {% block content %}
 <!-- Main -->
 <div id="header-color"></div>

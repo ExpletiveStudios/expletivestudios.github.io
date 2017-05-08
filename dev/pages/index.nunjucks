@@ -40,7 +40,7 @@
 				<header>
 					<h2>Welcome to Expletive Studios!</h2>
 				</header>
-				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="team.html#info-0" class="link">here</a>, or take a look at our current game <a href="#" class="link">here</a>.</p>
+				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="/team" class="link">here</a>, or take a look at our current game <a href="#" class="link">here</a>.</p>
 				<footer>
 					<ul class="buttons">
 						<li><a href="team.html#about" class="button">Find Out More</a></li>
