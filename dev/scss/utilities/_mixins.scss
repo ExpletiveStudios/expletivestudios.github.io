@@ -54,3 +54,53 @@
 	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
 
 }
+
+/// Increments of spacing for help classes
+$spaceamounts: (0, 1, 2, 3, 4, 5);
+
+/// Generates helper classes for margin and padding overrides
+@mixin generate-helpers() {
+  @each $space in $spaceamounts {
+	$new-space: $space * 11px;
+
+    .pad-#{$space} { padding: $new-space !important; }
+
+    .pad-top-#{$space} { padding-top: $new-space !important; }
+
+    .pad-right-#{$space} { padding-right: $new-space !important; }
+
+    .pad-bottom-#{$space} { padding-bottom: $new-space !important; }
+
+    .pad-left-#{$space} { padding-left: $new-space !important; }
+
+    .pad-vert-#{$space} {
+      padding-top: $new-space !important;
+      padding-bottom: $new-space !important;
+    }
+
+    .pad-sides-#{$space} {
+      padding-right: $new-space !important;
+      padding-left: $new-space !important;
+    }
+
+    .marg-#{$space} { margin: $new-space !important; }
+
+    .marg-top-#{$space} { margin-top: $new-space !important; }
+
+    .marg-right-#{$space} { margin-right: $new-space !important; }
+
+    .marg-bottom-#{$space} { margin-bottom: $new-space !important; }
+
+    .marg-left-#{$space} { margin-left: $new-space !important; }
+
+    .marg-vert-#{$space} {
+      margin-top: $new-space !important;
+      margin-bottom: $new-space !important;
+    }
+
+    .marg-sides-#{$space} {
+      margin-right: $new-space !important;
+      margin-left: $new-space !important;
+    }
+  }
+}
