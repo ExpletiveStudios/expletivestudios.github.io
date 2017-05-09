@@ -2,7 +2,13 @@
 /* Newsletter input*/
 
 #mce-EMAIL {
-	border-radius: 10px;
-	padding-left: 19px;
+	padding-left: 11px;
 	display: inline-block;
+	height: 44px;
+	max-width: 100%;
+	border-radius: 0;
+
+	@include breakpoint(mobile) {
+		width: 100%;
+	}
 }

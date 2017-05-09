@@ -6,9 +6,7 @@ section, article {
 		text-align: center;
 	}
 
-	@include breakpoint(narrower) {		
-		margin: 1em 0 1em 0;
-
+	@include breakpoint(narrower) {
 		&:first-child { margin-top: 0; }
 	}
 }

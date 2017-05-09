@@ -7,23 +7,28 @@ input[type="reset"],
 .button {
 	@include vendor('appearance', 'none');
 	@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
+
+	margin: 0 0 22px;
+	padding: 0 22px;
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+
 	background: none;
 	border: solid 1px;
 	color: inherit;
 	cursor: pointer;
-	display: inline-block;
+
 	font-size: 0.8em;
 	font-weight: 900;
 	letter-spacing: 2px;
-	min-width: 18em;
-	padding: 0 0.75em;
-	line-height: 3.75em;
+
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 
 	&:hover {
-		background: transparentize(color(gray, straight), 0.15);
+		background: transparentize(color(gray, straight), 0.85);
 		border-color: inherit;
 	}
 
@@ -58,20 +63,5 @@ input[type="reset"],
 		width: 100%;
 
 		&.fit { width: auto; }
-	}
-}
-
-.style2 .button {
-	&:hover { background: transparentize(color(mono, white), 0.15) !important; }
-
-	&.special {
-		background: color(mono, white);
-		border-color: color(mono, white);
-		color: color(gray, straight) !important;
-
-		&:hover {
-			border-color: inherit !important;
-			color: color(mono, white) !important;
-		}
 	}
 }
