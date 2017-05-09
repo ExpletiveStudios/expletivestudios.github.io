@@ -23,18 +23,18 @@ input[type="reset"],
 	text-transform: uppercase;
 
 	&:hover {
-		background: rgba(188,202,206,0.15);
+		background: transparentize(color(gray, straight), 0.15);
 		border-color: inherit;
 	}
 
 	&.special {
-		background: _palette(one, bg);
-		border-color: _palette(one, bg);
-		color: _palette(one, fg) !important;
+		background: color(primary, red);
+		border-color: color(primary, red);
+		color: color(mono, white) !important;
 
 		&:hover {
-			background: lighten(_palette(one, bg), 5) !important;
-			border-color: lighten(_palette(one, bg), 5) !important;
+			background: lighten(color(primary, red), 5) !important;
+			border-color: lighten(color(primary, red), 5) !important;
 		}
 	}
 
@@ -62,16 +62,16 @@ input[type="reset"],
 }
 
 .style2 .button {
-	&:hover { background: rgba(255,255,255,0.15) !important; }
+	&:hover { background: transparentize(color(mono, white), 0.15) !important; }
 
 	&.special {
-		background: _palette(one, fg);
-		border-color: _palette(one, fg);
-		color: _palette(one, bg) !important;
+		background: color(mono, white);
+		border-color: color(mono, white);
+		color: color(gray, straight) !important;
 
 		&:hover {
 			border-color: inherit !important;
-			color: _palette(one, fg) !important;
+			color: color(mono, white) !important;
 		}
 	}
 }

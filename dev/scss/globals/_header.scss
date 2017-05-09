@@ -4,9 +4,9 @@
 }
 
 #header {
-	background: _palette(header, bg);
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.075);
-	color: _palette(header, fg);
+	background: color(mono, white);
+	box-shadow: 0 1px 2px 0 transparentize(color(mono, black), 0.075);
+	color: inherit;
 	cursor: default;
 	font-size: 1em;
 	left: 0;
@@ -67,7 +67,7 @@
 			&:hover {
 				> a {
 					@include vendor('transition', 'all 0.2s ease-in-out');
-					background: rgba(188,202,206,0.15);
+					background: transparentize(color(gray, straight), 0.15);
 				}
 			}
 
@@ -81,9 +81,9 @@
 
 	&.alt {
 		@include vendor('animation', 'none');
-		background: _palette(header, alt-bg);
+		background: transparent;
 		box-shadow: none;
-		color: _palette(header, alt-fg);
+		color: color(mono, white);
 		padding: 2em 2.5em;
 		position: absolute;
 
@@ -94,9 +94,7 @@
 			ul li {
 				&.active,
 				&:hover {
-					> a {
-						border: solid 1px;
-					}
+					> a { border: solid 1px; }
 				}
 			}
 		}
@@ -113,6 +111,7 @@
 
 #navPanel {
 	display: none;
+
 	@include breakpoint(narrower) {
 		@include vendor('backface-visibility', 'hidden');
 		@include vendor('transform', 'translateX(#{_size(navPanel) * -1})');
@@ -125,8 +124,8 @@
 		top: 0;
 		width: _size(navPanel);
 		z-index: _misc(z-index-base) + 2;
-		background: _palette(navPanel, bg);
-		color: _palette(navPanel, fg);
+		background: color(gray, off-black);
+		color: color(mono, white);
 		font-size: 0.8em;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
@@ -134,7 +133,7 @@
 
 		.link {
 			border: 0;
-			border-top: solid 1px transparentize(_palette(navPanel, fg), 0.95);
+			border-top: solid 1px transparentize(color(mono, white), 0.95);
 			color: inherit;
 			display: block;
 			height: 3em;
@@ -182,7 +181,7 @@
 			outline: 0;
 
 			&:before {
-				color: _palette(navButton, fg);
+				color: color(mono, white);
 				content: '\f0c9';
 				font-size: 1em;
 				height: 40px;
@@ -196,7 +195,7 @@
 			}
 
 			&:after {
-				background: _palette(navButton, bg);
+				background: color(gray, straight);
 				border-radius: 2px;
 				content: '';
 				height: 40px;
@@ -249,5 +248,5 @@
 #header-color {
 	width: 100%;
 	height: 6em;
-	background-color: _palette(three, bg);
+	background-color: color(gray, jet);
 }

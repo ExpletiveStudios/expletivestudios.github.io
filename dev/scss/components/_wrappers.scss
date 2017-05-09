@@ -13,31 +13,29 @@
 	margin-bottom: 5em;
 	padding: 5em;
 
-	&.style1 {
-		padding: 0;
-	}
+	&.style1 { padding: 0; }
 
 	&.style2 {
-		background-color: _palette(one, bg);
+		background-color: transparent;
 		background-position: bottom left, bottom right;
 		background-repeat: no-repeat, no-repeat;
 		background-size: $pattern-background-size, $pattern-background-size;
-		color: _palette(one, fg);
+		color: color(mono, white);
 
 		.link {
-			color: _palette(one, fg);
+			color: color(mono, white);
 			font-weight: bold;
 		}
 	}
 
 	&.style3 {
-		background: _palette(two, bg);
-		color: _palette(two, fg);
+		background: color(mono, white);
+		color: inherit;
 	}
 
 	&.style4 {
-		background: _palette(two, bg);
-		color: _palette(two, fg);
+		background: color(mono, white);
+		color: inherit;
 		padding: 4em;
 	}
 

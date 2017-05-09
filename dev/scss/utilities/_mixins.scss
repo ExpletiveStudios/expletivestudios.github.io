@@ -55,9 +55,6 @@
 
 }
 
-/// Increments of spacing for help classes
-$spaceamounts: (0, 1, 2, 3, 4, 5);
-
 /// Generates helper classes for margin and padding overrides
 @mixin generate-helpers() {
   @each $space in $spaceamounts {

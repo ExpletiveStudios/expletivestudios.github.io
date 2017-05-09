@@ -32,3 +32,12 @@
 @function _size($keys...) {
 	@return val($size, $keys...);
 }
+
+/// Gets color from color map
+/// @param {string} $color
+/// @param {string} $tone
+@function color($color, $tone) {
+  @if map-has-key($color-map, $color) {
+    @return map-get(map-get($color-map, $color), $tone);
+  }
+}

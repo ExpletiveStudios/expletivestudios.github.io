@@ -1,0 +1,25 @@
+/// Increments of spacing for help classes
+$spaceamounts: (0, 1, 2, 3, 4, 5);
+
+/// All colors available for elements
+/// Called via color function
+$color-map: (
+  primary: (
+    red: #c63838
+  ),
+
+  gray: (
+    off-black: #1c2021,
+    jet: #393939,
+    dark: #7c8081,
+    straight: #c1c0c1,
+    mild: #dad9db,
+    light: #e8eef4,
+    off-white: #f3f6fa
+  ),
+
+  mono: (
+    black: #000,
+    white: #fff
+  )
+);

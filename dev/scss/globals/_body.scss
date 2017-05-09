@@ -46,7 +46,7 @@
 $pattern-background-size: 25em;
 
 body {
-	background: _palette(bg);
+	background: color(gray, off-white);
 
 	&.is-loading {
 		*, *:before, *:after {
@@ -68,7 +68,7 @@ body,
 input, 
 select, 
 textarea {
-	color: _palette(fg);
+	color: color(gray, dark);
 	font-family: 'Lato', sans-serif;
 	font-size: 15pt;
 	font-weight: 300;
@@ -94,7 +94,7 @@ textarea {
 
 a {
 	@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
-	color: darken(_palette(one, bg), 20);
+	color: darken(color(primary, red), 20);
 	text-decoration: none;
 	border-bottom: dotted 1px;
 
@@ -166,13 +166,13 @@ sup {
 }
 
 hr {
-	border-top: solid 1px _palette(border);
+	border-top: solid 1px transparentize(color(gray, dark), 0.8);
 	border: 0;
 	margin-bottom: 1.5em;
 }
 
 blockquote {
-	border-left: solid 0.5em _palette(border);
+	border-left: solid 0.5em transparentize(color(gray, dark), 0.8);
 	font-style: italic;
 	padding: 1em 0 1em 2em;
 }

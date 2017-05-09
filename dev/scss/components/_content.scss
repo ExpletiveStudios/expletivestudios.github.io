@@ -9,7 +9,7 @@
 
 	.banner-color {
 		width: 100%;
-		background-color: _palette(one, bg);
+		background-color: color(primary, red);
 	}
 
 	> :last-child { margin-bottom: 0; }
@@ -22,7 +22,7 @@
 		padding: 5em 0;
 
 		.sidebar {
-			border-top: solid 1px transparentize(_palette(fg), 0.9);
+			border-top: solid 1px transparentize(color(gray, dark), 0.9);
 			padding-top: 3em;
 
 			section {
