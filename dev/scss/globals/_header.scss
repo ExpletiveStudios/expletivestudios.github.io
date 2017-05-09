@@ -20,9 +20,7 @@
 		font-weight: 300;
 		margin: 0;
 
-		span {
-			font-weight: 900;
-		}
+		span { font-weight: 900; }
 	}
 
 	nav {
@@ -32,58 +30,48 @@
 		text-transform: uppercase;
 		top: 0.75em;
 
-		ul {
-			li {
+		ul li {
+			display: inline-block;
+			margin-left: 1.5em;
+
+			> ul { display: none; }
+
+			a {
+				border: solid 1px transparent;
+				color: inherit;
 				display: inline-block;
-				margin-left: 1.5em;
+				line-height: 1em;
+				padding: 0.6em 0.75em;
+				text-decoration: none;
+			}
 
-				> ul {
-					display: none;
-				}
+			input[type="button"],
+			input[type="submit"],
+			input[type="reset"],
+			.button {
+				font-size: 1em;
+				min-width: 0;
+				width: auto;
+			}
 
-				a {
-					border: solid 1px transparent;
-					color: inherit;
-					display: inline-block;
-					line-height: 1em;
-					padding: 0.6em 0.75em;
-					text-decoration: none;
-				}
+			&.submenu > a {
+				@include icon;
 
-				input[type="button"],
-				input[type="submit"],
-				input[type="reset"],
-				.button {
-					font-size: 1em;
-					min-width: 0;
-					width: auto;
-				}
-
-				&.submenu {
-					> a {
-						@include icon;
-
-						&:before {
-							content: '\f107';
-							margin-right: 0.65em;
-						}
-					}
-				}
-
-				&.active,
-				&:hover {
-					> a {
-						@include vendor('transition', 'all 0.2s ease-in-out');
-						background: rgba(188,202,206,0.15);
-					}
-				}
-
-				&.current {
-					> a {
-						font-weight: 900;
-					}
+				&:before {
+					content: '\f107';
+					margin-right: 0.65em;
 				}
 			}
+
+			&.active,
+			&:hover {
+				> a {
+					@include vendor('transition', 'all 0.2s ease-in-out');
+					background: rgba(188,202,206,0.15);
+				}
+			}
+
+			&.current > a { font-weight: 900; }
 		}
 	}
 
@@ -103,58 +91,77 @@
 			right: 2.5em;
 			top: 1.75em;
 
-			ul {
-				li {
-					&.active,
-					&:hover {
-						> a {
-							border: solid 1px;
-						}
+			ul li {
+				&.active,
+				&:hover {
+					> a {
+						border: solid 1px;
 					}
 				}
 			}
 		}
 	}
-}
 
-#navPanel, #navButton {
-	display: none;
-}
-
-/* Color Header Bar */
-	
-#header-color {
-	width: 100%;
-	height: 6em;
-	background-color: _palette(three, bg);
-}
-
-@include breakpoint(normal) {
-	#header {
-		nav {
-			ul {
-				li {
-					margin-left: 1em;
-				}
-			}
-		}
+	@include breakpoint(normal) {
+		nav ul li { margin-left: 1em; }
 	}
-}
 
-@include breakpoint(narrower) {
-	#header {
+	@include breakpoint(narrower) {
 		display: none;
 	}
+}
 
-	#page-wrapper {
+#navPanel {
+	display: none;
+	@include breakpoint(narrower) {
 		@include vendor('backface-visibility', 'hidden');
-		@include vendor('transition', 'transform #{_duration(navPanel)} ease');
-		padding-bottom: 1px;
+		@include vendor('transform', 'translateX(#{_size(navPanel) * -1})');
+		@include vendor('transition', ('transform #{_duration(navPanel)} ease'));
+		display: block;
+		height: 100%;
+		left: 0;
+		overflow-y: auto;
+		position: fixed;
+		top: 0;
+		width: _size(navPanel);
+		z-index: _misc(z-index-base) + 2;
+		background: _palette(navPanel, bg);
+		color: _palette(navPanel, fg);
+		font-size: 0.8em;
+		letter-spacing: 0.075em;
+		text-transform: uppercase;
+		padding: 0.25em 0.75em 1em 0.75em;
+
+		.link {
+			border: 0;
+			border-top: solid 1px transparentize(_palette(navPanel, fg), 0.95);
+			color: inherit;
+			display: block;
+			height: 3em;
+			line-height: 3em;
+			opacity: 0.75;
+			text-decoration: none;
+
+			&.depth-0 { font-weight: 900; }
+
+			&:first-child { border-top: 0; }
+		}
+
+		.indent-1 { display: inline-block; width: 1em; }
+		.indent-2 { display: inline-block; width: 2em; }
+		.indent-3 { display: inline-block; width: 3em; }
+		.indent-4 { display: inline-block; width: 4em; }
+		.indent-5 { display: inline-block; width: 5em; }
 	}
+}
 
-	#navButton {
+#navButton { 
+	display: none;
+
+	@include breakpoint(narrower) {
 		@include vendor('backface-visibility', 'hidden');
 		@include vendor('transition', 'transform #{_duration(navPanel)} ease');
+
 		display: block;
 		height: 60px;
 		left: 0;
@@ -199,54 +206,30 @@
 				width: 60px;
 			}
 		}
-	}
 
-	#navPanel {
-		@include vendor('backface-visibility', 'hidden');
-		@include vendor('transform', 'translateX(#{_size(navPanel) * -1})');
-		@include vendor('transition', ('transform #{_duration(navPanel)} ease'));
-		display: block;
-		height: 100%;
-		left: 0;
-		overflow-y: auto;
-		position: fixed;
-		top: 0;
-		width: _size(navPanel);
-		z-index: _misc(z-index-base) + 2;
-		background: _palette(navPanel, bg);
-		color: _palette(navPanel, fg);
-		font-size: 0.8em;
-		letter-spacing: 0.075em;
-		text-transform: uppercase;
-		padding: 0.25em 0.75em 1em 0.75em;
+		@include breakpoint(mobile) {
+			.toggle {
+				&:before {
+					top: 8px;
+					left: 8px;
+					width: 50px;
+					height: 34px;
+					line-height: 34px;
+				}
 
-		.link {
-			border: 0;
-			border-top: solid 1px transparentize(_palette(navPanel, fg), 0.95);
-			color: inherit;
-			display: block;
-			height: 3em;
-			line-height: 3em;
-			opacity: 0.75;
-			text-decoration: none;
-
-			&.depth-0 {
-				font-weight: 900;
-			}
-
-			&:first-child {
-				border-top: 0;
+				&:after {
+					top: 8px;
+					left: 8px;
+					width: 50px;
+					height: 34px;
+				}
 			}
 		}
-
-		.indent-1 { display: inline-block; width: 1em; }
-		.indent-2 { display: inline-block; width: 2em; }
-		.indent-3 { display: inline-block; width: 3em; }
-		.indent-4 { display: inline-block; width: 4em; }
-		.indent-5 { display: inline-block; width: 5em; }
 	}
+}
 
-	.navPanel-visible {
+.navPanel-visible {
+	@include breakpoint(narrower) {
 		#page-wrapper {
 			@include vendor('transform', 'translateX(#{_size(navPanel)})');
 		}
@@ -261,23 +244,10 @@
 	}
 }
 
-@include breakpoint(mobile) {
-	#navButton {
-		.toggle {
-			&:before {
-				top: 8px;
-				left: 8px;
-				width: 50px;
-				height: 34px;
-				line-height: 34px;
-			}
-
-			&:after {
-				top: 8px;
-				left: 8px;
-				width: 50px;
-				height: 34px;
-			}
-		}
-	}
+/* Color Header Bar */
+	
+#header-color {
+	width: 100%;
+	height: 6em;
+	background-color: _palette(three, bg);
 }

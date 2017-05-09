@@ -44,9 +44,7 @@
 				padding-left: 0.05em;
 				position: relative;
 
-				.red {
-					color: #c63838;
-				}
+				.red { color: #c63838; }
 			}
 		}
 
@@ -61,8 +59,34 @@
 			}
 		}
 
-		footer {
-			margin: 2em 0 0 0;
+		footer { margin: 2em 0 0 0; }
+	}
+
+	@include breakpoint(normal) {
+		background-attachment: scroll;
+	}
+
+	@include breakpoint(narrow) {
+		background-size: cover;
+	}
+
+	@include breakpoint(narrower) {
+		margin: 0;
+	}
+
+	@include breakpoint(mobile) {
+		background-size: cover;
+		padding: 6em 0;
+
+		.inner {
+			display: block;
+			padding: 0 1.5em;
+
+			header h2 { font-size: 1.5em; }
+
+			p { text-align: center; }
+
+			br { display: none; }
 		}
 	}
 }
@@ -76,73 +100,25 @@
 	text-align: center;
 	margin-bottom: -1em;
 
-	header {
-		margin-bottom: 2em;
-	}
+	header { margin-bottom: 2em; }
 
-	a {
-		border-bottom: none;
-	}
-}
+	a { border-bottom: none; }
 
-@include breakpoint(normal) {
-	#banner {
-		background-attachment: scroll;
-	}
-
-	#cta {
+	@include breakpoint(normal) {
 		padding: 4em;
 		background-attachment: scroll;
 	}
-}
 
-@include breakpoint(narrow) {
-	#banner {
-		background-size: cover;
-	}
-
-	#cta {
+	@include breakpoint(narrow) {
 		background-size: cover;
 		padding: 3em;
 	}
-}
 
-@include breakpoint(narrower) {
-	#banner {
-		margin: 0;
+	@include breakpoint(narrower) {
+		margin: 0;	
 	}
 
-	#cta {
-		margin: 0;
-	}
-}
-
-@include breakpoint(mobile) {
-	#banner {
-		background-size: cover;
-		padding: 6em 0;
-
-		.inner {
-			display: block;
-			padding: 0 1.5em;
-
-			header {
-				h2 {
-					font-size: 1.5em;
-				}
-			}
-
-			p {
-				text-align: center;
-			}
-
-			br {
-				display: none;
-			}
-		}
-	}
-	
-	#cta {
+	@include breakpoint(mobile) {		
 		background-size: cover;
 		padding: 3em 1.5em;
 	}

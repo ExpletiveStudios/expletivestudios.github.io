@@ -5,12 +5,16 @@ section, article {
 	&.special {
 		text-align: center;
 	}
+
+	@include breakpoint(narrower) {		
+		margin: 1em 0 1em 0;
+
+		&:first-child { margin-top: 0; }
+	}
 }
 
 header {
-	&.major {
-		padding-bottom: 2em;
-	}
+	&.major { padding-bottom: 2em; }
 
 	&.special {
 		margin-bottom: 5em;
@@ -30,72 +34,33 @@ header {
 			width: 43%;
 		}
 
-		&:before {
-			left: 0;
-		}
+		&:before { left: 0; }
 
-		&:after {
-			right: 0;
-		}
+		&:after { right: 0; }
 
-		h2 {
-			margin-bottom: 0;
-		}
+		h2 { margin-bottom: 0; }
 
 		h2 + p {
 			margin-bottom: 0;
 			padding-top: 1.5em;
 		}
 	}
-}
 
-footer {
-	> :last-child {
-		margin-bottom: 0;
-	}
-
-	&.major {
-		padding-top: 3em;
-	}
-
-	img {
-		width: 64px;
-		height: 64px;
-	}
-}
-	
-@include breakpoint(wide) {
-	header {
+	@include breakpoint(wide) {
 		&.special {
 			padding-top: 5.5em;
 			margin-bottom: 4em;
 		}
 	}
-}
 
-@include breakpoint(normal) {
-	header {
-		&.major {
-			padding-bottom: 1.5em;
-		}
+	@include breakpoint(normal) {
+		&.major { padding-bottom: 1.5em; }
 	}
 
-	footer {
-		&.major {
-			padding-top: 2em;
-		}
-	}
-}
+	@include breakpoint(narrow) {
+		br { display: none; }
 
-@include breakpoint(narrow) {
-	header {
-		br {
-			display: none;
-		}
-
-		&.major {
-			padding-bottom: 1em;
-		}
+		&.major { padding-bottom: 1em; }
 
 		&.special {
 			padding-left: 2.5em;
@@ -103,30 +68,24 @@ footer {
 		}
 	}
 
-	footer {
-		&.major {
-			padding-top: 1.5em;
-		}
+	@include breakpoint(narrower) {		
+		&.major { padding-bottom: 0.25em; }
+
+		&.special {
+			margin-bottom: 4em;
+			padding-top: 5em;
+
+			&:before,
+			&:after { width: 40%; }
+
+			h2 + p { padding-top: 1.25em; }
+		}	
 	}
-}
 
-@include breakpoint(narrower) {
-	section {
-		margin: 1em 0 1em 0;
-
-		&:first-child {
-			margin-top: 0;
-		}
-	}
-}
-
-@include breakpoint(mobile) {
-	header {
+	@include breakpoint(mobile) {
 		text-align: center;
 
-		&.major {
-			padding-bottom: 0;
-		}
+		&.major { padding-bottom: 0; }
 
 		&.special {
 			margin-bottom: 3em;
@@ -134,9 +93,7 @@ footer {
 			padding-right: 1.5em;
 
 			&:before,
-			&:after {
-				width: 38%;
-			}
+			&:after { width: 38%; }
 
 			.icon {
 				font-size: 0.75em;
@@ -144,15 +101,30 @@ footer {
 			}
 		}
 
-		p {
-			text-align: center;
-		}
+		p { text-align: center; }
+	}
+}
+
+footer {
+	> :last-child { margin-bottom: 0; }
+
+	&.major { padding-top: 3em; }
+
+	img {
+		width: 64px;
+		height: 64px;
 	}
 
-	footer {
-		&.major {
-			padding-top: 0;
-		}
+	@include breakpoint(normal) {
+		&.major { padding-top: 2em; }
+	}
+
+	@include breakpoint(narrow) {
+		&.major { padding-top: 1.5em; }
+	}
+
+	@include breakpoint(mobile) {
+		&.major { padding-top: 0; }
 
 		img {
 			margin-left: 15px;
@@ -160,10 +132,6 @@ footer {
 			height: 32px;
 		}
 
-		li:first-child {
-			img {
-				margin-left: 0px;
-			}
-		}
+		li:first-child img { margin-left: 0px; }
 	}
 }
