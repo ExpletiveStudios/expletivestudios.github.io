@@ -1,0 +1,53 @@
+
+.panel {
+	background-color: color(gray, light);
+	border: 1px solid color(gray, dark);
+	display: flex;
+	margin: 44px auto;
+	max-width: 1280px;
+	padding: 22px;
+	width: 100%;
+
+	.panel__content {
+		flex: 1 1 50%;
+
+		img {
+			height: auto;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	.panel__content--video {
+		border: 0;
+		color: transparent;
+		display: block;
+		height: 100%;
+		position: relative;
+		width: 100%;
+
+		&:after {
+			background-image: url('../img/youtube-play-button.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			content: "";
+			display: block;
+			height: 100px;
+			position: absolute;
+			right: calc(50% - 50px);
+			top: calc(50% - 50px);
+			width: 100px;
+		}
+	}
+
+	.panel__content--video-overlay {
+		background-color: rgba(color(gray, off-black), 0.5);
+		bottom: 10%;
+		color: color(mono, white);
+		display: block;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+}

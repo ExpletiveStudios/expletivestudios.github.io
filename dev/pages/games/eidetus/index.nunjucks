@@ -1,0 +1,62 @@
+{% extends "layout.nunjucks" %}
+
+{% set relative_path = '../../' %}
+
+{% block content %}
+
+{% call content.banner('eidetus') %}
+{% endcall %}
+
+
+
+<div class="panel">
+
+	<div class="panel__content">
+		<h2><b>Eidetus</b></h2>
+		<p>An objective-based multiplayer game where heroes are assembled with reality shaping abilities to overwhelm the enemy team.</p>
+		<p><b>Coming Soon!</b></p>
+	</div>
+
+	<div class="panel__content">
+		<a class="panel__content--video" href="https://www.youtube.com/watch?v=_Eb_MkswCsg">
+			<img src="{{ relative_path }}../app/img/eidetus-screenshot-01.jpg">
+			<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
+		</a>
+	</div>
+
+</div>
+
+{#
+<div class="cards">
+
+	{% call content.card('small', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
+	<p>Here's one thing you can do.</p>
+	{% endcall %}
+
+	{% call content.card('small', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
+	<p>Check out this other thing.</p>
+	{% endcall %}
+
+	{% call content.card('small', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
+	<p>Guess what? You can do three things!</p>
+	{% endcall %}
+
+</div>
+#}
+
+<div class="color__jet--bg">
+	<div class="thumbs">
+
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-01.jpg') }}
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-02.jpg') }}
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-03.jpg') }}
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-04.jpg') }}
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-05.jpg') }}
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-06.jpg') }}
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-07.jpg') }}
+		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-08.jpg') }}
+
+	</div>
+</div>
+
+{% endblock %}

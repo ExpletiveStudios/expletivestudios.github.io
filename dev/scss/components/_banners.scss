@@ -6,19 +6,27 @@
 	100% { opacity: 1; }
 }
 
-#banner {
+.banner {
 	background-attachment: fixed;
 	background-color: color(gray, jet);
-	background-image: url('../img/alex-kintner-eidetus-darkcity.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: color(gray, jet);
 	cursor: default;
+	min-height: 100vh;
 	padding: 6em 0;
 	text-align: center;
 
-	.inner {
+	&.banner--home {
+		background-image: url('../img/home-hero.jpg');
+	}
+
+	&.banner--eidetus {
+		background-image: url('../img/eidetus-screenshot-02.jpg');
+	}
+
+	.banner__inner {
 		@include vendor('animation', 'reveal-banner 1s 0.25s ease-in-out');
 		@include vendor('animation-fill-mode', 'forwards');
 		background: transparentize(color(mono, white), 0.3);
@@ -77,7 +85,7 @@
 		background-size: cover;
 		padding: 6em 0;
 
-		.inner {
+		.banner__inner {
 			display: block;
 			padding: 22px;
 

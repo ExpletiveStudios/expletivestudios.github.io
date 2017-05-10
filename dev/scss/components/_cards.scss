@@ -1,0 +1,45 @@
+
+.cards {
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 1280px;
+	padding: 22px 0 0;
+}
+
+.card {
+	flex: 1 1 auto;
+	font-size: 0;
+	line-height: 0;
+	padding: 0 22px 22px;
+
+	&.card--small { flex: 1 1 33%; }
+	&.card--large { flex: 1 1 66%; }
+
+	.card__inner {
+		background-color: color(gray, mild);
+		border: 1px solid color(gray, dark);
+		height: 100%;
+		width: 100%;
+	}
+
+	.card__inner--image {
+		height: auto;
+		width: 100%;
+	}
+
+	.card__inner--text {
+		color: color(gray, jet);
+		font-size: initial;
+		line-height: initial;
+		text-align: center;
+		display: block;
+		padding: 22px;
+	}
+
+	@include breakpoint(mobile) {
+		&.card--small,
+		&.card--large { flex: 1 1 100%; }
+	}
+}

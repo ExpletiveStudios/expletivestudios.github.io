@@ -1,28 +1,24 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<!-- Banner -->
-<section id="banner">
+
+{% call content.banner('home') %}
 
 	<!--
 		".inner" is set up as an inline-block so it automatically expands
 		in both directions to fit whatever's inside it. This means it won't
 		automatically wrap lines, so be sure to use line breaks where
-		appropriate (<br />).
+		appropriate (<br>).
 	-->
-	<div class="inner">
-
+	<div class="banner__inner">
 		<header>
 			<h2>expletive|<span class="red">studios</span></h2>
 		</header>
-		<p>We are <strong>expletive studios</strong>, a game
-		<br />
-		development studio.</p>
+		<p>We are <strong>expletive studios</strong>, a game <br>development studio.</p>
 		<a href="#main" class="button">Learn About Us</a>
-
 	</div>
 
-</section>
+{% endcall %}
 
 <!-- Main -->
 <article id="main">
@@ -36,7 +32,7 @@
 				<header>
 					<h2>Welcome to Expletive Studios!</h2>
 				</header>
-				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="/team#info-0" class="link">here</a>, or take a look at our current game <a href="javascript:void(0)" class="link">here</a>.</p>
+				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="/team" class="link">here</a>, or take a look at our current game <a href="games/eidetus" class="link">here</a>.</p>
 				<a href="/team#about" class="button">Find Out More</a>
 			</div>
 		</div>

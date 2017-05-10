@@ -1,0 +1,45 @@
+
+{#
+Full-width banner with css background image
+@param class - defines background image to be displayed
+#}
+{% macro banner(class) %}
+
+<div class="banner{% if class %} banner--{{ class }}{% endif %}">
+
+{{ caller() }}
+
+</div>
+
+{% endmacro %}
+
+
+{#
+Bordered card for displaying information
+@param class - defines card size on one, two, or three third scale
+#}
+{% macro card(class, image) %}
+
+<div class="card{% if class %} card--{{ class }}{% endif %}">
+	<div class="card__inner">
+		<img class="card__inner--image" src="{{ image }}">
+		<div class="card__inner--text">
+			{{ caller() }}
+		</div>
+	</div>
+</div>
+
+{% endmacro %}
+
+
+{#
+Bordered image thumbnail
+@param class - defines thumbnail size
+#}
+{% macro thumb(image) %}
+
+<a href="javascript:void(0)" class="thumb">
+	<img src="{{ image }}">
+</a>
+
+{% endmacro %}

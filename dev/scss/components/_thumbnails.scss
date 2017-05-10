@@ -1,0 +1,28 @@
+
+.thumbs {
+	align-items: stretch;
+	background-color: color(gray, jet);
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 1280px;
+	padding: 22px 0 0;
+}
+
+.thumb {
+	border: 0;
+	flex: 1 1 25%;
+	height: auto;
+	width: 100%;
+	padding: 0 22px 22px;
+
+	img {
+		border: 1px solid transparent;
+		height: auto;
+		width: 100%;
+
+		&:hover {
+			border-color: color(primary, red);
+		}
+	}
+}
