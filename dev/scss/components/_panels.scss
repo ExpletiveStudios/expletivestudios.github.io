@@ -3,6 +3,7 @@
 	background-color: color(gray, light);
 	border: 1px solid color(gray, dark);
 	display: flex;
+	flex-wrap: wrap;
 	margin: 44px auto;
 	max-width: 1280px;
 	padding: 22px;
@@ -49,5 +50,9 @@
 		position: absolute;
 		text-align: center;
 		width: 100%;
+	}
+
+	@include breakpoint(mobile) {
+		.panel__content { flex: 1 1 100%; }
 	}
 }

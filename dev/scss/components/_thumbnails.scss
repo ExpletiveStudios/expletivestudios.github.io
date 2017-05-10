@@ -25,4 +25,8 @@
 			border-color: color(primary, red);
 		}
 	}
+
+	@include breakpoint(mobile) {
+		flex: 1 1 100%;
+	}
 }
