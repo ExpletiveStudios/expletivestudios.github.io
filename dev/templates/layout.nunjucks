@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="main-container">
-    {{ header.header() }}
+    {{ header.header(relative_path, header_class) }}
     {% block content %} {% endblock %}
     {{ footer.footer(relative_path) }}
   </div>

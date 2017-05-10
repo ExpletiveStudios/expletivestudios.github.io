@@ -1,10 +1,10 @@
 {% extends "layout.nunjucks" %}
 
 {% set relative_path = '../' %}
+{% set header_class = 'header--alt' %}
 
 {% block content %}
 <!-- Main -->
-<div id="header-color"></div>
 <article id="main">
 
 	<!-- One -->
