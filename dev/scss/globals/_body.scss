@@ -55,6 +55,11 @@ body {
 		}
 	}
 
+	&.overlay--open {
+		max-height: 100vh;
+		overflow: hidden;
+	}
+
 	@include breakpoint(narrower) {
 		overflow-x: hidden;
 	}

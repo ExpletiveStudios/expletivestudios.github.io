@@ -16,16 +16,19 @@
 			height: auto;
 			max-width: 100%;
 			width: 100%;
+			vertical-align: middle;
 		}
 	}
 
 	.panel__content--video {
-		border: 0;
+		border: 1px solid transparent;
 		color: transparent;
 		display: block;
 		height: 100%;
 		position: relative;
 		width: 100%;
+
+		&:hover { border-color: color(primary, red); }
 
 		&:after {
 			background-image: url('../img/youtube-play-button.png');

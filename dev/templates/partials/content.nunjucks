@@ -35,10 +35,11 @@ Bordered card for displaying information
 {#
 Bordered image thumbnail
 @param class - defines thumbnail size
+@param overlay - whether click expands to an isolated overlay
 #}
-{% macro thumb(image) %}
+{% macro thumb(image, overlay) %}
 
-<a href="javascript:void(0)" class="thumb">
+<a href="javascript:void(0)" class="thumb"{% if overlay == true %} overlay="image"{% endif %}>
 	<img src="{{ image }}">
 </a>
 
