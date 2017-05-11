@@ -1,4 +1,6 @@
 var canvas = document.getElementById("gameCanvas");
+
+if(canvas != null) {
 var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width/2;
@@ -170,3 +172,4 @@ function draw() {
 }
 
 draw();
+}
