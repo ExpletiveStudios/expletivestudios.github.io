@@ -1,3 +1,7 @@
+// Reset header nav checkbox on page load
+$(document).ready(function() { resetNavToggle(); });
+function resetNavToggle() { $(document).find('.nav__toggle-switch').prop('checked', false); }
+
 // Toggle state of mobile header navigation menu
 $(document).on('click', '.nav__toggle-switch', function() {
 	$(this).closest('.nav__container').find('.nav__menu').toggleClass('nav__menu--visible');

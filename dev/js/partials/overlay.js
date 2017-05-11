@@ -1,3 +1,4 @@
+// Display image overlay on click
 $(document).on('click', '[overlay="image"]', function() {
 	var target = $(this);
 
@@ -41,6 +42,7 @@ $(document).on('click', '[overlay="image"]', function() {
 	}
 });
 
+// Update overlay image dimensions on window resize
 $(window).on('resize', function() {
 	var target = $(document).find('.overlay__image--open');
 
