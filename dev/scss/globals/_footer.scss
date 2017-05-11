@@ -1,26 +1,23 @@
-#footer {
-	padding: 11px 0 0;
-	width: 100%;
-	text-align: center;
+.footer {
 	background-color: color(gray, jet);
+	bottom: 0;
+	padding: 22px 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 
-	footer {
-		margin: 0 0 22px;
-		//width: 60%;
-		display: inline-block;
-		text-align: right;
-
-		ul {
-			display: inline-block;
-
-			a {
-				border-bottom: none;
-				
-				img {
-					width: 48px;
-					height: 48px;
-				}
-			}
+	.footer__social-link {
+		border-bottom: none;
+		display: block;
+		height: 44px;
+		transition: all 0.3s ease-in-out;
+		width: 44px;
+		
+		img {
+			height: 100%;
+			width: 100%;
 		}
+
+		&:hover { transform: translate(0, -5px); }
 	}
 }

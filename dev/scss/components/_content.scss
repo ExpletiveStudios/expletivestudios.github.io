@@ -1,6 +1,12 @@
 
 /* Main */
 
+.main-container {
+	height: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+
 #main {
 	background-position: bottom right;
 	background-repeat: no-repeat;

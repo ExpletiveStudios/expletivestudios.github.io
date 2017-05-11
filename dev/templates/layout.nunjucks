@@ -13,9 +13,11 @@
 </head>
 <body>
   <div class="main-container">
+  
     {{ header.header(relative_path, header_class) }}
     {% block content %} {% endblock %}
     {{ footer.footer(relative_path) }}
+
   </div>
   <footer><script src="{{ relative_path }}app/js/main.js"></script></footer>
 </body>

@@ -5,15 +5,16 @@ Global page footer with social media navigation
 #}
 {% macro footer(path) %}
 
-	<footer id="footer">
-		<footer>
-			<ul class="buttons">
-				<li><a target="_blank" href="http://www.facebook.com/expletivestudios"><img src="{{ path }}app/img/facebook-red.png"></a></li>
-				<li><a target="_blank" href="http://www.instagram.com/expletivestudios"><img src="{{ path }}app/img/insta-red.png"></a></li>
-				<li><a target="_blank" href="http://www.twitter.com/ExpletiveStudio"><img src="{{ path }}app/img/twitter-red.png"></a></li>
-				<li><a target="_blank" href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="{{ path }}app/img/youtube-red.png"></a></li>
-			</ul>
-		</footer>
-	</footer>
+<div class="footer">
+	<ul class="buttons">
+		<li><a class="footer__social-link" target="_blank" href="http://www.facebook.com/expletivestudios"><img src="{{ path }}app/img/facebook-red.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.instagram.com/expletivestudios"><img src="{{ path }}app/img/insta-red.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.twitter.com/ExpletiveStudio"><img src="{{ path }}app/img/twitter-red.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="{{ path }}app/img/youtube-red.png"></a></li>
+	</ul>
+	<div>
+		<span>Copyright © Expletive Studios. All rights reserved.</span>
+	</div>
+</div>
 
 {% endmacro %}
