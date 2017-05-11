@@ -25,7 +25,7 @@ $(document).on('click', '[overlay="image"]', function() {
 		overlayImage.css({
 			'background-image': 'url(' + targetImageRef + ')',
 			height: overlayImageHeight,
-			right: 'calc(50% - ' + overlayImageWidth / 2 + 'px)',
+			right: 0,
 			top: 'calc(50% - ' + overlayImageHeight / 2 + 'px)',
 			width: overlayImageWidth
 		});
@@ -38,5 +38,28 @@ $(document).on('click', '[overlay="image"]', function() {
 		// Handle removing overlay styles
 		target.removeClass('overlay__image--open');
 		$(document).find('body').removeClass('overlay--open');
+	}
+});
+
+$(window).on('resize', function() {
+	var target = $(document).find('.overlay__image--open');
+
+	// Check whether an overlay is currently active
+	if(target.length > 0) {
+		var targetImage = target.find('img'),
+			targetImageRef = targetImage.attr('src'),
+			targetImageRatio = targetImage.height() / targetImage.width(),
+			overlayImage = target.find('.overlay__image'),
+			overlayImageWidth = $(window).width(),
+			overlayImageHeight  = targetImageRatio * overlayImageWidth;
+
+		// Update overlay image based on selected image and window dimensions
+		overlayImage.css({
+			'background-image': 'url(' + targetImageRef + ')',
+			height: overlayImageHeight,
+			right: 0,
+			top: 'calc(50% - ' + overlayImageHeight / 2 + 'px)',
+			width: overlayImageWidth
+		});
 	}
 });
