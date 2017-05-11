@@ -19,7 +19,7 @@
 
 	<div class="panel__content">
 		<a class="panel__content--video" href="https://www.youtube.com/watch?v=_Eb_MkswCsg">
-			<img src="{{ relative_path }}../app/img/eidetus-screenshot-05.jpg">
+			<img src="{{ relative_path }}../app/img/eidetus-screenshot-09.jpg">
 			<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
 		</a>
 	</div>
