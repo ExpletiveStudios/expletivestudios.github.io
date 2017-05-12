@@ -1,7 +1,9 @@
 .footer {
-	background-color: color(gray, jet);
+	background: color(gray, jet);
+	border: 0;
 	bottom: 0;
 	padding: 22px 0;
+	overflow: hidden;
 	position: absolute;
 	text-align: center;
 	width: 100%;

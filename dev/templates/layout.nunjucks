@@ -12,7 +12,7 @@
   <link href="{{ relative_path }}app/img/favicon.ico" rel="shortcut icon"/>
 </head>
 <body>
-  <div class="main-container">
+  <div id="main-container" class="main-container">
   
     {{ header.header(relative_path, header_class) }}
     {% block content %} {% endblock %}
