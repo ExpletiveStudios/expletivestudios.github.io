@@ -1,22 +1,36 @@
 
 .panel {
-	background-color: color(gray, light);
-	border: 1px solid color(gray, dark);
-	display: flex;
-	flex-wrap: wrap;
 	margin: 44px auto;
 	max-width: $max-width;
-	padding: 22px;
-	width: 100%;
+	padding: 0 22px;
+
+	.panel__container {
+		background-color: color(gray, light);
+		border: 1px solid color(gray, dark);
+		color: color(gray, jet);
+		display: flex;
+		flex-wrap: wrap;
+		padding: 22px 0;
+		width: 100%;
+	}
 
 	.panel__content {
 		flex: 1 1 50%;
+		padding: 0 22px;
 
 		img {
 			height: auto;
 			max-width: 100%;
 			width: 100%;
 			vertical-align: middle;
+		}
+	}
+
+	.panel__link {
+		color: inherit;
+
+		&:hover {
+			color: inherit;
 		}
 	}
 

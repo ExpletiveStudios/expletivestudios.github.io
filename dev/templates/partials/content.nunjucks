@@ -58,6 +58,20 @@ Bordered card for displaying information on a single team member
 
 
 {#
+Bordered panel for displaying information in a max-width container
+#}
+{% macro panel() %}
+
+<div class="panel">
+	<div class="panel__container">
+		{{ caller() }}
+	</div>
+</div>
+
+{% endmacro %}
+
+
+{#
 Bordered image thumbnail
 @param class - defines thumbnail size
 @param overlay - whether click expands to an isolated overlay

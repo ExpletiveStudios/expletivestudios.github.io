@@ -7,20 +7,20 @@
 {% call content.banner('eidetus') %}
 {% endcall %}
 
-<div class="panel">
-	<div class="panel__content">
-		<h2><strong>Eidetus</strong></h2>
-		<p>An objective-based multiplayer game where heroes are assembled with reality shaping abilities to overwhelm the enemy team.</p>
-		<p><b>Coming Soon!</b></p>
-	</div>
-
-	<div class="panel__content">
-		<a class="panel__content--video" target="_blank" href="https://www.youtube.com/watch?v=_Eb_MkswCsg">
-			<img src="{{ relative_path }}../app/img/eidetus-screenshot-09.jpg">
-			<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
-		</a>
-	</div>
+{% call content.panel() %}
+<div class="panel__content">
+	<h2><strong>Eidetus</strong></h2>
+	<p>An objective-based multiplayer game where heroes are assembled with reality shaping abilities to overwhelm the enemy team.</p>
+	<p><b>Coming Soon!</b></p>
 </div>
+
+<div class="panel__content">
+	<a class="panel__content--video" href="https://www.youtube.com/watch?v=_Eb_MkswCsg">
+		<img src="{{ relative_path }}../app/img/eidetus-screenshot-09.jpg">
+		<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
+	</a>
+</div>
+{% endcall %}
 
 <div class="color__jet--bg">
 	<div class="thumbs">
