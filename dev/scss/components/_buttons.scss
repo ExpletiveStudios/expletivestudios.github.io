@@ -65,3 +65,12 @@ input[type="reset"],
 		&.fit { width: auto; }
 	}
 }
+
+.link__alt {
+	border-color: color(mono, white);
+	color: color(mono, white);
+
+	&:hover {
+		color: darken(color(primary, red), 20);
+	}
+}

@@ -7,12 +7,9 @@
 {% call content.banner('eidetus') %}
 {% endcall %}
 
-
-
 <div class="panel">
-
 	<div class="panel__content">
-		<h2><b>Eidetus</b></h2>
+		<h2><strong>Eidetus</strong></h2>
 		<p>An objective-based multiplayer game where heroes are assembled with reality shaping abilities to overwhelm the enemy team.</p>
 		<p><b>Coming Soon!</b></p>
 	</div>
@@ -23,30 +20,10 @@
 			<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
 		</a>
 	</div>
-
 </div>
-
-{#
-<div class="cards">
-
-	{% call content.card('small', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
-	<p>Here's one thing you can do.</p>
-	{% endcall %}
-
-	{% call content.card('small', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
-	<p>Check out this other thing.</p>
-	{% endcall %}
-
-	{% call content.card('small', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
-	<p>Guess what? You can do three things!</p>
-	{% endcall %}
-
-</div>
-#}
 
 <div class="color__jet--bg">
 	<div class="thumbs">
-
 		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-01.jpg', true) }}
 		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-02.jpg', true) }}
 		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-03.jpg', true) }}
@@ -55,7 +32,6 @@
 		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-06.jpg', true) }}
 		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-07.jpg', true) }}
 		{{ content.thumb(relative_path + '../app/img/eidetus-screenshot-08.jpg', true) }}
-
 	</div>
 </div>
 

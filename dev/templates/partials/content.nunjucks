@@ -18,13 +18,38 @@ Full-width banner with css background image
 Bordered card for displaying information
 @param class - defines card size on one, two, or three third scale
 #}
-{% macro card(class, image) %}
+{% macro card(image) %}
 
-<div class="card{% if class %} card--{{ class }}{% endif %}">
+<div class="card">
+	<div class="card__inner">
+		{% if image %}<img class="card__inner--image" src="{{ image }}">{% endif %}
+		<div class="card__inner--text">
+			{{ caller() }}
+		</div>
+	</div>
+</div>
+
+{% endmacro %}
+
+
+{#
+Bordered card for displaying information on a single team member
+@param name - first and last name
+@param role - role on project and/or team
+@param image - profile picture 
+#}
+{% macro team_card(name, role, image) %}
+
+<div class="card card--team">
 	<div class="card__inner">
 		<img class="card__inner--image" src="{{ image }}">
 		<div class="card__inner--text">
-			{{ caller() }}
+			<h3>{{ name }}</h3>
+			<small>{{ role }}</small>
+			<div class="card__hidden-on-mobile">
+				<hr>
+				{{ caller() }}
+			</div>
 		</div>
 	</div>
 </div>

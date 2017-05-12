@@ -8,8 +8,8 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>Expletive Studios</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet" type="text/css"/>
-  <link href="app/css/main.css" rel="stylesheet" type="text/css"/>
-  <link href="app/img/favicon.ico" rel="shortcut icon"/>
+  <link href="/app/css/main.css" rel="stylesheet" type="text/css"/>
+  <link href="/app/img/favicon.ico" rel="shortcut icon"/>
 </head>
 <body>
   <div class="main-container">
@@ -27,10 +27,10 @@
 			<span class="nav__toggle-icon"></span>
 		</div>
 		<ul class="nav__menu">
-			<li><a href="games/eidetus">Eidetus</a></li>
-			<li><a href="#cta" class="button special">Newsletter</a></li>
+			<li><a href="/games/eidetus">Eidetus</a></li>
+			<li><a href="/#newsletter" class="button special">Newsletter</a></li>
 			<li><a href="javascript:void(0)">Blog</a></li>
-			<li><a href="team">Team</a></li>
+			<li><a href="/team">Team</a></li>
 			<li><a href="javascript:void(0)">Contact</a></li>
 		</ul>
 	</div>
@@ -44,18 +44,9 @@
 <div class="banner banner--home">
 
 
-
-	<!--
-		".inner" is set up as an inline-block so it automatically expands
-		in both directions to fit whatever's inside it. This means it won't
-		automatically wrap lines, so be sure to use line breaks where
-		appropriate (<br>).
-	-->
+	
 	<div class="banner__inner">
-		<header>
-			<h2>expletive|<span class="red">studios</span></h2>
-		</header>
-		<p>We are <strong>expletive studios</strong>, a game <br>development studio.</p>
+		<h1>expletive|<span class="color__red--text">studios</span></h1>
 		<a href="#main" class="button">Learn About Us</a>
 	</div>
 
@@ -65,75 +56,87 @@
 
 
 
-<!-- Main -->
-<article id="main">
+<div id="main" class="content content--main">
+	<div class="content__container">
+		<h2>Welcome to <strong>Expletive Studios</strong>!</h2>
+		<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea.</p>
+		<p>That was more than 6 years ago. Now we are currently alpha testing our first game!</p>
+		<a href="team" class="button">Find Out More</a>
+	</div>
+</div>
 
-	<!-- One -->
-	<div class="banner-color">
-	<section class="wrapper style2 container special-alt">
-		<div class="row 50%">
-			<div class="8u 12u(narrower)">
-
-				<header>
-					<h2>Welcome to Expletive Studios!</h2>
-				</header>
-				<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea. That was more than 6 years ago. We are now in the process of Alpha testing our first game! Learn more about the individual members of our team <a href="/team" class="link">here</a>, or take a look at our current game <a href="games/eidetus" class="link">here</a>.</p>
-				<a href="games/eidetus" class="button">Find Out More</a>
-			</div>
-		</div>
-	</section>
+<div class="panel">
+	<div class="panel__content">
+		<h2><strong>Eidetus</strong></h2>
+		<p>An objective-based multiplayer game where heroes are assembled with reality shaping abilities to overwhelm the enemy team.</p>
+		<p><b>Coming Soon!</b></p>
 	</div>
 
-	<!-- Two -->
-	<section class="wrapper style1 container special">
-		<div class="row">			
-			<div class="4u 12u(narrower)">
-			<a href="javascript:void(0)">
-				<section>
-					<span class="icon featured fa-check"></span>
-					<header>
-						<h3>Blog post coming soon!</h3>
-					</header>
-					<p>This is where the blogs posts will be. Be sure to check back often to see progress on the game!</p>
-				</section>
-			</a>
-			</div>			
-			<div class="4u 12u(narrower)">
-			<a href="javascript:void(0)">
-				<section>
-					<span class="icon featured fa-check"></span>
-					<header>
-						<h3>Blog post coming soon!</h3>
-					</header>
-					<p>This is where the blogs posts will be. Be sure to check back often to see progress on the game!</p>
-				</section>
-			</a>
-			</div>
-			<div class="4u 12u(narrower)">
-			<a href="javascript:void(0)">
-				<section>
-					<span class="icon featured fa-check"></span>
-					<header>
-						<h3>Blog post coming soon!</h3>
-					</header>
-					<p>This is where the blogs posts will be. Be sure to check back often to see progress on the game!</p>
-				</section>
-			</a>
-			</div>			
+	<div class="panel__content">
+		<a class="panel__content--video" href="https://www.youtube.com/watch?v=_Eb_MkswCsg">
+			<img src="/../app/img/eidetus-screenshot-09.jpg">
+			<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
+		</a>
+	</div>
+</div>
+
+<div class="cards">
+	
+
+<div class="card">
+	<div class="card__inner">
+		
+		<div class="card__inner--text">
+			
+	<h3>Blog post coming soon!</h3>
+	<p>Be sure to check back often to see progress on the game!</p>
+	
 		</div>
-	</section>
-</article>
+	</div>
+</div>
 
-	<!-- CTA -->
-	<section id="cta">
 
-		<header>
-			<h2>Ready to <strong>follow us</strong>?</h2>
-			<p>Enter your email address below to sign up for our newsletter!</p>
-		</header>
-		<footer>
-			<!-- Begin MailChimp Signup Form -->
-			<div id="mc_embed_signup">
+
+	
+
+<div class="card">
+	<div class="card__inner">
+		
+		<div class="card__inner--text">
+			
+	<h3>Blog post coming soon!</h3>
+	<p>Be sure to check back often to see progress on the game!</p>
+	
+		</div>
+	</div>
+</div>
+
+
+
+	
+
+<div class="card">
+	<div class="card__inner">
+		
+		<div class="card__inner--text">
+			
+	<h3>Blog post coming soon!</h3>
+	<p>Be sure to check back often to see progress on the game!</p>
+	
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+<div id="newsletter" class="content content--alt">
+	<div class="content__container">
+		<h2>Ready to <b>follow us</b>?</h2>
+		<p>Enter your email address below to sign up for our newsletter!</p>
+
+		<!-- Begin MailChimp Signup Form -->
+		<div id="mc_embed_signup">
 			<form action="//expletivestudios.us15.list-manage.com/subscribe/post?u=2e07229fedd317f43de1a7336&amp;id=9132aaa9b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			    <div id="mc_embed_signup_scroll">
 				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required size="35">
@@ -141,22 +144,20 @@
 			    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2e07229fedd317f43de1a7336_9132aaa9b3" tabindex="-1" value=""></div>&nbsp;&nbsp;&nbsp;<input type="submit" value="Sign me up!" name="subscribe" id="mc-embedded-subscribe" class="button special">
 			    </div>
 			</form>
-			</div>
-
-			<!--End mc_embed_signup-->
-		</footer>
-
-	</section>
+		</div>
+		<!-- End MailChimp Signup Form -->
+	</div>
+</div>
 
 
     
 
 <div class="footer">
 	<ul class="buttons">
-		<li><a class="footer__social-link" target="_blank" href="http://www.facebook.com/expletivestudios"><img src="app/img/facebook-red.png"></a></li>
-		<li><a class="footer__social-link" target="_blank" href="http://www.instagram.com/expletivestudios"><img src="app/img/insta-red.png"></a></li>
-		<li><a class="footer__social-link" target="_blank" href="http://www.twitter.com/ExpletiveStudio"><img src="app/img/twitter-red.png"></a></li>
-		<li><a class="footer__social-link" target="_blank" href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="app/img/youtube-red.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.facebook.com/expletivestudios"><img src="/app/img/facebook-red.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.instagram.com/expletivestudios"><img src="/app/img/insta-red.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.twitter.com/ExpletiveStudio"><img src="/app/img/twitter-red.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="/app/img/youtube-red.png"></a></li>
 	</ul>
 	<div>
 		<span>Copyright © Expletive Studios. All rights reserved.</span>
@@ -166,6 +167,6 @@
 
 
   </div>
-  <footer><script src="app/js/main.js"></script></footer>
+  <footer><script src="/app/js/main.js"></script></footer>
 </body>
 </html>

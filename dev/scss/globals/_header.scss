@@ -18,13 +18,16 @@
 	&.header--alt {
 		background: color(gray, jet);
 		padding: 22px;
-		position: relative;
 	}
 
 	.header__logo {
 		display: inline-block;
+		font-size: 16px;
 		font-weight: 300;
+		line-height: 16px;
 		margin: 0;
+
+		a { color: color(mono, white) !important; }
 
 		span { font-weight: 900; }
 	}

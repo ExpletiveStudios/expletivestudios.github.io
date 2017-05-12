@@ -3,28 +3,25 @@
 	align-items: stretch;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 auto;
-	max-width: 1280px;
-	padding: 22px 0 0;
+	margin: 0 auto 22px;
+	max-width: $max-width;
+	padding: 0;
 }
 
 .card {
-	flex: 1 1 auto;
+	flex: 1 1 33%;
 	font-size: 0;
 	line-height: 0;
 	padding: 0 22px 22px;
 
-	&.card--small { flex: 1 1 33%; }
-	&.card--large { flex: 1 1 66%; }
-
 	.card__inner {
-		background-color: color(gray, mild);
+		background-color: color(gray, light);
 		border: 1px solid color(gray, dark);
 		height: 100%;
 		width: 100%;
 	}
 
-	.card__inner--image {
+	.card__inner--image {		
 		height: auto;
 		width: 100%;
 	}
@@ -39,7 +36,25 @@
 	}
 
 	@include breakpoint(mobile) {
-		&.card--small,
-		&.card--large { flex: 1 1 100%; }
+		flex: 1 1 100%;
+	}
+}
+
+.card--team {
+	.card__inner--image {
+		border: 5px solid color(gray, off-white);
+		border-radius: 50%;
+		display: block;
+		margin: 22px auto 0;
+		padding: 5.5px;
+		width: 60%;
+	}
+
+	.card__inner--text {
+		h3 { margin: 0 0 11px; }
+	}	
+
+	@include breakpoint(mobile) {
+		.card__hidden-on-mobile { display: none; }
 	}
 }

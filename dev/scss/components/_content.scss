@@ -7,41 +7,25 @@
 	position: relative;
 }
 
-#main {
-	background-position: bottom right;
-	background-repeat: no-repeat;
-	background-size: $pattern-background-size;
-	padding: 0;
+.content {
+	margin: 0 0 22px;
 
-	.banner-color {
-		width: 100%;
+	&.content--main {
 		background-color: color(primary, red);
+		color: color(mono, white);
+		text-align: center;
 	}
 
-	> :last-child { margin-bottom: 0; }
-
-	@include breakpoint(narrow) {
-		background-size: $pattern-background-size;
-	}	
-
-	@include breakpoint(narrower) {
-		.sidebar {
-			border-top: solid 1px transparentize(color(gray, dark), 0.9);
-
-			section {
-				border-top: 0;
-				padding-top: 0;
-			}
-		}
+	&.content--alt {
+		background-color: color(gray, jet);
+		color: color(mono, white);
+		margin: 0;
+		text-align: center;
 	}
 
-	@include breakpoint(mobile) {
-		background-size: $pattern-background-size;
-	}
-}
-
-.contact #main {
-	@include breakpoint(mobile) {
-		padding-bottom: 0;
+	.content__container {
+		margin: 0 auto;
+		max-width: $max-width;
+		padding: 44px 22px;
 	}
 }
