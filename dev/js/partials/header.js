@@ -1,14 +1,20 @@
 
 $(document).ready(function() { 
-	resetNavToggle();
+	// Reset header nav checkbox on page load
+	resetNavMenu();
 });
 
-// Reset header nav checkbox on page load
-function resetNavToggle() { $(document).find('.nav__toggle-switch').prop('checked', false); }
+// Reset mobile header nav menu
+function resetNavMenu() { 
+	$(document).find('.nav__toggle-switch').prop('checked', false); 
+	$(document).find('.header').find('.nav__menu').removeClass('nav__menu--visible');
+}
 
 // Toggle state of mobile header navigation menu
 $(document).on('click', '.nav__toggle-switch', function() {
-	$(this).closest('.nav__container').find('.nav__menu').toggleClass('nav__menu--visible');
+	var menu = $(this).closest('.nav__container').find('.nav__menu');
+
+	menu.toggleClass('nav__menu--visible');
 });
 
 var isFirstScrollUp = true,
@@ -30,6 +36,9 @@ function handleScroll() {
 
 		// Indicate scroll down has occurred
 		isFirstScrollUp = false;
+
+		// Close potentially open header nav menu
+		resetNavMenu();
 	}
 	else {
 		// Clear header top style
