@@ -1,14 +1,12 @@
-// Display image overlay on click
-$(document).on('click', '[overlay="image"]', function() {
-	var target = $(this);
-
+// Create new image overlay or hide existing one associated with target
+function handleImageOverlay(target) {
 	// Check whether overlay is currently active
 	if(!target.hasClass('overlay__image--open')) {
 		var targetImage = target.find('img'),
 			targetImageRef = targetImage.attr('src'),
 			targetImageRatio = targetImage.height() / targetImage.width(),
 			overlayBackground = $('<div class="overlay__background"></div>'),
-			overlayImage = $('<div class="overlay__image"></div>'),
+			overlayImage = $('<div class="overlay__image"><span class="overlay__nav--prev"></span><span class="overlay__nav--next"></span></div>'),
 			overlayImageWidth = $(window).width(),
 			overlayImageHeight  = targetImageRatio * overlayImageWidth;
 
@@ -28,7 +26,7 @@ $(document).on('click', '[overlay="image"]', function() {
 			height: overlayImageHeight,
 			right: 0,
 			top: 'calc(50% - ' + overlayImageHeight / 2 + 'px)',
-			width: overlayImageWidth
+			width: '100%'
 		});
 
 		// Handle adding overlay styles
@@ -40,6 +38,43 @@ $(document).on('click', '[overlay="image"]', function() {
 		target.removeClass('overlay__image--open');
 		$(document).find('body').removeClass('overlay--open');
 	}
+}
+
+// Display image overlay on click
+$(document).on('click', '[overlay="image"]', function() {
+	handleImageOverlay($(this));
+});
+
+$(document).on('click', '.overlay__nav--prev', function(e) {
+	e.stopPropagation();
+
+	var current = $(this).closest('[overlay="image"]'),
+		prev = current.prev('[overlay="image"]');
+
+	// Retrieve last image when current is first
+	if(prev.length <= 0) { prev = current.parent().find('[overlay="image"]').last(); }
+
+	// Hide current overlay
+	handleImageOverlay(current);
+
+	// Display next overlay
+	handleImageOverlay(prev);
+});
+
+$(document).on('click', '.overlay__nav--next', function(e) {
+	e.stopPropagation();
+
+	var current = $(this).closest('[overlay="image"]'),
+		next = current.next('[overlay="image"]');
+
+	// Retrieve first image when current is last
+	if(next.length <= 0) { next = current.parent().find('[overlay="image"]').first(); }
+
+	// Hide current overlay
+	handleImageOverlay(current);
+
+	// Display next overlay
+	handleImageOverlay(next);
 });
 
 // Update overlay image dimensions on window resize
@@ -61,7 +96,7 @@ $(window).on('resize', function() {
 			height: overlayImageHeight,
 			right: 0,
 			top: 'calc(50% - ' + overlayImageHeight / 2 + 'px)',
-			width: overlayImageWidth
+			width: '100%'
 		});
 	}
 });

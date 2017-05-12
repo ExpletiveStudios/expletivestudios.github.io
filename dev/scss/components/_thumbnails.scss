@@ -27,6 +27,41 @@
 			z-index: 999999;
 		}
 
+		.overlay__nav--prev,
+		.overlay__nav--next {
+			position: absolute;
+			height: 100%;
+			top: 0;
+			width: 44px;
+
+			&:hover { cursor: pointer; }
+
+			&:before {
+				background-image: url('../img/overlay-caret.png');
+				background-position: center center;
+				background-size: cover;
+				content: "";
+				height: 44px;
+				position: absolute;
+				top: calc(50% - 22px);
+				width: 44px;
+			}
+		}
+
+		.overlay__nav--prev {
+			background: linear-gradient(to left, transparent, rgba(color(mono, black), 0.75));
+			left: 0;
+
+			&:before { transform: rotate(90deg); }
+		}
+
+		.overlay__nav--next {
+			background: linear-gradient(to left, rgba(color(mono, black), 0.75), transparent);
+			right: 0;
+
+			&:before { transform: rotate(-90deg); }
+		}
+
 		.overlay__background {
 			background: rgba(color(mono, black), 0.85);
 			bottom: 0;
