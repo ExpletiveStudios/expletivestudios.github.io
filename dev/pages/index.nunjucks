@@ -1,6 +1,6 @@
 {% extends "layout.nunjucks" %}
 
-{% set relative_path = '/' %}
+{% set relative_path = '' %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
 	
 	<div class="banner__inner">
 		<h1>expletive|<span class="color__red--text">studios</span></h1>
-		<a href="#main" class="button button--alternate">Learn About Us</a>
+		<a href="#main" class="button button--alternate" animate="scroll">Learn About Us</a>
 	</div>
 
 {% endcall %}
