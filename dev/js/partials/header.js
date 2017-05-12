@@ -1,5 +1,9 @@
+
+$(document).ready(function() { 
+	resetNavToggle();
+});
+
 // Reset header nav checkbox on page load
-$(document).ready(function() { resetNavToggle(); });
 function resetNavToggle() { $(document).find('.nav__toggle-switch').prop('checked', false); }
 
 // Toggle state of mobile header navigation menu
@@ -46,15 +50,16 @@ function handleScroll() {
 	scrollTopLast = scrollTopNew;
 }
 
-// Apply fixed position to 
-function setFixed(element){
+// Apply fixed position
+function setFixed(element) {
 	element.css({
 		position: 'fixed',
 		top: 0
 	});
 }
 
-function setAbsolute(element, scrollTop){
+// Apply absolute position a current scroll top
+function setAbsolute(element, scrollTop) {
 	element.css({
 		position: 'absolute',
 		top: Math.max(scrollTop, 0)

@@ -1,9 +1,8 @@
 
-/* Main */
-
 .main-container {
 	height: 100%;
 	min-height: 100vh;
+	overflow: hidden;
 	position: relative;
 }
 
@@ -23,9 +22,15 @@
 		text-align: center;
 	}
 
+	&.content--top { padding: 73px 0 0; }
+
 	.content__container {
 		margin: 0 auto;
 		max-width: $max-width;
 		padding: 44px 22px;
+	}
+
+	@include breakpoint(mobile) {
+		&.content--top { padding: 70px 0 0; }
 	}
 }
