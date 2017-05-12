@@ -102,18 +102,13 @@
 			a {
 				border: solid 1px transparent;
 				color: inherit;
-				display: inline-block;
 				font-size: 16px;
 				height: initial;
 				line-height: 16px;
 				margin: 0;
 				padding: 5.5px;
-				text-decoration: none;
-			}
 
-			&.active,
-			&:hover {
-				a {
+				&:not(.button):hover {
 					background: rgba(color(gray, straight), 0.5);
 					transition: all 0.3s ease-in-out;
 				}

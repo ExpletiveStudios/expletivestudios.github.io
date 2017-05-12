@@ -5,8 +5,8 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 .button {
-	@include vendor('appearance', 'none');
-	@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
+	//@include vendor('appearance', 'none');
+	//@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
 
 	margin: 0 0 22px;
 	padding: 0 22px;
@@ -14,9 +14,9 @@ input[type="reset"],
 	height: 44px;
 	line-height: 44px;
 
-	background: none;
-	border: solid 1px;
-	color: inherit;
+	background: transparent;
+	border: solid 1px color(mono, white);
+	color: color(mono, white);
 	cursor: pointer;
 
 	font-size: 0.8em;
@@ -27,42 +27,38 @@ input[type="reset"],
 	text-decoration: none;
 	text-transform: uppercase;
 
+	transition: all 0.3s ease-in-out;
+
 	&:hover {
-		background: transparentize(color(gray, straight), 0.85);
-		border-color: inherit;
+		background: color(mono, white);
+		border-color: color(mono, white);
+		color: color(primary, red);
 	}
 
-	&.special {
-		background: color(primary, red);
-		border-color: color(primary, red);
-		color: color(mono, white) !important;
+	&.button--alternate {
+		border-color: color(gray, jet);
+		color: color(gray, jet);
 
 		&:hover {
-			background: lighten(color(primary, red), 5) !important;
-			border-color: lighten(color(primary, red), 5) !important;
+			background: color(gray, jet);
+			border-color: color(gray, jet);
+			color: color(gray, off-white);
 		}
 	}
 
-	&.fit { width: 100%; }
+	&.button--attention {
+		background: color(primary, red);
+		border-color: color(primary, red);
 
-	&.small {
-		font-size: 0.7em;
-		min-width: 14em;
-		padding: 0.5em 0;
-	}
-
-	@include breakpoint(narrower) {
-		&.small {
-			font-size: 0.8em;
-			min-width: 18em;
-			padding: 0.75em 0;
+		&:hover {
+			background: darken(color(primary, red), 10);
+			border-color: darken(color(primary, red), 10);
+			color: color(mono, white);
 		}
 	}
 
 	@include breakpoint(mobile) {
 		width: 100%;
-
-		&.fit { width: auto; }
 	}
 }
 
@@ -71,6 +67,7 @@ input[type="reset"],
 	color: color(mono, white);
 
 	&:hover {
-		color: darken(color(primary, red), 20);
+		border-color: darken(color(mono, white), 20);
+		color: darken(color(mono, white), 20);
 	}
 }
