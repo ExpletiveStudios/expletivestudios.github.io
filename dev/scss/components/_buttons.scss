@@ -5,9 +5,6 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 .button {
-	//@include vendor('appearance', 'none');
-	//@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
-
 	margin: 0 0 22px;
 	padding: 0 22px;
 	display: inline-block;

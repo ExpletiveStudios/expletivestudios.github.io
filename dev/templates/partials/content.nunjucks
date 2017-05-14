@@ -60,9 +60,9 @@ Bordered card for displaying information on a single team member
 {#
 Bordered panel for displaying information in a max-width container
 #}
-{% macro panel() %}
+{% macro panel(id) %}
 
-<div class="panel">
+<div id="{{ id }}" class="panel">
 	<div class="panel__container">
 		{{ caller() }}
 	</div>
