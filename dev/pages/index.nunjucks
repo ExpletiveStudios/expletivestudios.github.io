@@ -25,7 +25,7 @@
 	</div>
 </div>
 
-{% call content.panel() %}
+{% call content.panel("game", true) %}
 <div class="panel__content">
 	<a href="/games/eidetus" class="panel__link">
 		<h2><strong>Eidetus</strong></h2>

@@ -1,8 +1,11 @@
-
 .panel {
 	margin: 0 auto;
 	max-width: $max-width;
 	padding: 44px 22px;
+
+	#game {
+		background-color: color(gray, mild);
+	}
 
 	.panel__container {
 		background-color: color(gray, light);

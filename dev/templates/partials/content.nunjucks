@@ -36,7 +36,7 @@ Bordered card for displaying information
 Bordered card for displaying information on a single team member
 @param name - first and last name
 @param role - role on project and/or team
-@param image - profile picture 
+@param image - profile picture
 #}
 {% macro team_card(name, role, image) %}
 
@@ -60,13 +60,20 @@ Bordered card for displaying information on a single team member
 {#
 Bordered panel for displaying information in a max-width container
 #}
-{% macro panel(id) %}
-
+{% macro panel(id, panel_var) %}
+{% if panel_var %}
+<div class="panel">
+	<div id="{{ id }}" class="panel__container">
+		{{ caller() }}
+	</div>
+</div>
+{% else %}
 <div id="{{ id }}" class="panel">
 	<div class="panel__container">
 		{{ caller() }}
 	</div>
 </div>
+{% endif %}
 
 {% endmacro %}
 
