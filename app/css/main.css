@@ -1944,7 +1944,7 @@ footer img {
   background-size: cover;
   color: #393939;
   cursor: default;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   padding: 200px 0 0;
   position: relative;
   text-align: center; }
