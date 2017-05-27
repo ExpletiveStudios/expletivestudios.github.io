@@ -1,5 +1,26 @@
 
-.game__canvas { 
+.game__canvas {
 	background-color: color(gray, straight);
 	border: 1px solid color(gray, dark);
+}
+
+.content__mobile {display: none;}
+
+@include breakpoint(mobile) {
+
+	.content__container { display: none; }
+	.content {
+		width: 100%;
+		text-align: center;
+
+		.content__mobile {
+			width: 85%;
+			display: inline-block;
+			padding-top: 4em;
+
+			.button {
+				background-color: color(primary, red);
+			}
+		}
+	}
 }

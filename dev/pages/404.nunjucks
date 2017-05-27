@@ -10,6 +10,10 @@
 		<h3>Oops! Looks like you are lost! Please enjoy the game below. You will be redirected when it is over.</h3>
 		<canvas id="gameCanvas" class="game__canvas" width="1150" height="500"></canvas>
 	</div>
+	<div class="content__mobile">
+		<h1>Oops! Looks like you are lost! Please head back with the back button or click below.</h1>
+		<a href="index" class="button">Take me home</a>
+	</div>
 </div>
 
 {% endblock %}
