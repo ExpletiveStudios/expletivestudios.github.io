@@ -1,6 +1,7 @@
 // Gulp plugins
 var gulp      = require('gulp');
 var prefix    = require('gulp-autoprefixer');
+var data      = require('gulp-data');
 var gulpIf    = require('gulp-if');
 var imagemin  = require('gulp-imagemin');
 var include   = require('gulp-include');
@@ -14,6 +15,7 @@ var maps      = require('gulp-sourcemaps');
 var sequence  = require('run-sequence');
 var sync      = require('browser-sync');
 var del       = require('del');
+var fs        = require('fs');
 
 /** 
  * Commands:
@@ -110,6 +112,7 @@ gulp.task('nunjucks', function() {
   // Get all html and nunjucks files in pages
   return gulp.src(config.src + 'pages/**/*.+(html|nunjucks)')
     .pipe(customPlumber('Error Running Nunjucks'))
+    .pipe(data(function() { return JSON.parse(fs.readFileSync(config.src + 'data/data.json')) }))
     .pipe(render({data: {masterlayout: 'layout.nunjucks'}}))
     .pipe(gulp.dest(''))
     .pipe(notify({ message: 'Nunjucks Complete!', onLast: true }))
@@ -134,7 +137,8 @@ gulp.task('watch', function(){
   gulp.watch(config.src + 'scss/**/*.scss', ['sass']);
   gulp.watch([
     config.src + 'templates/**/*.+(html|nunjucks)', 
-    config.src + 'pages/**/*.+(html|nunjucks)'], 
+    config.src + 'pages/**/*.+(html|nunjucks)',
+    config.src + 'data/data.json'],
     ['nunjucks']
   );
 });
