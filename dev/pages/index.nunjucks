@@ -5,13 +5,14 @@
 {% block content %}
 
 {% call content.banner('home') %}
-	
+
 	<div class="banner__inner">
 		<h1>expletive|<span class="color__red--text">studios</span></h1>
 	</div>
-	
+
 	<a href="#main" class="button__icon" animate="scroll">
 		<i class="button__icon--down-caret"></i>
+		<div class="crystal"></div>
 	</a>
 
 {% endcall %}

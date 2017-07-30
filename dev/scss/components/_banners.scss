@@ -41,33 +41,52 @@
 
 	.button__icon {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
-		animation-fill-mode: both;
 		background: color(primary, red);
 		border: 0;
 		border-radius: 50%;
 		bottom: 100px;
-		height: 44px;
+		height: 66px;
 		position: absolute;
 		left: calc(50% - 22px);
-		width: 44px;
+		top: calc(100vh - 102px);
+		width: 66px;
+		z-index: 999;
 
-		&:before,
-		&:after {
-		    animation-fill-mode: both;
-			background: color(primary, red);
-			content: "";
-		    height: 88px;
-		    border-radius: 50%;
-		    position: absolute;
-			right: calc(50% - 44px);
-			top: calc(50% - 44px);
-		    opacity: 0;
-		    width: 88px;
-			z-index: 999;
+		.crystal {
+			$particles: 30;
+			$width: 150;
+			$height: 150;
+
+			$box-shadow: ();
+			$box-shadow2: ();
+			@for $i from 0 through $particles {
+				$box-shadow: $box-shadow,
+										 random($width)-$width / 2 + px
+										 random($height)-$height / 1.2 + px
+										 color(primary, red);
+				$box-shadow2: $box-shadow2, 0 0 #fff
+			}
+			z-index: 0;
+
+			&:before,
+			&:after {
+			  content: "";
+			  position: absolute;
+			  width: 5px;
+			  height: 5px;
+			  border-radius: 50%;
+			  box-shadow: $box-shadow2;
+			  animation: bang 2.25s 1.25s ease-out infinite;
+				z-index: 0;
+			}
+
+			@keyframes bang {
+				from {
+					box-shadow:$box-shadow;
+				}
+			}
 		}
 
-		&:before { animation: pulse-ring 1.8s 0.8s ease-out infinite; }
-		&:after { animation: pulse-ring 1.8s 0.33s ease-out infinite; }
 	}
 
 	.button__icon--down-caret {
