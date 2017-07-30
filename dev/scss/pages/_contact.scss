@@ -1,0 +1,38 @@
+.center {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 3em;
+  background-color: color(gray, light) !important;
+  color: color(gray, off-black) !important;
+
+  .faq {
+    display: inline-block;
+    width: 65%;
+    padding-top: 5em;
+    font-family: 'Helvetica', sans-serif;
+    text-align: left;
+
+    .title {
+      font-size: 3em;
+      padding-left: 0 !important;
+    }
+
+    td {
+      padding: 1em 2em 1em 2em;
+
+      &.second {
+        border-left: solid color(gray, off-black) 1px;
+      }
+
+    }
+
+    .question {
+      border-bottom: dotted color(gray, off-black) 1px;
+    }
+
+  }
+}
+
+.contact {
+  margin-bottom: 0;
+}

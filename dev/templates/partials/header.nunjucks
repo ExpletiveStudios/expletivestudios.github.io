@@ -2,7 +2,7 @@
 {#
 Global header with page navigation
 @param path - prefix relative path for subpages
-@param class - modifier for alternate header 
+@param class - modifier for alternate header
 #}
 {% macro header(path, class) %}
 
@@ -21,7 +21,7 @@ Global header with page navigation
 			<li><a href="{{ path }}#newsletter" class="button button--attention" animate="scroll">Newsletter</a></li>
 			<li><a href="javascript:void(0)">Blog</a></li>
 			<li><a href="{{ path }}team">Team</a></li>
-			<li><a href="javascript:void(0)">Contact</a></li>
+			<li><a href="{{ path }}contact">Contact</a></li>
 		</ul>
 	</div>
 </div>

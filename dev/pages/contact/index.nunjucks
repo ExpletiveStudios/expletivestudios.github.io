@@ -1,0 +1,53 @@
+{% extends "layout.nunjucks" %}
+
+{% set relative_path = '../' %}
+{% set header_class = 'header--alt' %}
+
+{% block content %}
+
+<div class="content content--alt center">
+  <div class="faq">
+    <table>
+      <tr>
+        <td class="title"><strong>F. A. Q.</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Q. <span class="question">How many people work for Expletive?</strong></td>
+        <td class="second"><strong>Q. <span class="question">How long have you been working on games?</strong></td>
+      </tr>
+      <tr>
+        <td><span class="answer">A. There are three of us currently working at Expletive.
+          We do hope to make that number grow some day, though!</span></td>
+        <td class="second"><span class="answer">A. We have been working on our current project, Eidetus,
+          although we have only been seriously working on the game
+          for a little over a year and a half</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q. <span class="question">Do you plan on making games after Eidetus?</strong></td>
+        <td class="second"><strong>Q. <span class="question">When will Eidetus be released?</strong></td>
+      </tr>
+      <tr>
+        <td><span class="answer">A. We plan on making games until we physically can not
+           make games anymore</span></td>
+        <td class="second"><span class="answer">A. There is no official release date for Eidetus yet,
+          buy we can assure you that we will release it as soon as it's ready</span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div id="main" class="content content--main contact">
+  <div class="content__container">
+    Still haven't found what you were looking for? Give us a shout!</br></br>
+    <form method="POST" action="//formspree.io/support@expletivestudios.com">
+        <input type="email" name="_replyto" placeholder="Your email"></br>
+        <input type="hidden" name="_subject" value="Website contact" /></br>
+        <textarea name="message" placeholder="Your message"></textarea></br></br>
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="submit" value="Send">
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
