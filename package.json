@@ -22,9 +22,7 @@
     "url": "https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io/issues"
   },
   "homepage": "https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io#readme",
-  "devDependencies": {},
-  "false": {},
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "fsevents": "^1.1.2",
@@ -41,7 +39,14 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
     "minimatch": "^3.0.4",
     "run-sequence": "^2.1.0"
+  },
+  "false": {},
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "owl.carousel": "^2.3.4",
+    "tingle.js": "^0.13.2"
   }
 }

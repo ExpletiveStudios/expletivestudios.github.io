@@ -25,10 +25,10 @@ First and foremost, the development environment requires the appropriate develop
 	
 	* Git
 	* Node.JS
+	* Python
 
 2. Requires manual installation via command line
 
-	* Bower
 	* Gulp
 	* SASS
 	* Nunjucks
@@ -49,6 +49,13 @@ JavaScript runtime built on Chrome's V8 JavaScript engine.
 * [Documentation](https://nodejs.org/en/docs/)
 * [Download](https://nodejs.org/en/download/)
 
+### Python
+
+Dependency for some node modules.
+
+* [About](https://www.python.org/about/)
+* [Download](https://www.python.org/downloads/)
+
 ### NPM
 
 Package manager for JavaScript built upon Node.JS.
@@ -58,27 +65,12 @@ Package manager for JavaScript built upon Node.JS.
 * [Features](https://www.npmjs.com/features)
 * [Documentation](https://docs.npmjs.com/)
 
-### Bower
-
-Package manager with extended libraries beyond NPM.
-
-* [Configuration](https://bower.io/docs/config/)
-* [Documentation](https://bower.io/docs/api/)
-* [Packages](https://bower.io/search/)
-
 ### Gulp
 
 Automated streaming build system.
 
 * [Documentation](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 * [Plugins](http://gulpjs.com/plugins/)
-
-### SASS
-
-Preprocessor extension for CSS.
-
-* [Guide](http://sass-lang.com/guide)
-* [Documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
 ### Nunjucks
 
@@ -101,16 +93,6 @@ Globally install gulp for access to 'gulp' command
 
 		npm install -g gulp
 
-Globally install bower for access to 'bower' command
-
-		npm install -g bower
-
-### Bower
-
-Install all bower components
-
-		bower install
-
 ---
 
 ## Execution
@@ -119,9 +101,13 @@ Install all bower components
 
 As this project is streamlined via the automated workflow of gulp, all compilation is handled with various gulp commands.
 
-Default and most useful command that executes all others:
+Default and most useful command that executes all non-video and non-image tasks:
 
 		gulp
+
+Production command that all other tasks with full compression and optimizations:
+
+		gulp prod
 
 Commands for individual tasks:
 

@@ -6,6 +6,7 @@ var gulpIf    = require('gulp-if');
 var imagemin  = require('gulp-imagemin');
 var include   = require('gulp-include');
 var notify    = require('gulp-notify');
+var uglify    = require('gulp-uglify');
 var render    = require('gulp-nunjucks-render');
 var plumber   = require('gulp-plumber');
 var sass      = require('gulp-sass');
@@ -26,6 +27,9 @@ var fs        = require('fs');
  * gulp scripts
  * gulp watch
  */
+
+// Whether build is for testing or production
+var isProd = false;
 
 // Project build directories
 var config = {
@@ -58,7 +62,7 @@ gulp.task('sync', function() {
     // Set base directory of server to root folder
     server: { baseDir: './' },
     // Prevents browsers from opening automatically
-    open: false,
+    open: true,
     // Disable pop-over notification
     notify: true,
   })
@@ -74,10 +78,11 @@ gulp.task('scripts', function(){
   return gulp.src(config.src + 'js/main.js')
     .pipe(customPlumber('Error Running Scripts'))
     // Initialize sourcemaps
-    .pipe(maps.init())
+    .pipe(gulpIf(isProd == false, maps.init()))
     .pipe(include(includeSettings))
+    .pipe(gulpIf(isProd == true, uglify()))
     // Write sourcemaps
-    .pipe(maps.write())
+    .pipe(gulpIf(isProd == false, maps.write()))
     .pipe(gulp.dest(config.dest + 'js'))
     .pipe(notify({ message: 'Scripts Complete!', onLast: true }))
     // Tells browser sync to reload files when task is done
@@ -86,18 +91,18 @@ gulp.task('scripts', function(){
 
 // Compile all sass into css
 gulp.task('sass', function() {
+  var sassOptions = { outputStyle: 'compressed' };
+  var autoprefixerOptions = { browsers: ['last 2 versions', '> 5%', 'Firefox ESR'] };
+
   return gulp.src(config.src + 'scss/**/*.scss')
     .pipe(customPlumber('Error Running Sass'))
     // Initialize sourcemaps
-    .pipe(maps.init())
-    .pipe(sass())
-    // Runs produced css through autoprefixer
-    .pipe(prefix({
-      // Add prefixes for IE8, IE9 and last 2 versions of all other browsers
-      browsers: ['> 1%', 'last 2 versions']
-    }))
+    .pipe(gulpIf(isProd == false, maps.init()))
+    .pipe(gulpIf(isProd == false, sass(), sass(sassOptions)))
+    // Add prefixes for IE8, IE9 and last 2 versions of all other browsers
+    .pipe(prefix(autoprefixerOptions))
     // Write sourcemaps
-    .pipe(maps.write())
+    .pipe(gulpIf(isProd == false, maps.write()))
     .pipe(gulp.dest(config.dest + 'css'))
     .pipe(notify({ message: 'Sass Complete!', onLast: true }))
     // Tells browser sync to reload files when task is done
@@ -122,12 +127,29 @@ gulp.task('nunjucks', function() {
 
 // Minify all images
 gulp.task('images', function() {
+  var imageSettings = [
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false }
+        ]
+      })
+    ];
+
   return gulp.src(config.src + 'img/**/*')
-    .pipe(imagemin({
-        progressive: true
-    }))
+    .pipe(imagemin(imageSettings))
     .pipe(gulp.dest(config.dest + 'img'))
     .pipe(notify({ message: 'Images Complete!', onLast: true }))
+});
+
+// Move video files
+gulp.task('videos', function() {
+  return gulp.src(config.src + 'vid/*')    
+    .pipe(gulp.dest(config.dest + 'vid'))
+    .pipe(notify({ message: 'Videos Complete!', onLast: true }))
 });
 
 // Watch specified folders and files for any changes
@@ -143,11 +165,21 @@ gulp.task('watch', function(){
   );
 });
 
+gulp.task('prod', function(callback) {
+  isProd = true;
+
+  sequence(
+    ['clean'],
+    ['videos', 'images'],
+    ['default'],
+    callback
+  )
+});
+
 // Executes a sequence of tasks
 gulp.task('default', function(callback) {
   sequence(
-    'clean',
-    ['images', 'scripts', 'sass', 'nunjucks'],
+    ['scripts', 'sass', 'nunjucks'],
     ['sync', 'watch']
   )
 });

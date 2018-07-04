@@ -1,6 +1,6 @@
 
-// Bower components
-// =require ../bower_components/jquery/dist/jquery.min.js
+// Node Modules
+// =require ../node_modules/jquery/dist/jquery.min.js
 
 // Google analytics
 // =require partials/analytics.js
