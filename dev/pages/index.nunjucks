@@ -19,9 +19,7 @@
 <div id="main" class="content content--main">
 	<div class="content__container">
 		<h2>Welcome to <strong>Expletive Studios</strong>!</h2>
-		<p>We're a small indie game studio that started with a couple of high school friends and a crazy idea.</p>
-		<p>That was more than 6 years ago. Now we are currently alpha testing our first game!</p>
-		<a href="team" class="button">Find Out More</a>
+		<p>We're a little <b>!%£@?&amp;#</b> indie with big <b>!%£@?&amp;#</b> dreams. Founded around a kitchen table with a lot of coffee; we started out as a bunch of friends with an idea to make a game. A game that would be the spiritual successor of sorts to some of our favorites with tastely unique and memorable additions. Fast-forward six years of concepting and garnering experience, college and multiple jobs, all the while making consistent progress.</p>
 	</div>
 </div>
 
@@ -29,35 +27,101 @@
 <div class="panel__content">
 	<a href="/games/eidetus" class="panel__link">
 		<h2><strong>Eidetus</strong></h2>
-		<p>An objective-based multiplayer game where heroes are assembled with reality shaping abilities to overwhelm the enemy team.</p>
-		<p><b>Coming Soon!</b></p>
+		<p>A strategic, team-based B.Y.O.H. (Build Your Own Hero) shooter set in a dystopian sci-fi landscape. Play as a Psypher channeling memories through psychic power while drawing from the deck of abilities you’ve assembled to defeat your opponents.</p>
+		<a href="https://www.eidetus.com" class="button button--attention">Discover More</a>
 	</a>
 </div>
 
 <div class="panel__content">
-	<a class="panel__content--video" target="_blank" href="https://www.youtube.com/watch?v=_Eb_MkswCsg">
+	<a class="panel__content--video" target="_blank" href="https://www.youtube.com/watch?v=6riRHh0Y7ng">
 		<img src="{{ relative_path }}../app/img/eidetus-screenshot-09.jpg">
 		<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
 	</a>
 </div>
 {% endcall %}
 
-<div class="cards">
-	{% call content.card() %}
-	<h3>Blog post coming soon!</h3>
-	<p>Be sure to check back often to see progress on the game!</p>
+<div class="content">
+	<div class="content__container cards">
+
+	{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg') %}
+
+		<p>Bio Coming Soon<sup>TM</sup></p>
+
+		<hr>
+
+		<p><span>Favorite Games:</span> Coming Soon<sup>TM</sup></p>
+
 	{% endcall %}
 
-	{% call content.card() %}
-	<h3>Blog post coming soon!</h3>
-	<p>Be sure to check back often to see progress on the game!</p>
+
+	{% call content.team_card('Joe Faiella', 'Community & Design', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
+
+		<p>Bio Coming Soon<sup>TM</sup></p>
+
+		<hr>
+
+		<p><span>Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering</p>
+
 	{% endcall %}
 
-	{% call content.card() %}
-	<h3>Blog post coming soon!</h3>
-	<p>Be sure to check back often to see progress on the game!</p>
+
+	{% call content.team_card('Pat Petrushonis', 'Gameplay & Systems', relative_path + '../app/img/Portrait-Patrick.jpg') %}
+
+		<p>Bio Coming Soon<sup>TM</sup></p>
+
+		<hr>
+		
+		<p><span>Favorite Games:</span> Armored Core, Bioshock, Dead Space</p>
+
 	{% endcall %}
+
+	</div>
 </div>
+
+{#
+<div class="content content--alt">
+	<div class="content__container">
+		<div id="info-0"></div>
+
+		<div id="info-1">
+			<img src="{{ relative_path }}../app/img/Portrait-Alex.jpg">
+			<div id="member-info">
+				<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Coming Soon<sup>TM</sup></span><br>
+				<span class="info__label">Expertise:</span> Art and modeling</sup><br>
+				<span class="info__label">Location:</span> California, USA<br>
+				<span class="info__label">Education:</span> Rhode Island School Design, Illustration<br>
+				<span class="info__label">Best Qualities:</span> Coming Soon<sup>TM</sup><br>
+				<span class="info__label">Favorite Games:</span> Coming Soon<sup>TM</sup><br>
+			</div>
+		</div>
+
+		<div id="info-2">
+			<img src="{{ relative_path }}../app/img/Portrait-Placeholder.jpg">
+			<div id="member-info">
+				<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Failing out of mechanical engineering and changing schools to help me realize my knack for computer science. They say that there is a lot to learn from failure and I think I know about that first hand.</span><br>
+				<span class="info__label">Expertise:</span> Game design and web development<br>
+				<span class="info__label">Location:</span> Connecticut, USA<br>
+				<span class="info__label">Education:</span> Southern Connecticut State University, Computer Science<br>
+				<span class="info__label">Best Qualities:</span> Dashing good looks and self depricating humor<br>
+				<span class="info__label">Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering<br>
+			</div>
+		</div>
+
+		<div id="info-3">
+			<img src="{{ relative_path }}../app/img/Portrait-Patrick.jpg"> 
+			<div id="member-info">
+				<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>A supportive web of family and friends helped tremendously, but the long nights spent alone are what truly build one's character. Learning what failure tastes like, discovering perseverance, and willing to continue leading on.</span><br>
+				<span class="info__label">Expertise:</span> Gameplay systems, networking and user interface<br>
+				<span class="info__label">Location:</span> Connecticut, USA<br>
+				<span class="info__label">Education:</span> Western Connecticut State University, Computer Science<br>
+				<span class="info__label">Best Qualities:</span> My charming personality and exquisite vocabulary<br>
+				<span class="info__label">Favorite Games:</span> Armored Core, Bioshock, Dead Space<br>
+			</div>
+		</div>
+
+	</div>
+</div>
+#}
 
 <div id="newsletter" class="content content--alt">
 	<div class="content__container">
