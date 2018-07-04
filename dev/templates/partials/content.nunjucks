@@ -90,3 +90,17 @@ Bordered image thumbnail
 </a>
 
 {% endmacro %}
+
+{#
+Modal container with supplied content in caller
+@param ID - alphanumerical identifier to link modal button with content
+#}
+{% macro modal(ID) %}
+
+<div class="hide" modal-content="{{ ID }}">
+
+{{ caller() }}
+
+</div>
+
+{% endmacro %}

@@ -8,3 +8,27 @@
     .color__#{$label}--bg { background-color: $value !important; }
   }
 }
+
+.hide {
+	display: none !important;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.opacity-50 {
+	opacity: 0.5;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}

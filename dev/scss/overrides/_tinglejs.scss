@@ -1,0 +1,43 @@
+
+.tingle-modal {
+	background: rgba(color(mono, black), 0.8);
+}
+
+.tingle-modal--video .tingle-modal-box__content {	
+	max-width: 100%;
+	padding: 0;	
+}
+
+.tingle-modal-box {
+	background-color: color(primary, dark);
+	max-width: 800px;
+}
+
+.tingle-modal-box__content {
+	.video-modal__container {
+		padding-top: 56.25%;
+		position: relative;
+	}
+
+	iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+.tingle-modal__close {
+	height: 60px;
+	line-height: 60px;
+
+	.tingle-modal__closeIcon {
+		font-size: 32px;
+		vertical-align: top;
+	}
+	.tingle-modal__closeLabel {
+		font-size: 24px;
+		vertical-align: top;
+	}
+}
