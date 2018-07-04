@@ -17,9 +17,9 @@ Global header with page navigation
 			<span class="nav__toggle-icon"></span>
 		</div>
 		<ul class="nav__menu">
-			<li><a href="https://www.eidetus.com">Eidetus</a></li>
-			<li><a href="{{ path }}#newsletter" class="button button--attention" animate="scroll">Newsletter</a></li>
-			<li><a href="{{ path }}team">Team</a></li>
+			<li><a href="https://www.eidetus.com" class="button button--attention">Eidetus</a></li>
+			<li><a href="{{ path }}#newsletter" animate="scroll">Newsletter</a></li>
+			<li><a href="{{ path }}#team" animate="scroll">Team</a></li>
 			<li><a href="javascript:void(0)">Contact</a></li>
 		</ul>
 	</div>

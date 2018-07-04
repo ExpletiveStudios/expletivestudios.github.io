@@ -40,7 +40,7 @@
 </div>
 {% endcall %}
 
-<div class="content">
+<div id="team" class="content">
 	<div class="content__container cards">
 
 	{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg') %}
