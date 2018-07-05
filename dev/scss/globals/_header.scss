@@ -20,12 +20,12 @@
 		display: inline-block;
 		font-size: 16px;
 		font-weight: 300;
-		line-height: 16px;
+		line-height: 29px;
 		margin: 0;
 
-		a { color: color(mono, white) !important; }
-
-		span { font-weight: 900; }
+		a:not(span) {
+			color: color(mono, white) !important;
+		}
 	}
 
 	.nav__container {
