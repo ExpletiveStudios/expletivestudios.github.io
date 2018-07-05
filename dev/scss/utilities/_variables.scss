@@ -1,23 +1,33 @@
-/// Increments of spacing for help classes
-$spaceamounts: (0, 1, 2, 3, 4, 5);
+/// Increments of spacing for helper classes
+$space-amounts: (0, 1, 2, 3, 4, 5);
+
+/// All vertical indices available for elements
+/// Called via z-index function
+$z-index-map: (
+  body: 1,
+  banner: 50,
+  banner-icon: 51,
+  header: 100,
+  header-toggle: 101,
+  modal: 1000
+);
 
 /// All colors available for elements
 /// Called via color function
 $color-map: (
   primary: (
-    red: #c63838
+    light: #c63838,
+    dark: #8a2727
   ),
-
   gray: (
-    off-black: #1c2021,
-    jet: #393939,
-    dark: #7c8081,
-    straight: #c1c0c1,
-    mild: #dad9db,
+    off-white: #f3f6fa,
     light: #e8eef4,
-    off-white: #f3f6fa
+    mild: #dad9db,
+    straight: #c1c0c1,
+    dark: #7c8081,
+    jet: #393939,
+    off-black: #1c2021,
   ),
-
   mono: (
     black: #000,
     white: #fff
@@ -26,3 +36,15 @@ $color-map: (
 
 /// Maximum width of non-full width content
 $max-width: 1280px;
+
+// Number of columns generated for the grid
+$grid-columns: 12;
+$grid-gutter-width: 0;
+
+// Media query upper sizes
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1366px;
+$screen-xl: 1920px;
+

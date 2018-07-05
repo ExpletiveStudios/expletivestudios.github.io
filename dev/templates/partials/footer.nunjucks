@@ -1,19 +1,13 @@
 
 {#
-Global page footer with social media navigation
+Global page footer with copyright information
 @param path - prefix relative path for subpages
 #}
 {% macro footer(path) %}
 
-<div id="footer" class="footer">
-	<ul class="buttons">
-		<li><a class="footer__social-link" target="_blank" href="http://www.facebook.com/expletivestudios"><img src="{{ path }}app/img/icon-social-facebook.png"></a></li>
-		<li><a class="footer__social-link" target="_blank" href="http://www.instagram.com/expletivestudios"><img src="{{ path }}app/img/icon-social-instagram.png"></a></li>
-		<li><a class="footer__social-link" target="_blank" href="http://www.twitter.com/ExpletiveStudio"><img src="{{ path }}app/img/icon-social-twitter.png"></a></li>
-		<li><a class="footer__social-link" target="_blank" href="http://www.youtube.com/channel/UC30ur-pGzTcl0BlK3KPBRPw"><img src="{{ path }}app/img/icon-social-youtube.png"></a></li>
-	</ul>
+<div id="footer" class="footer">	
 	<div>
-		<span>Copyright © Expletive Studios. All rights reserved.</span>
+		<small class="text-upper">© <span copyright-year>2018</span> <a href="/" target="_blank">Expletive Studios</a>. All rights reserved.</small>
 	</div>
 </div>
 

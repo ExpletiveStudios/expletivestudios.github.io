@@ -5,31 +5,32 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 .button {
-	margin: 0 0 22px;
-	padding: 0 22px;
-	display: inline-block;
-	height: 44px;
-	line-height: 44px;
-
-	background: transparent;
-	border: solid 1px color(mono, white);
+	background: color(primary, light);
+	border: solid 1px color(primary, light);
+	box-shadow: 1px 2px 4px 1px rgba(color(mono, black), 0.2);
 	color: color(mono, white);
 	cursor: pointer;
-
+	display: inline-block;
 	font-size: 0.8em;
-	font-weight: 900;
+	font-weight: 700;
+	height: 44px;
 	letter-spacing: 2px;
-
+	line-height: 44px;
+	margin: 0 0 22px;
+	overflow: hidden;
+	padding: 0 22px;
 	text-align: center;
 	text-decoration: none;
+  	text-overflow: ellipsis;
+  	text-shadow: none;
 	text-transform: uppercase;
-
-	transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;  
 
 	&:hover {
-		background: color(mono, white);
-		border-color: color(mono, white);
-		color: color(primary, red);
+		background: lighten(color(primary, light), 5);
+		border-color: lighten(color(primary, light), 5);
+		box-shadow: none;
+		color: color(mono, white);
 	}
 
 	&.button--alternate {
@@ -43,19 +44,32 @@ input[type="reset"],
 		}
 	}
 
-	&.button--attention {
-		background: color(primary, red);
-		border-color: color(primary, red);
+	&.button__nav--primary {
+		background: color(primary, light);
+		border-color: color(primary, light);
+		box-shadow: none;
 
 		&:hover {
-			background: darken(color(primary, red), 10);
-			border-color: darken(color(primary, red), 10);
+			background: lighten(color(primary, light), 5);
+			border-color: lighten(color(primary, light), 5);
 			color: color(mono, white);
 		}
 	}
 
-	@include breakpoint(mobile) {
-		width: 100%;
+	&.button__nav--secondary {
+		background: color(primary, light);
+		border-color: color(primary, light);
+		box-shadow: none;
+
+		&:hover {
+			background: lighten(color(primary, light), 5);
+			border-color: lighten(color(primary, light), 5);
+			color: color(mono, white);
+		}
+	}
+
+	&.button--full-width {
+		width: 100% !important;
 	}
 }
 

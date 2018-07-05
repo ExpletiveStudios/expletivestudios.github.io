@@ -1,0 +1,19 @@
+
+// Generate grid for each screen size
+@include make-grid('xs');
+@include breakpoint($screen-xs) { @include make-grid('sm'); }
+@include breakpoint($screen-sm) { @include make-grid('md'); }
+@include breakpoint($screen-md) { @include make-grid('lg'); }
+@include breakpoint($screen-lg) { @include make-grid('xl'); }
+
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 20px;
+	width: 100%;
+}
+
+[class^="col-"] {
+	//flex: 1 1 100%;
+	padding: 0;
+}

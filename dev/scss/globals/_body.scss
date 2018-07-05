@@ -1,96 +1,51 @@
-/*
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
-@include skel-breakpoints((
-	wide: '(max-width: 1680px)',
-	normal: '(max-width: 1280px)',
-	narrow: '(max-width: 980px)',
-	narrower: '(max-width: 840px)',
-	mobile: '(max-width: 736px)'
-));
+@include reset('full');
+@include boxModel('border');
 
-@include skel-layout((
-	reset: 'full',
-	boxModel: 'border',
-	grid: ( gutters: (50px, 50px) ),
-	conditionals: true,
-	containers: 1400px,
-	breakpoints: (
-		wide: (
-			containers: 1200px,
-			grid: (
-				gutters: (40px, 40px)
-			),
-		),
-		normal: (
-			containers: 960px,
-		),
-		narrow: (
-			containers: 95%,
-			grid: (
-				gutters: (30px, 30px)
-			),
-		),
-		narrower: (
-			containers: (95%, true),
-		),
-		mobile: (
-			containers: (100%, true),
-		)
-	)
-));
-
-$pattern-background-size: 25em;
+/*html {
+	background: url("../img/background.jpg");
+}*/
 
 body {
-	background: color(gray, off-white);
+	background: color(gray, off-black);
+	background: linear-gradient(
+		to right,
+		rgba(darken(color(gray, off-black), 10), 0.9),
+		rgba(color(gray, off-black), 0.9), 
+		rgba(darken(color(gray, off-black), 10), 0.9)
+	);
+}
 
-	&.overlay--open {
-		max-height: 100vh;
-		overflow: hidden;
-	}
+body.tingle-enabled {
+	background: color(gray, off-black) !important;
 }
 
 body, 
 input, 
 select, 
 textarea {
-	color: color(gray, dark);
-	font-family: 'Lato', sans-serif;
-	font-size: 15pt;
+	color: color(gray, off-white);
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 15px;
 	font-weight: 300;
 	letter-spacing: 0.025em;
-	line-height: 1.75em;
+	line-height: 20px;
 
-	@include breakpoint(wide) {
-		font-size: 14pt;
-	}
-
-	@include breakpoint(normal) {
-		font-size: 13pt;
-		letter-spacing: 0.025em;
-		line-height: 1.65em;
-	}
-
-	@include breakpoint(narrow) {
-		font-size: 13pt;
-		letter-spacing: 0.025em;
-		line-height: 1.5em;
+	@include breakpoint($screen-sm) {
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
 
 a {
-	border-bottom: 1px solid color(primary, red);
-	color: color(primary, red);
+	border-bottom: 1px solid color(gray, off-white);
+	color: color(gray, off-white);
 	text-decoration: none;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.1s ease-in-out;
 
 	&:hover {
-		border-color: darken(color(primary, red), 20);
-		color: darken(color(primary, red), 20);
+		border-color: darken(color(gray, off-white), 20);
+		color: darken(color(gray, off-white), 20);
 	}
 }
 
@@ -106,6 +61,10 @@ blockquote,
 small {
 	display: block;
 	margin: 0 0 22px; 
+}
+
+small {
+	font-size: 14px;
 }
 
 h1, 
@@ -127,36 +86,39 @@ h6 {
 }
 
 h1 {
-	font-size: 44px;
+	font-size: 33px;
 	letter-spacing: 0.1em;
-	line-height: 44px;
+	line-height: 33px;
+	margin-bottom: 44px;
 
-	@include breakpoint(mobile) {
+	@include breakpoint($screen-xs) {
+		font-size: 44px;
+		line-height: 44px;
+	}
+}
+
+h2 {
+	font-size: 22px;
+	letter-spacing: 0.1em;
+	line-height: 22px;
+	margin-bottom: 44px;
+
+	@include breakpoint($screen-xs) {
 		font-size: 33px;
 		line-height: 33px;
 	}
 }
 
-h2 {
-	font-size: 33px;
-	letter-spacing: 0.1em;
-	line-height: 33px;
-
-	@include breakpoint(mobile) {
-		font-size: 22px;
-		line-height: 22px;
-	}
-}
-
 h3 {
-	font-size: 22px;
+	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: 0.025em;
-	line-height: 22px;
+	line-height: 16px;
+	margin-bottom: 11px;
 
-	@include breakpoint(mobile) {
-		font-size: 16px;
-		line-height: 16px;
+	@include breakpoint($screen-xs) {
+		font-size: 22px;
+		line-height: 22px;
 	}
 }
 
@@ -183,8 +145,10 @@ blockquote {
 	padding: 1em 0 1em 2em;
 }
 
-p {
-	@include breakpoint(mobile) {
-		text-align: justify;
+p {	
+	text-align: justify;
+
+	@include breakpoint($screen-xs) {
+		text-align: left;
 	}
 }

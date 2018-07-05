@@ -20,12 +20,13 @@ ul {
 
 	&.buttons {
 		cursor: default;
+		text-align: center;
 
 		&:last-child { margin-bottom: 0; }
 
 		li {
 			display: inline-block;
-			padding: 0 0 0 1.5em;
+			padding-left: 12px;
 
 			&:first-child { padding: 0; }
 		}
@@ -38,33 +39,13 @@ ul {
 		}
 	}
 
-	@include breakpoint(narrower) {		
-		&.featured-icons {
-			margin: 0;
+	&.icons li { padding-left: 0.25em; }
 
-			li {
-				display: inline-block;
-				float: none;
-				width: auto;
-
-			}
-		}
+	@include breakpoint($screen-sm) {
+		&.icons li { padding: 0; }
 
 		&.buttons li {
-			display: inline-block;
-			padding: 1em 0 0 0;
+			padding-left: 24px;
 		}
-	}
-
-	@include breakpoint(mobile) {		
-		&.icons {
-			li { padding-left: 0.25em; }
-		}
-
-		&.featured-icons {
-			li .icon { width: 1.1em; }
-		}
-
-		&.buttons { text-align: center; }
 	}
 }

@@ -4,124 +4,142 @@
 
 {% block content %}
 
-{% call content.banner('home') %}
-	
-	<div class="banner__inner">
-		<h1>expletive|<span class="color__red--text">studios</span></h1>
-	</div>
-	
-	<a href="#main" class="button__icon" animate="scroll">
-		<i class="button__icon--down-caret"></i>
-	</a>
+<div class="banner">
 
-{% endcall %}
+	<div class="banner__hero--image"></div>
 
-<div id="main" class="content content--main">
-	<div class="content__container">
-		<h2>Welcome to <strong>Expletive Studios</strong>!</h2>
-		<p>We're a little <b>!%£@?&amp;#</b> indie with big <b>!%£@?&amp;#</b> dreams. Founded around a kitchen table with a lot of coffee; we started out as a bunch of friends with an idea to make a game. A game that would be the spiritual successor of sorts to some of our favorites with tastely unique and memorable additions. Fast-forward six years of concepting and garnering experience, college and multiple jobs, all the while making consistent progress.</p>
-	</div>
-</div>
-
-{% call content.panel("game", true) %}
-<div class="panel__content">
-	<a href="/games/eidetus" class="panel__link">
-		<h2><strong>Eidetus</strong></h2>
-		<p>A strategic, team-based B.Y.O.H. (Build Your Own Hero) shooter set in a dystopian sci-fi landscape. Play as a Psypher channeling memories through psychic power while drawing from the deck of abilities you’ve assembled to defeat your opponents.</p>
-		<a href="https://www.eidetus.com" class="button button--attention">Discover More</a>
-	</a>
-</div>
-
-<div class="panel__content">
-	<a class="panel__content--video" target="_blank" href="https://www.youtube.com/watch?v=6riRHh0Y7ng">
-		<img src="{{ relative_path }}../app/img/eidetus-screenshot-09.jpg">
-		<span class="panel__content--video-overlay">Pre-Alpha Gameplay</span>
-	</a>
-</div>
-{% endcall %}
-
-<div id="team" class="content">
-	<div class="content__container cards">
-
-	{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg') %}
-
-		<p>Bio Coming Soon<sup>TM</sup></p>
-
-		<hr>
-
-		<p><span>Favorite Games:</span> Coming Soon<sup>TM</sup></p>
-
-	{% endcall %}
-
-
-	{% call content.team_card('Joe Faiella', 'Community & Design', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
-
-		<p>Bio Coming Soon<sup>TM</sup></p>
-
-		<hr>
-
-		<p><span>Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering</p>
-
-	{% endcall %}
-
-
-	{% call content.team_card('Pat Petrushonis', 'Gameplay & Systems', relative_path + '../app/img/Portrait-Patrick.jpg') %}
-
-		<p>Bio Coming Soon<sup>TM</sup></p>
-
-		<hr>
+	<div class="banner__overlay">
 		
-		<p><span>Favorite Games:</span> Armored Core, Bioshock, Dead Space</p>
-
-	{% endcall %}
-
-	</div>
-</div>
-
-{#
-<div class="content content--alt">
-	<div class="content__container">
-		<div id="info-0"></div>
-
-		<div id="info-1">
-			<img src="{{ relative_path }}../app/img/Portrait-Alex.jpg">
-			<div id="member-info">
-				<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Coming Soon<sup>TM</sup></span><br>
-				<span class="info__label">Expertise:</span> Art and modeling</sup><br>
-				<span class="info__label">Location:</span> California, USA<br>
-				<span class="info__label">Education:</span> Rhode Island School Design, Illustration<br>
-				<span class="info__label">Best Qualities:</span> Coming Soon<sup>TM</sup><br>
-				<span class="info__label">Favorite Games:</span> Coming Soon<sup>TM</sup><br>
-			</div>
+		<div class="banner__inner">
+			<h1>expletive|<span class="color__primary-light--text bold">studios</span></h1>
 		</div>
 
-		<div id="info-2">
-			<img src="{{ relative_path }}../app/img/Portrait-Placeholder.jpg">
-			<div id="member-info">
-				<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Failing out of mechanical engineering and changing schools to help me realize my knack for computer science. They say that there is a lot to learn from failure and I think I know about that first hand.</span><br>
-				<span class="info__label">Expertise:</span> Game design and web development<br>
-				<span class="info__label">Location:</span> Connecticut, USA<br>
-				<span class="info__label">Education:</span> Southern Connecticut State University, Computer Science<br>
-				<span class="info__label">Best Qualities:</span> Dashing good looks and self depricating humor<br>
-				<span class="info__label">Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering<br>
-			</div>
-		</div>
-
-		<div id="info-3">
-			<img src="{{ relative_path }}../app/img/Portrait-Patrick.jpg"> 
-			<div id="member-info">
-				<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>A supportive web of family and friends helped tremendously, but the long nights spent alone are what truly build one's character. Learning what failure tastes like, discovering perseverance, and willing to continue leading on.</span><br>
-				<span class="info__label">Expertise:</span> Gameplay systems, networking and user interface<br>
-				<span class="info__label">Location:</span> Connecticut, USA<br>
-				<span class="info__label">Education:</span> Western Connecticut State University, Computer Science<br>
-				<span class="info__label">Best Qualities:</span> My charming personality and exquisite vocabulary<br>
-				<span class="info__label">Favorite Games:</span> Armored Core, Bioshock, Dead Space<br>
+		<div class="banner__overlay--button-container">
+			<div class="button__icon--container">
+				<a class="button__icon" href="#intro" animate="scroll">
+					<i class="button__icon--down-caret"></i>
+				</a>
+				<span class="button__icon--animation"></span>
 			</div>
 		</div>
 
 	</div>
 </div>
-#}
+
+<div class="banner__full-width banner__full-width--alt">
+	<div id="intro" class="content__container" style="max-width: 1000px;">
+
+		<p class="text-center">
+			At Expletive Studios, we're a little <b>!%£@?&amp;#</b> indie with big <b>!%£@?&amp;#</b> dreams. Founded around a kitchen table with a lot of coffee; we started out as a bunch of friends with an idea to make a game. A game that would be the spiritual successor of sorts to some of our favorites with tastely unique and memorable additions. Fast-forward six years of concepting and garnering experience, college and multiple jobs, all the while making consistent progress.
+		</p>
+
+	</div>
+</div>
+
+<div class="banner__full-width">
+	<div class="content__container banner__content">
+		<div class="banner__inner">
+
+			<h2 class="text-center text-upper"><strong>Eidetus</strong></h2>
+			<p>
+				A strategic, team-based B.Y.O.H. (Build Your Own Hero) shooter set in a dystopian sci-fi landscape. Play as a Psypher channeling memories through psychic power while drawing from the deck of abilities you’ve assembled to defeat your opponents.
+			</p>
+
+			<a href="https://www.eidetus.com" class="button button--attention">Discover More</a>		
+		</div>
+	</div>
+
+	<div class="banner__content--background"></div>
+</div>
+
+<div class="banner__full-width banner__full-width--alt">
+	<div id="team" class="content__container">
+
+		<h2 class="text-center text-upper"><strong>Team</strong></h2>
+
+		<div class="flex-row cards">
+
+		{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg') %}
+
+			<p>Bio Coming Soon<sup>TM</sup></p>
+
+			<hr>
+
+			<p><span>Favorite Games:</span> Coming Soon<sup>TM</sup></p>
+
+		{% endcall %}
+
+
+		{% call content.team_card('Joe Faiella', 'Community & Design', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
+
+			<p>Bio Coming Soon<sup>TM</sup></p>
+
+			<hr>
+
+			<p><span>Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering</p>
+
+		{% endcall %}
+
+
+		{% call content.team_card('Pat Petrushonis', 'Gameplay & Systems', relative_path + '../app/img/Portrait-Patrick.jpg') %}
+
+			<p>Bio Coming Soon<sup>TM</sup></p>
+
+			<hr>
+			
+			<p><span>Favorite Games:</span> Armored Core, Bioshock, Dead Space</p>
+
+		{% endcall %}
+
+	</div>
+
+	{#
+	<div class="content content--alt">
+		<div class="content__container">
+			<div id="info-0"></div>
+
+			<div id="info-1">
+				<img src="{{ relative_path }}../app/img/Portrait-Alex.jpg">
+				<div id="member-info">
+					<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Coming Soon<sup>TM</sup></span><br>
+					<span class="info__label">Expertise:</span> Art and modeling</sup><br>
+					<span class="info__label">Location:</span> California, USA<br>
+					<span class="info__label">Education:</span> Rhode Island School Design, Illustration<br>
+					<span class="info__label">Best Qualities:</span> Coming Soon<sup>TM</sup><br>
+					<span class="info__label">Favorite Games:</span> Coming Soon<sup>TM</sup><br>
+				</div>
+			</div>
+
+			<div id="info-2">
+				<img src="{{ relative_path }}../app/img/Portrait-Placeholder.jpg">
+				<div id="member-info">
+					<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Failing out of mechanical engineering and changing schools to help me realize my knack for computer science. They say that there is a lot to learn from failure and I think I know about that first hand.</span><br>
+					<span class="info__label">Expertise:</span> Game design and web development<br>
+					<span class="info__label">Location:</span> Connecticut, USA<br>
+					<span class="info__label">Education:</span> Southern Connecticut State University, Computer Science<br>
+					<span class="info__label">Best Qualities:</span> Dashing good looks and self depricating humor<br>
+					<span class="info__label">Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering<br>
+				</div>
+			</div>
+
+			<div id="info-3">
+				<img src="{{ relative_path }}../app/img/Portrait-Patrick.jpg"> 
+				<div id="member-info">
+					<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>A supportive web of family and friends helped tremendously, but the long nights spent alone are what truly build one's character. Learning what failure tastes like, discovering perseverance, and willing to continue leading on.</span><br>
+					<span class="info__label">Expertise:</span> Gameplay systems, networking and user interface<br>
+					<span class="info__label">Location:</span> Connecticut, USA<br>
+					<span class="info__label">Education:</span> Western Connecticut State University, Computer Science<br>
+					<span class="info__label">Best Qualities:</span> My charming personality and exquisite vocabulary<br>
+					<span class="info__label">Favorite Games:</span> Armored Core, Bioshock, Dead Space<br>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	#}
+
+	</div>
+</div>
 
 <div id="newsletter" class="content content--alt">
 	<div class="content__container">
@@ -145,6 +163,12 @@
 		</div>
 
 		{% endcall %}
+
+		<p class="text-center">
+			Don't forget to follow <strong>@ExpletiveStudios</strong> on all social media for the latest updates on our upcoming game.
+		</p>
+
+	  	{{ content.social_links(relative_path) }}
 
 	</div>
 </div>

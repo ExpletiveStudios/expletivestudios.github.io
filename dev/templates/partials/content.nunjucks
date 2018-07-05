@@ -40,13 +40,13 @@ Bordered card for displaying information on a single team member
 #}
 {% macro team_card(name, role, image) %}
 
-<div class="card card--team">
+<div class="card col-xs-12 col-sm-4">
 	<div class="card__inner">
 		<img class="card__inner--image" src="{{ image }}">
 		<div class="card__inner--text">
 			<h3>{{ name }}</h3>
 			<small>{{ role }}</small>
-			<div class="card__hidden-on-mobile">
+			<div class="hide-on-mobile">
 				<hr>
 				{{ caller() }}
 			</div>
@@ -88,6 +88,22 @@ Bordered image thumbnail
 <a href="javascript:void(0)" class="thumb"{% if overlay == true %} overlay="image"{% endif %}>
 	<img src="{{ image }}">
 </a>
+
+{% endmacro %}
+
+{#
+Social media links
+@param path - prefix relative path for subpages
+#}
+{% macro social_links(path) %}
+
+<div class="marg-bottom-2 text-center">
+	<ul class="buttons">
+		<li><a class="footer__social-link" target="_blank" href="http://www.facebook.com/expletivestudios"><img src="{{ path }}app/img/icon-social-facebook.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.instagram.com/expletivestudios"><img src="{{ path }}app/img/icon-social-instagram.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="http://www.twitter.com/ExpletiveStudio"><img src="{{ path }}app/img/icon-social-twitter.png"></a></li>
+	</ul>
+</div>
 
 {% endmacro %}
 

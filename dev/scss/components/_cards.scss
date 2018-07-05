@@ -1,17 +1,12 @@
 
 .cards {
 	align-items: stretch;
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 auto 22px;
-	max-width: $max-width;
-	padding: 0;
 }
 
 .card {
-	flex: 1 1 33%;
 	font-size: 0;
 	line-height: 0;
+	margin-bottom: 22px;
 	padding: 0 22px 22px;
 
 	.card__inner {
@@ -34,10 +29,6 @@
 		display: block;
 		padding: 22px;
 	}
-
-	@include breakpoint(mobile) {
-		flex: 1 1 100%;
-	}
 }
 
 .card--team {
@@ -52,9 +43,5 @@
 
 	.card__inner--text {
 		h3 { margin: 0 0 11px; }
-	}	
-
-	@include breakpoint(mobile) {
-		.card__hidden-on-mobile { display: none; }
 	}
 }

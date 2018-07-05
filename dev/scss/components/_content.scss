@@ -7,30 +7,32 @@
 }
 
 .content {
-	margin: 0 0 22px;
-
-	&.content--main {
-		background-color: color(primary, red);
-		color: color(mono, white);
-		text-align: center;
-	}
-
-	&.content--alt {
-		background-color: color(gray, jet);
-		color: color(mono, white);
-		margin: 0;
-		text-align: center;
-	}
-
-	&.content--top { padding: 73px 0 0; }
-
 	.content__container {
 		margin: 0 auto;
 		max-width: $max-width;
 		padding: 44px 22px;
 	}
 
-	@include breakpoint(mobile) {
-		&.content--top { padding: 70px 0 0; }
+	.content__image {
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+
+		&.content__image--vertical img {
+			height: 100%;
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%);
+			width: auto;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+		&.content--top { padding: 73px 0 0; }
 	}
 }

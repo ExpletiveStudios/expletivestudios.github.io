@@ -1,0 +1,21 @@
+
+.owl-theme .owl-dots .owl-dot {
+	span {
+		background: color(gray, dark);
+		height: 6px;
+		margin: 7px;
+		transition: all 0.2s linear;
+		width: 6px;
+	}
+
+	&.active span {
+		background: color(gray, light);
+		height: 10px;
+		margin: 5px 7px;
+		width: 10px;
+	}
+
+	&:hover span {
+		background: color(gray, mild);
+	}
+}

@@ -1,60 +1,83 @@
+
 .banner {
-	background-attachment: fixed;
-	background-color: color(gray, jet);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	color: color(gray, jet);
 	cursor: default;
-	min-height: calc(100vh - 20px);
-	padding: 200px 0 0;
+	height: 50vh;
+	min-height: 400px;
+	overflow: hidden;
+	padding: 80px 0 0;
 	position: relative;
 	text-align: center;
+	width: 100vw;
 
-	&.banner--home {
-		background-image: url('../img/home-hero.jpg');
+	.banner__hero--image {
+		left: 25%;
+		min-height: 100%;
+		min-width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-25%) translateY(-50%);
 	}
 
-	&.banner--eidetus {
-		background-image: url('../img/eidetus-screenshot-10.jpg');
+	.banner__hero--image {
+		background-image: url("../img/banner-hero.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.banner__overlay {
+		background: linear-gradient(to bottom, color(gray, off-black), transparent, transparent);
+		bottom: 0;
+		min-height: 100%;
+		min-width: 100%;
+		position: absolute;
+		right: 0;
 	}
 
 	.banner__inner {
-		animation: reveal-banner 1s 0.25s ease-in-out;
-		animation-fill-mode: forwards;
-		background: rgba(color(mono, white), 0.7);
-		color: color(gray, jet);
-		display: inline-block;
-		opacity: 0;
-		padding: 22px;
-		text-align: center;
+		margin-top: 25vh;
 
-		h1 {
-			font-family: 'Helvetica', sans-serif;
-			font-weight: 900;
-			letter-spacing: 0.05em;
-			margin: 0;
-		}
+        h1 {
+			animation: reveal-banner 1s 0.25s ease-in-out;
+			animation-fill-mode: forwards;
+			color: color(gray, off-white);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+			opacity: 0;
+        }
+	}
 
-		.button { margin: 0; }
+	.banner__overlay--button-container {
+		animation: lower-on-load 0.8s 0.0s ease-in-out;
+		animation-fill-mode: both;
+		margin: 20px auto 0;
+		position: relative;
+	}
+
+	.button__icon--container {
+		height: 44px;
+		position: relative;
+		margin: 0 auto;
+		width: 44px;
 	}
 
 	.button__icon {
-		animation: lower-on-load 0.8s 0.0s ease-in-out;
-		animation-fill-mode: both;
-		background: color(primary, red);
+		background: color(primary, light);
 		border: 0;
 		border-radius: 50%;
-		bottom: 100px;
-		height: 44px;
+		display: block;
+		height: 100%;
 		position: absolute;
-		left: calc(50% - 22px);
-		width: 44px;
+		width: 100%;
+		z-index: z-index(banner);
+	}
 
+	.button__icon--animation {
 		&:before,
 		&:after {
-		    animation-fill-mode: both;
-			background: color(primary, red);
+		    animation-fill-mode: both; 
+			background: color(primary, light);
 			content: "";
 		    height: 88px;
 		    border-radius: 50%;
@@ -63,7 +86,6 @@
 			top: calc(50% - 44px);
 		    opacity: 0;
 		    width: 88px;
-			z-index: 999;
 		}
 
 		&:before { animation: pulse-ring 1.8s 0.8s ease-out infinite; }
@@ -74,7 +96,7 @@
 		position: absolute;
 		right: 50%;
 		top: 50%;
-		z-index: 99999;
+		z-index: z-index(banner-icon);
 
 		&:before {
 			background-image: url('../img/overlay-caret.png');
@@ -86,14 +108,78 @@
 			right: calc(50% - 11px);
 			top: calc(50% - 11px);
 			width: 22px;
-			z-index: 99999;
+			z-index: z-index(banner-icon);
 		}
 	}
 
-	@include breakpoint(mobile) {
-		background-attachment: scroll;
-		background-size: cover;
+	@include breakpoint($screen-sm) {
+		padding: 55px 0 0;
+		
+		.banner__inner {
+			margin-top: 15vh;
 
-		.banner__inner { display: none; }
+			img { width: 50vw; }
+		}
+	}
+}
+
+.banner__full-width {
+	border-bottom: 1px solid color(gray, lightest);
+	position: relative;
+
+	&.banner__full-width--alt {
+		background-color: color(primary, light);
+	}
+
+	.banner__content--background {
+		background-image: url('../img/banner-eidetus.jpg');
+		background-position: center center;
+		background-size: cover;
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: z-index(body);
+	}
+}
+
+.banner__content {
+	background-color: rgba(color(primary, light), 0.6);
+	height: auto;
+	margin: 0 0 20px;
+	overflow: hidden;
+	padding-bottom: 0 !important;
+	padding-top: 0 !important;
+	position: relative;
+
+	.banner__inner {
+		background: linear-gradient(
+			to right, 
+			transparent, 
+			rgba(color(mono, black), 0.4), 
+			rgba(color(mono, black), 0.6), 
+			rgba(color(mono, black), 0.4), 
+			transparent
+		);
+		height: 100%;
+		margin: 0 auto;
+		max-width: 1000px;
+		padding: 44px 0;
+		position: relative;
+		text-align: center;
+		text-shadow: 1px 1px color(mono, black);
+		width: 100%;
+		z-index: z-index(banner);
+
+		p {
+			text-align: justify;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+		.banner__inner p {
+			text-align: center;
+		}
 	}
 }

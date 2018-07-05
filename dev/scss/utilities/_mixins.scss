@@ -2,7 +2,6 @@
 /// @param {string} $content Optional content value to use.
 /// @param {string} $where Optional pseudoelement to target (before or after).
 @mixin icon($content: false, $where: before) {
-
 	text-decoration: none;
 
 	&:#{$where} {
@@ -17,9 +16,16 @@
 		font-style: normal;
 		font-weight: normal;
 		text-transform: none !important;
-
 	}
+}
 
+/// Wraps @content in vendorized keyframe blocks.
+/// @param {string} $name Name.
+@mixin keyframes($name) {
+  @-moz-keyframes #{$name} { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+  @-ms-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
 }
 
 /// Applies padding to an element, taking the current element-margin value into account.
@@ -28,36 +34,16 @@
 /// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
 /// @param {bool} $important If true, adds !important.
 @mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
-
 	@if $important {
 		$important: '!important';
 	}
 
 	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
-
-}
-
-/// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
-/// @param {string} $svg SVG data URL.
-/// @return {string} Encoded SVG data URL.
-@function svg-url($svg) {
-
-	$svg: str-replace($svg, '"', '\'');
-	$svg: str-replace($svg, '<', '%3C');
-	$svg: str-replace($svg, '>', '%3E');
-	$svg: str-replace($svg, '&', '%26');
-	$svg: str-replace($svg, '#', '%23');
-	$svg: str-replace($svg, '{', '%7B');
-	$svg: str-replace($svg, '}', '%7D');
-	$svg: str-replace($svg, ';', '%3B');
-
-	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
-
 }
 
 /// Generates helper classes for margin and padding overrides
 @mixin generate_space_helpers() {
-  @each $space in $spaceamounts {
+  @each $space in $space-amounts {
 	$new-space: $space * 11px;
 
     .pad-#{$space} { padding: $new-space !important; }
@@ -98,6 +84,426 @@
     .marg-sides-#{$space} {
       margin-right: $new-space !important;
       margin-left: $new-space !important;
+    }
+  }
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin flex-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-#{$class}-#{$i}";
+  }
+  #{$list} {
+    flex: 1 1 0;
+  }
+}
+
+@mixin calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index >= 0) {
+    .col-#{$class}-#{$index} {
+      flex: 1 1 percentage(($index / $grid-columns));
+
+      @if ($index == $grid-columns) {
+        padding: 0 !important;
+      }
+
+      padding: 0 10px !important;
+    }
+  }
+  @if ($type == offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $class, $type);
+  }
+}
+
+// Create grid for specific class
+@mixin make-grid($class) {
+  @include flex-grid-columns($class);
+  @include loop-grid-columns($grid-columns, $class, width);
+  @include loop-grid-columns($grid-columns, $class, offset);
+}
+
+/// Sets the global box model.
+/// @param {string} $model Model (default is content).
+@mixin boxModel($model: 'content') {
+  $x: $model + '-box';
+
+  *, 
+  *:before, 
+  *:after {
+    -moz-box-sizing: #{$x};
+    -webkit-box-sizing: #{$x};
+    box-sizing: #{$x};
+  }
+}
+
+// Mobile first breakpoint
+@mixin breakpoint($point) {
+  @media screen and (min-width: $point) { @content; }
+}
+
+/// Resets browser styles.
+/// @param {string} $mode Mode (default is 'normalize').
+@mixin reset($mode: 'normalize') {
+
+  @if $mode == 'normalize' {
+    // normalize.css v3.0.2 | MIT License | git.io/normalize
+    html{
+      font-family:sans-serif;
+      -ms-text-size-adjust:100%;
+      -webkit-text-size-adjust:100%
+    }
+
+    body{
+      margin:0
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    menu,
+    nav,
+    section,
+    summary{
+      display:block
+    }
+
+    audio,
+    canvas,
+    progress,
+    video{
+      display:inline-block;
+      vertical-align:baseline
+    }
+
+    audio:not([controls]){
+      display:none;
+      height:0
+    }
+
+    [hidden]{
+      display:none
+    }
+
+    a{
+      background-color:transparent
+    }
+
+    a:active,
+    a:hover{
+      outline:0
+    }
+
+    abbr[title]{
+      border-bottom:1px dotted
+    }
+
+    b,
+    strong{
+      font-weight:700
+    }
+
+    dfn{
+      font-style:italic
+    }
+
+    h1{
+      font-size:2em;
+      margin:.67em 0
+    }
+
+    mark{
+      background:#ff0;
+      color:#000
+    }
+
+    small{
+      font-size:80%
+    }
+
+    sub,
+    sup{
+      font-size:75%;
+      line-height:0;
+      position:relative;
+      vertical-align:baseline
+    }
+
+    sup{
+      top:-.5em
+    }
+
+    sub{
+      bottom:-.25em
+    }
+
+    img{
+      border:0
+    }
+
+    svg:not(:root){
+      overflow:hidden
+    }
+
+    figure{
+      margin:1em 40px
+    }
+
+    hr{
+      -moz-box-sizing:content-box;
+      box-sizing:content-box;
+      height:0
+    }
+
+    pre{overflow:auto}
+
+    code,
+    kbd,
+    pre,
+    samp{
+      font-family:monospace,monospace;
+      font-size:1em
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea{
+      color:inherit;
+      font:inherit;
+      margin:0
+    }
+
+    button{
+      overflow:visible
+    }
+
+    button,
+    select{
+      text-transform:none
+    }
+
+    button,
+    html input[type=button],
+    input[type=reset],
+    input[type=submit]{
+      -webkit-appearance:button;
+      cursor:pointer
+    }
+
+    button[disabled],
+    html input[disabled]{
+      cursor:default
+    }
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner{
+      border:0;
+      padding:0
+    }
+
+    input{
+      line-height:normal
+    }
+
+    input[type=checkbox],
+    input[type=radio]{
+      box-sizing:border-box;
+      padding:0
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button{
+      height:auto
+    }
+
+    input[type=search]{
+      -webkit-appearance:textfield;
+      -moz-box-sizing:content-box;
+      -webkit-box-sizing:content-box;
+      box-sizing:content-box
+    }
+
+    input[type=search]::-webkit-search-cancel-button,
+    input[type=search]::-webkit-search-decoration{
+      -webkit-appearance:none
+    }
+
+    fieldset{
+      border:1px solid silver;
+      margin:0 2px;
+      padding:.35em .625em .75em
+    }
+
+    legend {
+      border:0;
+      padding:0
+    }
+
+    textarea{
+      overflow:auto
+    }
+
+    optgroup{
+      font-weight:700
+    }
+
+    table{
+      border-collapse:collapse;
+      border-spacing:0
+    }
+
+    td,
+    th{
+      padding:0
+    }
+  }
+  @else if $mode == 'full' {
+    // meyerweb.com/eric/tools/css/reset v2.0 | 20110126 | License: none (public domain)
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video{
+      margin:0;
+      padding:0;
+      border:0;
+      font-size:100%;
+      font:inherit;
+      vertical-align:baseline;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display:block;
+    }
+
+    body {
+      line-height:1;
+      -webkit-text-size-adjust:none
+    }
+
+    ol,
+    ul {
+      list-style:none;
+    }
+
+    blockquote,
+    q{
+      quotes:none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content:'';
+      content:none;
+    }
+
+    table {
+      border-collapse:collapse;
+      border-spacing:0;
     }
   }
 }

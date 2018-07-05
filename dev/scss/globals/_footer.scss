@@ -1,6 +1,6 @@
 .footer {
-	background: color(gray, jet);
-	border: 0;
+	background: linear-gradient(lighten(color(gray, jet), 10), darken(color(gray, jet), 10));
+	border-top: 1px solid color(gray, off-white);
 	bottom: 0;
 	padding: 22px 0;
 	overflow: hidden;
@@ -8,18 +8,28 @@
 	text-align: center;
 	width: 100%;
 
-	.footer__social-link {
-		border-bottom: none;
-		display: block;
-		height: 44px;
-		transition: all 0.3s ease-in-out;
-		width: 44px;
-		
-		img {
-			height: 100%;
-			width: 100%;
-		}
-
-		&:hover { transform: translate(0, -5px); }
+	small {
+		font-size: 12px;
 	}
+
+	@include breakpoint($screen-sm) { 
+		small {
+			font-size: 14px;
+		}
+	}
+}
+
+.footer__social-link {
+	border-bottom: none;
+	display: block;
+	height: 33px;
+	transition: all 0.3s ease-in-out;
+	width: 33px;
+	
+	img {
+		height: 100%;
+		width: 100%;
+	}
+
+	&:hover { transform: translate(0, -5px); }
 }

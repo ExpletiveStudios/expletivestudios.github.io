@@ -22,7 +22,17 @@ var isFirstScrollUp = true,
 	scrollTopNew,
 	headerTop;
 
-$(document).on('scroll', function() { handleScroll(); });
+$(document).on('scroll', function() { 
+	if ($(window).width() >= 768) { return; }
+
+	handleScroll(); 
+});
+
+$(window).on('resize', function() { 
+	if ($(window).width() < 768) { return; }
+
+	setFixed($(document).find('.header'));
+});
 
 // Reveal header on scroll up
 function handleScroll() {
