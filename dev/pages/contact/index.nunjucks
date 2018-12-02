@@ -1,0 +1,52 @@
+{% extends "layout.nunjucks" %}
+
+{% set relative_path = '../' %}
+
+{% block content %}
+
+<div class="content content--alt" style="margin-top: 100px;">
+	<div class="content__container">
+		<div class="flex-row">
+
+			<div class="col-xs-12 col-sm-6">
+
+				<h3>Frequency Asked Questions</h2>
+
+				<p class="color__primary-light--text marg-bottom-0">Q: When will Eidetus be released?</p>
+				<p>A: There is no official release date for Eidetus yet, but we can assure you that we will release it as soon as it's ready.</p>
+
+				<br>
+
+				<p class="color__primary-light--text marg-bottom-0">Q: How can I play Eidetus now?</p>
+				<p>A: We are planning to open up testing as we actively develop Eidetus. More information will be available soon, but join our <a target="_blank" href="/#newsletter">newsletter</a> to find out the moment we update.</p>
+
+				<br>
+
+				<p class="color__primary-light--text marg-bottom-0">Q: Are there any job opportunities at Expletive Studios?</p>
+				<p>A: While we're always on the lookout for new talent, we are currently not offering employment or internships at Expletive Studios. We'll update here if this changes.</p>
+
+				<br>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+
+				<h3>Have a question for us at Expletive Studios?</h2>
+
+				<p>Please fill in the following form to get in touch with us. For quick questions, try connecting with us <a target="_blank" href="http://www.twitter.com/ExpletiveStudio">@ExpletiveStudio</a> on Twitter.</p>
+
+			    <form method="POST" action="//formspree.io/support@expletivestudios.com">
+			        <input type="email" name="_replyto" placeholder="email address">
+			        <input type="hidden" name="_subject" value="Website contact" />
+			        <textarea name="message" placeholder="message"></textarea>
+			        <input type="text" name="_gotcha" style="display:none" />
+			        <input type="submit" value="Send">
+		    	</form>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}

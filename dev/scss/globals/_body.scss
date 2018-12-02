@@ -38,14 +38,13 @@ textarea {
 }
 
 a {
-	border-bottom: 1px solid color(gray, off-white);
-	color: color(gray, off-white);
+	color: color(primary, light);
+	font-weight: 600;
 	text-decoration: none;
 	transition: all 0.1s ease-in-out;
 
 	&:hover {
-		border-color: darken(color(gray, off-white), 20);
-		color: darken(color(gray, off-white), 20);
+		color: darken(color(primary, light), 10);
 	}
 }
 
