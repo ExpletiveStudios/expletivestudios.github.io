@@ -1,6 +1,6 @@
 {% extends "layout.nunjucks" %}
 
-{% set relative_path = '' %}
+{% set relative_path = '/' %}
 
 {% block content %}
 

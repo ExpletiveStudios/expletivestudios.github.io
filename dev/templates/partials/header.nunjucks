@@ -20,7 +20,7 @@ Global header with page navigation
 			<li><a href="https://www.eidetus.com" class="button button--attention">Eidetus</a></li>
 			<li><a href="{{ path }}#newsletter" animate="scroll">Newsletter</a></li>
 			<li><a href="{{ path }}#team" animate="scroll">Team</a></li>
-			<li><a href="javascript:void(0)">Contact</a></li>
+			<li><a href="{{ path }}contact">Contact</a></li>
 		</ul>
 	</div>
 </div>
