@@ -165,6 +165,12 @@
 		{% endcall %}
 
 		<p class="text-center">
+			Use the below link to join our growing community on Discord. We'll also be occasionally pulling from the audience for exclusive playtests.
+		</p>
+
+	  	{{ content.discord_link(relative_path) }}
+
+		<p class="text-center">
 			Don't forget to follow <strong>@ExpletiveStudios</strong> on all social media for the latest updates on our upcoming game.
 		</p>
 

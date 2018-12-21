@@ -108,6 +108,20 @@ Social media links
 {% endmacro %}
 
 {#
+Discord invite link
+@param path - prefix relative path for subpages
+#}
+{% macro discord_link(path) %}
+
+<div class="marg-bottom-2 text-center">
+	<a href="https://discord.gg/ZW8WBef" target="_blank">
+		<img src="{{ path }}app/img/logo_discord.png" style="width:200px;height:auto;">
+	</a>
+</div>
+
+{% endmacro %}
+
+{#
 Modal container with supplied content in caller
 @param ID - alphanumerical identifier to link modal button with content
 #}
