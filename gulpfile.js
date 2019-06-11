@@ -112,13 +112,16 @@ gulp.task('sass', function() {
 // Compile all nunjucks logic into html
 gulp.task('nunjucks', function() {
   // Identify location of nunjucks partials
-  render.nunjucks.configure([config.src + 'templates/']);
+  //render.nunjucks.configure([config.src + 'templates/']);
+
+  render.nunjucks.configure(config.src);
 
   // Get all html and nunjucks files in pages
   return gulp.src(config.src + 'pages/**/*.+(html|nunjucks)')
     .pipe(customPlumber('Error Running Nunjucks'))
     .pipe(data(function() { return JSON.parse(fs.readFileSync(config.src + 'data/data.json')) }))
-    .pipe(render({data: {masterlayout: 'layout.nunjucks'}}))
+    .pipe(render({path: [config.src + 'templates/']}))
+    //.pipe(render({data: {masterlayout: 'layout.nunjucks'}}))
     .pipe(gulp.dest(''))
     .pipe(notify({ message: 'Nunjucks Complete!', onLast: true }))
     // Tells browser sync to reload files when task is done
