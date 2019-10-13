@@ -100,3 +100,11 @@ input[type="reset"],
 		color: darken(color(mono, white), 20);
 	}
 }
+
+.link__brand {
+	box-shadow: 1px 2px 4px 1px rgba(color(mono, black), 0.2);
+
+	&:hover {
+		box-shadow: none;
+	}
+}
