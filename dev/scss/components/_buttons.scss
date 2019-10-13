@@ -33,6 +33,24 @@ input[type="reset"],
 		color: color(mono, white);
 	}
 
+	&.button--image {
+		background: transparent !important;
+		border: 0px;
+		height: auto;
+		margin: 0;
+		max-height: 85px;
+		max-width: 200px;
+		overflow: hidden;
+		padding: 0;
+
+		img {
+			height: auto;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
 	&.button--alternate {
 		border-color: color(gray, jet);
 		color: color(gray, jet);

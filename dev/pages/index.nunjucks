@@ -37,19 +37,34 @@
 </div>
 
 <div class="banner__full-width">
-	<div class="content__container banner__content">
-		<div class="banner__inner">
+	<div class="content__container content--alt">
+		{#<div class="banner__inner">#}
 
-			<h2 class="text-center text-upper"><strong>Eidetus</strong></h2>
-			<p>
-				A strategic, team-based B.Y.O.H. (Build Your Own Hero) shooter set in a dystopian sci-fi landscape. Play as a Psypher channeling memories through psychic power while drawing from the deck of abilities you’ve assembled to defeat your opponents.
-			</p>
+			<div class="flex-row">
+				<div class="col-md-3" style="height: auto; width: 100%">
+					<a href="https://www.eidetus.com">
+						<img class="content__brand marg-bottom-2" src="{{ relative_path }}app/img/branding-eidetus.jpg" alt="Eidetus">
+					</a>
+				</div>
+				<div class="col-md-9">
+					<p class="text-center">
+						Eidetus is a third-person shooter meets collectible card game set in a dystopian sci-fi landscape. Play as a Psypher channeling memories through psychic power while drawing from the deck of abilities you’ve assembled to defeat your opponents. 
+					</p>
 
-			<a href="https://www.eidetus.com" class="button button--attention">Discover More</a>		
-		</div>
+					<div class="text-center">
+						<h3 class="marg-bottom-2 text-center text-upper">Coming soon to</h3>
+
+						<a class="button button--image" href="https://store.steampowered.com/app/681710/Eidetus/" target="_blank">
+							<img src="{{ relative_path }}app/img/branding-steam-light.jpg">
+						</a>
+					</div>
+				</div>
+			</div>
+	
+		{#</div>#}
 	</div>
 
-	<div class="banner__content--background"></div>
+	{# <div class="banner__content--background"></div> #}
 </div>
 
 <div class="banner__full-width banner__full-width--alt">

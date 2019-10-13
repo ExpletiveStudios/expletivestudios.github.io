@@ -32,6 +32,15 @@
 		}
 	}
 
+	.content__brand,
+	.content__brand img {
+		display: block; 
+		height: auto; 
+		margin: 0 auto; 
+		max-width: 300px; 
+		width: 100%
+	}
+
 	@include breakpoint($screen-sm) {
 		&.content--top { padding: 73px 0 0; }
 	}
