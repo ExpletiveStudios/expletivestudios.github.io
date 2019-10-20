@@ -9,7 +9,7 @@
   <title>Expletive Studios</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet" type="text/css"/>
   <link href="{{ relative_path }}app/css/main.css" rel="stylesheet" type="text/css"/>
-  <link href="{{ relative_path }}app/img/favicon.ico" rel="shortcut icon"/>
+  <link href="{{ relative_path }}favicon.ico" rel="shortcut icon"/>
 </head>
 <body>
   <div id="main-container" class="main-container">
