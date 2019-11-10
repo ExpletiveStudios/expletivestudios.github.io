@@ -94,14 +94,14 @@
     $list: "#{$list}, .col-#{$class}-#{$i}";
   }
   #{$list} {
-    flex: 1 1 0;
+    flex: 0 1 0;
   }
 }
 
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index >= 0) {
     .col-#{$class}-#{$index} {
-      flex: 1 1 percentage(($index / $grid-columns));
+      flex: 0 1 percentage(($index / $grid-columns));
 
       @if ($index == $grid-columns) {
         padding: 0 !important;

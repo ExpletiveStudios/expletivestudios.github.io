@@ -106,6 +106,28 @@
 
 		{% endcall %}
 
+
+		{% call content.team_card('Max Kintner', 'Sound & Music', relative_path + '../app/img/Portrait-Max.jpg') %}
+
+			<p>Bio Coming Soon<sup>TM</sup></p>
+
+			<hr>
+			
+			<p><span>Favorite Games:</span> Deadly Premonition</p>
+
+		{% endcall %}
+
+
+		{% call content.team_card('Bea Schuster', 'Narration & Story', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
+
+			<p>Bio Coming Soon<sup>TM</sup></p>
+
+			<hr>
+			
+			<p><span>Favorite Games:</span> Zelda - Breath of the Wild</p>
+
+		{% endcall %}
+
 	</div>
 
 	{#
