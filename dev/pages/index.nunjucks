@@ -74,106 +74,31 @@
 
 		<div class="flex-row cards">
 
-		{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg') %}
-
-			<p>Bio Coming Soon<sup>TM</sup></p>
-
-			<hr>
-
-			<p><span>Favorite Games:</span> Coming Soon<sup>TM</sup></p>
+		{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg', 'TBD') %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Joe Faiella', 'Community & Design', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
-
-			<p>Bio Coming Soon<sup>TM</sup></p>
-
-			<hr>
-
-			<p><span>Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering</p>
+		{% call content.team_card('Joe Faiella', 'Community & Design', relative_path + '../app/img/Portrait-Placeholder.jpg', 'Dota 2') %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Pat Petrushonis', 'Gameplay & Systems', relative_path + '../app/img/Portrait-Patrick.jpg') %}
-
-			<p>Bio Coming Soon<sup>TM</sup></p>
-
-			<hr>
-			
-			<p><span>Favorite Games:</span> Armored Core, Bioshock, Dead Space</p>
+		{% call content.team_card('Pat Petrushonis', 'Gameplay & Systems', relative_path + '../app/img/Portrait-Patrick.jpg', 'Armored Core') %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Max Kintner', 'Sound & Music', relative_path + '../app/img/Portrait-Max.jpg') %}
-
-			<p>Bio Coming Soon<sup>TM</sup></p>
-
-			<hr>
-			
-			<p><span>Favorite Games:</span> Deadly Premonition</p>
+		{% call content.team_card('Max Kintner', 'Sound & Music', relative_path + '../app/img/Portrait-Max.jpg', 'Deadly Premonition') %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Bea Schuster', 'Narration & Story', relative_path + '../app/img/Portrait-Placeholder.jpg') %}
-
-			<p>Bio Coming Soon<sup>TM</sup></p>
-
-			<hr>
-			
-			<p><span>Favorite Games:</span> Zelda - Breath of the Wild</p>
+		{% call content.team_card('Bea Schuster', 'Narration & Story', relative_path + '../app/img/Portrait-Placeholder.jpg', 'Zelda: Breath of the Wild') %}
 
 		{% endcall %}
-
-	</div>
-
-	{#
-	<div class="content content--alt">
-		<div class="content__container">
-			<div id="info-0"></div>
-
-			<div id="info-1">
-				<img src="{{ relative_path }}../app/img/Portrait-Alex.jpg">
-				<div id="member-info">
-					<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Coming Soon<sup>TM</sup></span><br>
-					<span class="info__label">Expertise:</span> Art and modeling</sup><br>
-					<span class="info__label">Location:</span> California, USA<br>
-					<span class="info__label">Education:</span> Rhode Island School Design, Illustration<br>
-					<span class="info__label">Best Qualities:</span> Coming Soon<sup>TM</sup><br>
-					<span class="info__label">Favorite Games:</span> Coming Soon<sup>TM</sup><br>
-				</div>
-			</div>
-
-			<div id="info-2">
-				<img src="{{ relative_path }}../app/img/Portrait-Placeholder.jpg">
-				<div id="member-info">
-					<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>Failing out of mechanical engineering and changing schools to help me realize my knack for computer science. They say that there is a lot to learn from failure and I think I know about that first hand.</span><br>
-					<span class="info__label">Expertise:</span> Game design and web development<br>
-					<span class="info__label">Location:</span> Connecticut, USA<br>
-					<span class="info__label">Education:</span> Southern Connecticut State University, Computer Science<br>
-					<span class="info__label">Best Qualities:</span> Dashing good looks and self depricating humor<br>
-					<span class="info__label">Favorite Games:</span> Dota 2, Super Smash Bros. Melee, Magic the Gathering<br>
-				</div>
-			</div>
-
-			<div id="info-3">
-				<img src="{{ relative_path }}../app/img/Portrait-Patrick.jpg"> 
-				<div id="member-info">
-					<span class="info__label">What are the most important events that helped you reach where you are today?</span><br><span>A supportive web of family and friends helped tremendously, but the long nights spent alone are what truly build one's character. Learning what failure tastes like, discovering perseverance, and willing to continue leading on.</span><br>
-					<span class="info__label">Expertise:</span> Gameplay systems, networking and user interface<br>
-					<span class="info__label">Location:</span> Connecticut, USA<br>
-					<span class="info__label">Education:</span> Western Connecticut State University, Computer Science<br>
-					<span class="info__label">Best Qualities:</span> My charming personality and exquisite vocabulary<br>
-					<span class="info__label">Favorite Games:</span> Armored Core, Bioshock, Dead Space<br>
-				</div>
-			</div>
 
 		</div>
-	</div>
-	#}
 
 	</div>
 </div>
