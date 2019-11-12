@@ -74,27 +74,27 @@
 
 		<div class="flex-row cards">
 
-		{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg', 'TBD') %}
+		{% call content.team_card('Alex Kintner', 'Art & Animation', relative_path + '../app/img/Portrait-Alex.jpg', "Oddworld: Stranger's Wrath") %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Joe Faiella', 'Community & Design', relative_path + '../app/img/Portrait-Placeholder.jpg', 'Dota 2') %}
+		{% call content.team_card('Joe Faiella', 'Community & Design', relative_path + '../app/img/Portrait-Placeholder.jpg', "Dota 2") %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Pat Petrushonis', 'Gameplay & Systems', relative_path + '../app/img/Portrait-Patrick.jpg', 'Armored Core') %}
+		{% call content.team_card('Pat Petrushonis', 'Gameplay & Systems', relative_path + '../app/img/Portrait-Patrick.jpg', "Armored Core") %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Max Kintner', 'Sound & Music', relative_path + '../app/img/Portrait-Max.jpg', 'Deadly Premonition') %}
+		{% call content.team_card('Max Kintner', 'Sound & Music', relative_path + '../app/img/Portrait-Max.jpg', "Deadly Premonition") %}
 
 		{% endcall %}
 
 
-		{% call content.team_card('Bea Schuster', 'Narration & Story', relative_path + '../app/img/Portrait-Placeholder.jpg', 'Zelda: Breath of the Wild') %}
+		{% call content.team_card('Bea Schuster', 'Narration & Story', relative_path + '../app/img/Portrait-Placeholder.jpg', "Zelda: Breath of the Wild") %}
 
 		{% endcall %}
 
