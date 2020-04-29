@@ -45,7 +45,7 @@
   "false": {},
   "dependencies": {
     "gulp-nunjucks-render": "^2.2.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "owl.carousel": "^2.3.4",
     "tingle.js": "^0.13.2"
   }
